@@ -1,0 +1,11 @@
+year,total_population,working_age_15_64,working_age_pct,under_15,under_15_pct,age_65_plus,age_65_plus_pct,median_age,source
+2010,46238,30154,65.2,7758,16.8,8326,18.0,36.3,Decennial Census
+2015,45500,29575,65.0,7435,16.3,8490,18.7,36.4,ACS 5-Year Estimates (interpolated)
+2016,45200,29380,65.0,7389,16.3,8431,18.7,36.4,ACS 5-Year Estimates (interpolated)
+2017,44900,29185,65.0,7340,16.3,8375,18.7,36.4,ACS 5-Year Estimates (interpolated)
+2018,44500,28925,65.0,7276,16.4,8299,18.6,36.4,ACS 5-Year Estimates (interpolated)
+2019,43887,28526,65.0,7176,16.4,8187,18.6,36.4,Census Population Estimates
+2020,45312,29432,65.0,7407,16.3,8456,18.7,36.5,Decennial Census (2020)
+2021,45150,29320,64.9,7381,16.4,8449,18.7,36.5,ACS 5-Year Estimates
+2022,45002,29229,64.9,7355,16.3,8418,18.7,36.5,ACS 5-Year Estimates
+2023,44694,28994,64.9,7305,16.4,8395,18.8,36.5,ACS 5-Year Estimates

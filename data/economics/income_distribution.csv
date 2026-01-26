@@ -1,0 +1,10 @@
+year,under_25k_pct,income_25k_50k_pct,income_50k_75k_pct,income_75k_100k_pct,income_100k_150k_pct,over_150k_pct,gini_coefficient,source
+2015,22.5,20.8,17.2,12.5,14.0,13.0,0.48,ACS 5-Year Estimates
+2016,21.8,20.5,17.0,12.8,14.2,13.7,0.48,ACS 5-Year Estimates
+2017,21.2,20.2,16.8,13.0,14.5,14.3,0.47,ACS 5-Year Estimates
+2018,20.5,19.8,16.5,13.2,14.8,15.2,0.47,ACS 5-Year Estimates
+2019,19.8,19.5,16.2,13.5,15.2,15.8,0.47,ACS 5-Year Estimates
+2020,20.2,19.2,16.0,13.8,15.5,15.3,0.47,ACS 5-Year Estimates
+2021,19.5,18.8,15.8,14.0,16.0,15.9,0.46,ACS 5-Year Estimates
+2022,18.8,18.5,15.5,14.2,16.5,16.5,0.46,ACS 5-Year Estimates
+2023,18.2,18.0,15.2,14.5,17.0,17.1,0.46,ACS 2023 5-Year Estimates

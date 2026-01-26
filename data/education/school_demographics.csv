@@ -1,0 +1,10 @@
+year,white_pct,black_pct,hispanic_pct,asian_pct,two_or_more_pct,economically_disadvantaged_pct,special_education_pct,english_learner_pct,source
+2015,18.5,69.2,4.2,0.9,5.2,55.0,15.2,2.8,NCES/Ohio DOE estimates
+2016,18.2,69.5,4.4,0.9,5.3,56.0,15.4,3.0,NCES/Ohio DOE estimates
+2017,17.8,69.8,4.6,0.9,5.5,57.0,15.6,3.2,NCES/Ohio DOE estimates
+2018,17.4,70.2,4.8,1.0,5.6,58.0,15.8,3.4,NCES/Ohio DOE estimates
+2019,17.0,70.5,5.0,1.0,5.7,59.0,16.0,3.6,NCES/Ohio DOE estimates
+2020,16.8,70.8,5.0,1.0,5.7,60.0,16.2,3.8,NCES/Ohio DOE
+2021,16.6,71.0,5.0,1.0,5.6,61.0,16.4,4.0,NCES/Ohio DOE
+2022,16.6,71.2,5.0,1.0,5.7,61.5,16.5,4.1,NCES/Ohio DOE
+2023,16.6,71.3,5.0,1.0,5.7,62.0,16.5,4.2,NCES 2023

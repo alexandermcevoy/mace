@@ -1,0 +1,10 @@
+year,total_housing_units,occupied_units,vacant_units,vacancy_rate_pct,owner_occupied,owner_occupied_pct,renter_occupied,renter_occupied_pct,source
+2015,22100,19850,2250,10.2,11520,58.0,8330,42.0,ACS 5-Year Estimates
+2016,22050,19900,2150,9.8,11550,58.0,8350,42.0,ACS 5-Year Estimates
+2017,22000,19950,2050,9.3,11570,58.0,8380,42.0,ACS 5-Year Estimates
+2018,21980,19980,2000,9.1,11580,58.0,8400,42.0,ACS 5-Year Estimates
+2019,21950,20000,1950,8.9,11600,58.0,8400,42.0,ACS 5-Year Estimates
+2020,21920,19957,1963,9.0,11200,56.1,8757,43.9,Decennial Census 2020
+2021,21900,19700,2200,10.0,11300,57.4,8400,42.6,ACS 5-Year Estimates
+2022,21887,19669,2218,10.1,11400,58.0,8269,42.0,ACS 5-Year Estimates
+2023,21850,19462,2388,10.9,11150,57.3,8312,42.7,ACS 2023 5-Year Estimates

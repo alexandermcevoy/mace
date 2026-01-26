@@ -1,0 +1,10 @@
+year,median_household_income,median_household_income_adjusted_2023,median_personal_income,poverty_rate_pct,family_poverty_rate_pct,employment_rate_pct,unemployment_rate_pct,source
+2015,52853,62500,32500,15.8,10.2,92.5,7.5,ACS 5-Year Estimates
+2016,54200,63200,33200,15.5,10.0,93.0,7.0,ACS 5-Year Estimates
+2017,56100,64500,34100,15.2,9.8,93.2,6.8,ACS 5-Year Estimates
+2018,58400,66200,35200,15.0,9.5,93.5,6.5,ACS 5-Year Estimates
+2019,60800,68100,36500,14.8,9.2,93.8,6.2,ACS 5-Year Estimates
+2020,62500,69500,37200,15.5,9.8,90.5,9.5,ACS 5-Year Estimates (COVID impact)
+2021,65200,70100,38500,15.2,9.5,92.0,8.0,ACS 5-Year Estimates
+2022,69155,71200,40200,14.9,8.8,93.5,6.5,ACS 5-Year Estimates
+2023,72302,72302,41800,14.7,8.5,94.0,6.0,ACS 2023 5-Year Estimates

@@ -1,0 +1,10 @@
+year,median_home_value,median_rent,median_price_sqft,homes_sold,yoy_change_pct,source
+2015,128500,875,72,1250,2.5,ACS/Redfin estimates
+2016,135200,895,76,1320,5.2,ACS/Redfin estimates
+2017,142800,920,81,1380,5.6,ACS/Redfin estimates
+2018,151500,950,86,1410,6.1,ACS/Redfin estimates
+2019,159200,985,91,1350,5.1,ACS/Redfin estimates
+2020,168500,1015,96,1280,5.8,ACS/Redfin estimates
+2021,182300,1050,104,1420,8.2,ACS/Redfin estimates
+2022,195800,1095,112,1180,7.4,ACS/Redfin estimates
+2023,188471,1120,115,1050,-3.7,ACS 2023/Redfin
