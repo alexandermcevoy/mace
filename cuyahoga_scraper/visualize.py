@@ -76,13 +76,13 @@ def calculate_assessed_tax_rate(prop: Property) -> Optional[float]:
     return None
 
 
-def plot_tax_rates_by_property_class(
+def plot_annual_taxes_by_property_class(
     properties: List[Property],
-    output_path: str = "tax_rates_by_class.png",
+    output_path: str = "annual_taxes_by_class.png",
     show: bool = False,
 ) -> str:
     """
-    Create bar chart of average property tax rates by property class.
+    Create bar chart of average annual property taxes by property class.
 
     Args:
         properties: List of Property objects
@@ -92,13 +92,12 @@ def plot_tax_rates_by_property_class(
     Returns:
         Path to saved chart
     """
-    # Group properties by class and calculate average tax rates
-    class_rates: Dict[str, List[float]] = defaultdict(list)
+    # Group properties by class and collect annual taxes
+    class_taxes: Dict[str, List[float]] = defaultdict(list)
 
     for prop in properties:
-        rate = calculate_tax_rate(prop)
-        if rate is not None and prop.property_class:
-            class_rates[prop.property_class].append(rate)
+        if prop.annual_taxes and prop.property_class:
+            class_taxes[prop.property_class].append(prop.annual_taxes)
 
     # Calculate averages
     class_labels = {
@@ -111,27 +110,27 @@ def plot_tax_rates_by_property_class(
     }
 
     categories = []
-    avg_rates = []
+    avg_taxes = []
     counts = []
 
-    for class_code in sorted(class_rates.keys()):
-        rates = class_rates[class_code]
+    for class_code in sorted(class_taxes.keys()):
+        taxes = class_taxes[class_code]
         label = class_labels.get(class_code, class_code)
-        categories.append(f"{label}\n(n={len(rates)})")
-        avg_rates.append(sum(rates) / len(rates))
-        counts.append(len(rates))
+        categories.append(f"{label}\n(n={len(taxes)})")
+        avg_taxes.append(sum(taxes) / len(taxes))
+        counts.append(len(taxes))
 
     # Create figure
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Create bars with colors
     colors = ['#2ecc71', '#3498db', '#9b59b6', '#e74c3c', '#f39c12', '#95a5a6']
-    bars = ax.bar(categories, avg_rates, color=colors[:len(categories)], edgecolor='black', linewidth=1.2)
+    bars = ax.bar(categories, avg_taxes, color=colors[:len(categories)], edgecolor='black', linewidth=1.2)
 
     # Add value labels on bars
-    for bar, rate in zip(bars, avg_rates):
+    for bar, tax in zip(bars, avg_taxes):
         height = bar.get_height()
-        ax.annotate(f'{rate:.2f}%',
+        ax.annotate(f'${tax:,.0f}',
                     xy=(bar.get_x() + bar.get_width() / 2, height),
                     xytext=(0, 3),
                     textcoords="offset points",
@@ -139,19 +138,17 @@ def plot_tax_rates_by_property_class(
                     fontsize=12, fontweight='bold')
 
     # Styling
-    ax.set_ylabel('Average Effective Tax Rate (%)', fontsize=12)
+    ax.set_ylabel('Average Annual Property Tax ($)', fontsize=12)
     ax.set_xlabel('Property Class', fontsize=12)
-    ax.set_title('Cleveland Heights Property Tax Rates by Property Class', fontsize=14, fontweight='bold')
-    ax.set_ylim(0, max(avg_rates) * 1.2)
+    ax.set_title('Cleveland Heights Annual Property Taxes by Property Class', fontsize=14, fontweight='bold')
+    ax.set_ylim(0, max(avg_taxes) * 1.2)
+
+    # Format y-axis as currency
+    ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x:,.0f}'))
 
     # Add grid
     ax.yaxis.grid(True, linestyle='--', alpha=0.7)
     ax.set_axisbelow(True)
-
-    # Add note about calculation
-    ax.text(0.02, 0.98, 'Tax Rate = Annual Taxes / Market Value × 100',
-            transform=ax.transAxes, fontsize=9, verticalalignment='top',
-            style='italic', color='gray')
 
     plt.tight_layout()
 
@@ -165,13 +162,13 @@ def plot_tax_rates_by_property_class(
     return output_path
 
 
-def plot_tax_rates_by_value_range(
+def plot_annual_taxes_by_value_range(
     properties: List[Property],
-    output_path: str = "tax_rates_by_value.png",
+    output_path: str = "annual_taxes_by_value.png",
     show: bool = False,
 ) -> str:
     """
-    Create bar chart of average property tax rates by property value range.
+    Create bar chart of average annual property taxes by property value range.
 
     Args:
         properties: List of Property objects
@@ -191,37 +188,36 @@ def plot_tax_rates_by_value_range(
     ]
 
     # Group properties by value range
-    range_rates: Dict[str, List[float]] = defaultdict(list)
+    range_taxes: Dict[str, List[float]] = defaultdict(list)
 
     for prop in properties:
-        rate = calculate_tax_rate(prop)
-        if rate is not None and prop.market_value_total:
+        if prop.annual_taxes and prop.market_value_total:
             for low, high, label in ranges:
                 if low <= prop.market_value_total < high:
-                    range_rates[label].append(rate)
+                    range_taxes[label].append(prop.annual_taxes)
                     break
 
     # Prepare data
     categories = []
-    avg_rates = []
+    avg_taxes = []
 
     for _, _, label in ranges:
-        if label in range_rates:
-            rates = range_rates[label]
-            categories.append(f"{label}\n(n={len(rates)})")
-            avg_rates.append(sum(rates) / len(rates))
+        if label in range_taxes:
+            taxes = range_taxes[label]
+            categories.append(f"{label}\n(n={len(taxes)})")
+            avg_taxes.append(sum(taxes) / len(taxes))
 
     # Create figure
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # Create gradient colors
     colors = plt.cm.Blues([(i + 3) / (len(categories) + 3) for i in range(len(categories))])
-    bars = ax.bar(categories, avg_rates, color=colors, edgecolor='black', linewidth=1.2)
+    bars = ax.bar(categories, avg_taxes, color=colors, edgecolor='black', linewidth=1.2)
 
     # Add value labels
-    for bar, rate in zip(bars, avg_rates):
+    for bar, tax in zip(bars, avg_taxes):
         height = bar.get_height()
-        ax.annotate(f'{rate:.2f}%',
+        ax.annotate(f'${tax:,.0f}',
                     xy=(bar.get_x() + bar.get_width() / 2, height),
                     xytext=(0, 3),
                     textcoords="offset points",
@@ -229,10 +225,13 @@ def plot_tax_rates_by_value_range(
                     fontsize=12, fontweight='bold')
 
     # Styling
-    ax.set_ylabel('Average Effective Tax Rate (%)', fontsize=12)
+    ax.set_ylabel('Average Annual Property Tax ($)', fontsize=12)
     ax.set_xlabel('Property Value Range', fontsize=12)
-    ax.set_title('Cleveland Heights Property Tax Rates by Value Range', fontsize=14, fontweight='bold')
-    ax.set_ylim(0, max(avg_rates) * 1.2)
+    ax.set_title('Cleveland Heights Annual Property Taxes by Value Range', fontsize=14, fontweight='bold')
+    ax.set_ylim(0, max(avg_taxes) * 1.2)
+
+    # Format y-axis as currency
+    ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x:,.0f}'))
 
     ax.yaxis.grid(True, linestyle='--', alpha=0.7)
     ax.set_axisbelow(True)
@@ -247,13 +246,13 @@ def plot_tax_rates_by_value_range(
     return output_path
 
 
-def plot_tax_rates_by_year_built(
+def plot_annual_taxes_by_year_built(
     properties: List[Property],
-    output_path: str = "tax_rates_by_year.png",
+    output_path: str = "annual_taxes_by_year.png",
     show: bool = False,
 ) -> str:
     """
-    Create bar chart of average property tax rates by decade built.
+    Create bar chart of average annual property taxes by decade built.
 
     Args:
         properties: List of Property objects
@@ -264,37 +263,36 @@ def plot_tax_rates_by_year_built(
         Path to saved chart
     """
     # Group by decade
-    decade_rates: Dict[str, List[float]] = defaultdict(list)
+    decade_taxes: Dict[str, List[float]] = defaultdict(list)
 
     for prop in properties:
-        rate = calculate_tax_rate(prop)
-        if rate is not None and prop.year_built:
+        if prop.annual_taxes and prop.year_built:
             decade = (prop.year_built // 10) * 10
             label = f"{decade}s"
-            decade_rates[label].append(rate)
+            decade_taxes[label].append(prop.annual_taxes)
 
     # Sort by decade
-    sorted_decades = sorted(decade_rates.keys())
+    sorted_decades = sorted(decade_taxes.keys())
 
     categories = []
-    avg_rates = []
+    avg_taxes = []
 
     for decade in sorted_decades:
-        rates = decade_rates[decade]
-        categories.append(f"{decade}\n(n={len(rates)})")
-        avg_rates.append(sum(rates) / len(rates))
+        taxes = decade_taxes[decade]
+        categories.append(f"{decade}\n(n={len(taxes)})")
+        avg_taxes.append(sum(taxes) / len(taxes))
 
     # Create figure
     fig, ax = plt.subplots(figsize=(12, 6))
 
     # Create gradient colors
     colors = plt.cm.Greens([(i + 3) / (len(categories) + 3) for i in range(len(categories))])
-    bars = ax.bar(categories, avg_rates, color=colors, edgecolor='black', linewidth=1.2)
+    bars = ax.bar(categories, avg_taxes, color=colors, edgecolor='black', linewidth=1.2)
 
     # Add value labels
-    for bar, rate in zip(bars, avg_rates):
+    for bar, tax in zip(bars, avg_taxes):
         height = bar.get_height()
-        ax.annotate(f'{rate:.2f}%',
+        ax.annotate(f'${tax:,.0f}',
                     xy=(bar.get_x() + bar.get_width() / 2, height),
                     xytext=(0, 3),
                     textcoords="offset points",
@@ -302,10 +300,13 @@ def plot_tax_rates_by_year_built(
                     fontsize=11, fontweight='bold')
 
     # Styling
-    ax.set_ylabel('Average Effective Tax Rate (%)', fontsize=12)
+    ax.set_ylabel('Average Annual Property Tax ($)', fontsize=12)
     ax.set_xlabel('Decade Built', fontsize=12)
-    ax.set_title('Cleveland Heights Property Tax Rates by Decade Built', fontsize=14, fontweight='bold')
-    ax.set_ylim(0, max(avg_rates) * 1.2)
+    ax.set_title('Cleveland Heights Annual Property Taxes by Decade Built', fontsize=14, fontweight='bold')
+    ax.set_ylim(0, max(avg_taxes) * 1.2)
+
+    # Format y-axis as currency
+    ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x:,.0f}'))
 
     ax.yaxis.grid(True, linestyle='--', alpha=0.7)
     ax.set_axisbelow(True)
@@ -326,7 +327,7 @@ def plot_comprehensive_tax_analysis(
     show: bool = False,
 ) -> str:
     """
-    Create comprehensive multi-panel tax rate analysis.
+    Create comprehensive multi-panel annual property tax analysis.
 
     Args:
         properties: List of Property objects
@@ -337,61 +338,62 @@ def plot_comprehensive_tax_analysis(
         Path to saved chart
     """
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-    fig.suptitle('Cleveland Heights Property Tax Rate Analysis', fontsize=16, fontweight='bold', y=1.02)
+    fig.suptitle('Cleveland Heights Annual Property Tax Analysis', fontsize=16, fontweight='bold', y=1.02)
 
-    # Panel 1: Tax rates by property class
+    # Panel 1: Annual taxes by property class
     ax1 = axes[0, 0]
-    class_rates = defaultdict(list)
+    class_taxes = defaultdict(list)
     for prop in properties:
-        rate = calculate_tax_rate(prop)
-        if rate and prop.property_class:
-            class_rates[prop.property_class].append(rate)
+        if prop.annual_taxes and prop.property_class:
+            class_taxes[prop.property_class].append(prop.annual_taxes)
 
     class_labels = {"R": "Residential", "C": "Commercial", "M": "Multi-Family"}
-    cats1 = [class_labels.get(k, k) for k in sorted(class_rates.keys())]
-    vals1 = [sum(v)/len(v) for k, v in sorted(class_rates.items())]
+    cats1 = [class_labels.get(k, k) for k in sorted(class_taxes.keys())]
+    vals1 = [sum(v)/len(v) for k, v in sorted(class_taxes.items())]
 
     bars1 = ax1.bar(cats1, vals1, color=['#2ecc71', '#3498db', '#9b59b6'][:len(cats1)], edgecolor='black')
-    ax1.set_ylabel('Avg Tax Rate (%)')
+    ax1.set_ylabel('Avg Annual Tax ($)')
     ax1.set_title('By Property Class')
+    ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x:,.0f}'))
     for bar, val in zip(bars1, vals1):
-        ax1.annotate(f'{val:.2f}%', xy=(bar.get_x() + bar.get_width()/2, bar.get_height()),
+        ax1.annotate(f'${val:,.0f}', xy=(bar.get_x() + bar.get_width()/2, bar.get_height()),
                     xytext=(0, 3), textcoords="offset points", ha='center', fontsize=10, fontweight='bold')
     ax1.yaxis.grid(True, linestyle='--', alpha=0.5)
 
-    # Panel 2: Tax rates by value range
+    # Panel 2: Annual taxes by value range
     ax2 = axes[0, 1]
     ranges = [(0, 200000, "<$200K"), (200000, 400000, "$200-400K"), (400000, float('inf'), ">$400K")]
-    range_rates = defaultdict(list)
+    range_taxes = defaultdict(list)
     for prop in properties:
-        rate = calculate_tax_rate(prop)
-        if rate and prop.market_value_total:
+        if prop.annual_taxes and prop.market_value_total:
             for low, high, lbl in ranges:
                 if low <= prop.market_value_total < high:
-                    range_rates[lbl].append(rate)
+                    range_taxes[lbl].append(prop.annual_taxes)
                     break
 
-    cats2 = [lbl for _, _, lbl in ranges if lbl in range_rates]
-    vals2 = [sum(range_rates[lbl])/len(range_rates[lbl]) for lbl in cats2]
+    cats2 = [lbl for _, _, lbl in ranges if lbl in range_taxes]
+    vals2 = [sum(range_taxes[lbl])/len(range_taxes[lbl]) for lbl in cats2]
 
     bars2 = ax2.bar(cats2, vals2, color=plt.cm.Blues([0.4, 0.6, 0.8])[:len(cats2)], edgecolor='black')
-    ax2.set_ylabel('Avg Tax Rate (%)')
+    ax2.set_ylabel('Avg Annual Tax ($)')
     ax2.set_title('By Property Value')
+    ax2.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x:,.0f}'))
     for bar, val in zip(bars2, vals2):
-        ax2.annotate(f'{val:.2f}%', xy=(bar.get_x() + bar.get_width()/2, bar.get_height()),
+        ax2.annotate(f'${val:,.0f}', xy=(bar.get_x() + bar.get_width()/2, bar.get_height()),
                     xytext=(0, 3), textcoords="offset points", ha='center', fontsize=10, fontweight='bold')
     ax2.yaxis.grid(True, linestyle='--', alpha=0.5)
 
-    # Panel 3: Distribution histogram
+    # Panel 3: Distribution histogram of annual taxes
     ax3 = axes[1, 0]
-    all_rates = [calculate_tax_rate(p) for p in properties]
-    all_rates = [r for r in all_rates if r is not None]
+    all_taxes = [p.annual_taxes for p in properties if p.annual_taxes]
 
-    ax3.hist(all_rates, bins=15, color='#e74c3c', edgecolor='black', alpha=0.7)
-    ax3.axvline(sum(all_rates)/len(all_rates), color='black', linestyle='--', linewidth=2, label=f'Mean: {sum(all_rates)/len(all_rates):.2f}%')
-    ax3.set_xlabel('Tax Rate (%)')
+    ax3.hist(all_taxes, bins=20, color='#e74c3c', edgecolor='black', alpha=0.7)
+    mean_tax = sum(all_taxes)/len(all_taxes)
+    ax3.axvline(mean_tax, color='black', linestyle='--', linewidth=2, label=f'Mean: ${mean_tax:,.0f}')
+    ax3.set_xlabel('Annual Property Tax ($)')
     ax3.set_ylabel('Number of Properties')
-    ax3.set_title('Tax Rate Distribution')
+    ax3.set_title('Tax Distribution')
+    ax3.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, p: f'${x/1000:.0f}K'))
     ax3.legend()
     ax3.yaxis.grid(True, linestyle='--', alpha=0.5)
 
@@ -402,11 +404,11 @@ def plot_comprehensive_tax_analysis(
     # Calculate statistics
     total_props = len(properties)
     props_with_tax = len([p for p in properties if p.annual_taxes])
-    avg_rate = sum(all_rates) / len(all_rates) if all_rates else 0
-    min_rate = min(all_rates) if all_rates else 0
-    max_rate = max(all_rates) if all_rates else 0
+    avg_tax = sum(all_taxes) / len(all_taxes) if all_taxes else 0
+    min_tax = min(all_taxes) if all_taxes else 0
+    max_tax = max(all_taxes) if all_taxes else 0
+    median_tax = sorted(all_taxes)[len(all_taxes)//2] if all_taxes else 0
     avg_value = sum(p.market_value_total for p in properties if p.market_value_total) / total_props
-    avg_tax = sum(p.annual_taxes for p in properties if p.annual_taxes) / props_with_tax
 
     stats_text = f"""
     Cleveland Heights Property Tax Summary
@@ -415,11 +417,11 @@ def plot_comprehensive_tax_analysis(
     Total Properties:           {total_props:,}
 
     Average Market Value:       ${avg_value:,.0f}
-    Average Annual Taxes:       ${avg_tax:,.0f}
 
-    Average Effective Tax Rate: {avg_rate:.2f}%
-    Minimum Tax Rate:           {min_rate:.2f}%
-    Maximum Tax Rate:           {max_rate:.2f}%
+    Average Annual Tax:         ${avg_tax:,.0f}
+    Median Annual Tax:          ${median_tax:,.0f}
+    Minimum Annual Tax:         ${min_tax:,.0f}
+    Maximum Annual Tax:         ${max_tax:,.0f}
 
     {'='*45}
     Data Source: Cuyahoga County ArcGIS
@@ -467,25 +469,25 @@ def generate_all_visualizations(
     print(f"Generating visualizations for {len(properties)} properties...")
 
     # Generate individual charts
-    path1 = plot_tax_rates_by_property_class(
+    path1 = plot_annual_taxes_by_property_class(
         properties,
-        str(output_dir / "tax_rates_by_class.png"),
+        str(output_dir / "annual_taxes_by_class.png"),
         show=show,
     )
     generated_files.append(path1)
     print(f"  Created: {path1}")
 
-    path2 = plot_tax_rates_by_value_range(
+    path2 = plot_annual_taxes_by_value_range(
         properties,
-        str(output_dir / "tax_rates_by_value.png"),
+        str(output_dir / "annual_taxes_by_value.png"),
         show=show,
     )
     generated_files.append(path2)
     print(f"  Created: {path2}")
 
-    path3 = plot_tax_rates_by_year_built(
+    path3 = plot_annual_taxes_by_year_built(
         properties,
-        str(output_dir / "tax_rates_by_year.png"),
+        str(output_dir / "annual_taxes_by_year.png"),
         show=show,
     )
     generated_files.append(path3)
