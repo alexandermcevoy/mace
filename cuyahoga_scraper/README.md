@@ -2,6 +2,32 @@
 
 A Python tool for pulling property data from Cuyahoga County's public property lookup systems, specifically designed for Cleveland Heights, Ohio properties.
 
+## Quick Start
+
+```bash
+# 1. Install dependencies
+pip install requests matplotlib
+
+# 2. Run the visualization (from project root)
+python run_visualization.py
+
+# 3. View the generated charts in ./output/
+```
+
+This generates property tax rate visualizations using 200 sample Cleveland Heights properties.
+
+### Fetch Real Data
+
+To fetch live data from Cuyahoga County (requires internet access):
+
+```bash
+# Fetch 500 real properties and generate charts
+python run_visualization.py --fetch --limit 500
+
+# Fetch data only (export to CSV)
+python -m cuyahoga_scraper fetch --limit 1000 --output properties.csv
+```
+
 ## Overview
 
 This scraper uses the Cuyahoga County ArcGIS REST API to retrieve parcel and property information. The tool provides:

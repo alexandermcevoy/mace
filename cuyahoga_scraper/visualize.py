@@ -14,45 +14,7 @@ import json
 
 from .models import Property
 from .scraper import CuyahogaPropertyScraper
-
-
-# Sample data representing realistic Cleveland Heights properties
-# Used when live data cannot be fetched
-SAMPLE_PROPERTIES = [
-    # Historic district properties (1900-1930)
-    {"parcel_id": "561-01-001", "address": "2345 Overlook Rd", "year_built": 1925, "market_value_total": 285000, "assessed_value": 99750, "annual_taxes": 7182, "property_class": "R", "living_area_sqft": 2400},
-    {"parcel_id": "561-01-002", "address": "2401 Overlook Rd", "year_built": 1922, "market_value_total": 310000, "assessed_value": 108500, "annual_taxes": 7812, "property_class": "R", "living_area_sqft": 2650},
-    {"parcel_id": "561-02-015", "address": "1890 Coventry Rd", "year_built": 1918, "market_value_total": 195000, "assessed_value": 68250, "annual_taxes": 4914, "property_class": "R", "living_area_sqft": 1800},
-    {"parcel_id": "561-02-022", "address": "2156 Lennox Rd", "year_built": 1928, "market_value_total": 225000, "assessed_value": 78750, "annual_taxes": 5670, "property_class": "R", "living_area_sqft": 2100},
-    {"parcel_id": "561-03-008", "address": "2678 Fairmount Blvd", "year_built": 1924, "market_value_total": 425000, "assessed_value": 148750, "annual_taxes": 10710, "property_class": "R", "living_area_sqft": 3200},
-    {"parcel_id": "561-03-019", "address": "2890 Fairmount Blvd", "year_built": 1920, "market_value_total": 520000, "assessed_value": 182000, "annual_taxes": 13104, "property_class": "R", "living_area_sqft": 4100},
-
-    # Mid-century properties (1940-1970)
-    {"parcel_id": "562-04-011", "address": "3456 Mayfield Rd", "year_built": 1952, "market_value_total": 175000, "assessed_value": 61250, "annual_taxes": 4410, "property_class": "R", "living_area_sqft": 1450},
-    {"parcel_id": "562-04-025", "address": "3512 Mayfield Rd", "year_built": 1948, "market_value_total": 185000, "assessed_value": 64750, "annual_taxes": 4662, "property_class": "R", "living_area_sqft": 1550},
-    {"parcel_id": "562-05-003", "address": "1245 Yellowstone Rd", "year_built": 1955, "market_value_total": 165000, "assessed_value": 57750, "annual_taxes": 4158, "property_class": "R", "living_area_sqft": 1380},
-    {"parcel_id": "562-05-018", "address": "1367 Yellowstone Rd", "year_built": 1960, "market_value_total": 155000, "assessed_value": 54250, "annual_taxes": 3906, "property_class": "R", "living_area_sqft": 1320},
-    {"parcel_id": "562-06-007", "address": "2089 Noble Rd", "year_built": 1958, "market_value_total": 145000, "assessed_value": 50750, "annual_taxes": 3654, "property_class": "R", "living_area_sqft": 1250},
-    {"parcel_id": "562-06-021", "address": "2145 Noble Rd", "year_built": 1965, "market_value_total": 138000, "assessed_value": 48300, "annual_taxes": 3478, "property_class": "R", "living_area_sqft": 1180},
-
-    # Later properties (1970-2000)
-    {"parcel_id": "563-07-004", "address": "4567 Warrensville Rd", "year_built": 1975, "market_value_total": 125000, "assessed_value": 43750, "annual_taxes": 3150, "property_class": "R", "living_area_sqft": 1100},
-    {"parcel_id": "563-07-016", "address": "4623 Warrensville Rd", "year_built": 1978, "market_value_total": 135000, "assessed_value": 47250, "annual_taxes": 3402, "property_class": "R", "living_area_sqft": 1200},
-    {"parcel_id": "563-08-009", "address": "1789 Lee Rd", "year_built": 1985, "market_value_total": 198000, "assessed_value": 69300, "annual_taxes": 4990, "property_class": "R", "living_area_sqft": 1650},
-    {"parcel_id": "563-08-023", "address": "1845 Lee Rd", "year_built": 1992, "market_value_total": 215000, "assessed_value": 75250, "annual_taxes": 5418, "property_class": "R", "living_area_sqft": 1800},
-
-    # Commercial properties
-    {"parcel_id": "564-09-001", "address": "2200 Lee Rd", "year_built": 1945, "market_value_total": 850000, "assessed_value": 297500, "annual_taxes": 22313, "property_class": "C", "living_area_sqft": 8500},
-    {"parcel_id": "564-09-012", "address": "2287 Lee Rd", "year_built": 1955, "market_value_total": 425000, "assessed_value": 148750, "annual_taxes": 11156, "property_class": "C", "living_area_sqft": 4200},
-    {"parcel_id": "564-10-005", "address": "1800 Coventry Rd", "year_built": 1935, "market_value_total": 675000, "assessed_value": 236250, "annual_taxes": 17719, "property_class": "C", "living_area_sqft": 6800},
-    {"parcel_id": "564-10-019", "address": "1856 Coventry Rd", "year_built": 1940, "market_value_total": 525000, "assessed_value": 183750, "annual_taxes": 13781, "property_class": "C", "living_area_sqft": 5200},
-
-    # Multi-family properties
-    {"parcel_id": "565-11-002", "address": "2450 Derbyshire Rd", "year_built": 1930, "market_value_total": 380000, "assessed_value": 133000, "annual_taxes": 9576, "property_class": "M", "living_area_sqft": 4800},
-    {"parcel_id": "565-11-014", "address": "2512 Derbyshire Rd", "year_built": 1928, "market_value_total": 420000, "assessed_value": 147000, "annual_taxes": 10584, "property_class": "M", "living_area_sqft": 5400},
-    {"parcel_id": "565-12-008", "address": "3100 Euclid Heights Blvd", "year_built": 1925, "market_value_total": 550000, "assessed_value": 192500, "annual_taxes": 13860, "property_class": "M", "living_area_sqft": 7200},
-    {"parcel_id": "565-12-020", "address": "3156 Euclid Heights Blvd", "year_built": 1932, "market_value_total": 485000, "assessed_value": 169750, "annual_taxes": 12222, "property_class": "M", "living_area_sqft": 6100},
-]
+from .sample_data import SAMPLE_PROPERTIES, generate_sample_properties
 
 
 def get_sample_properties() -> List[Property]:
