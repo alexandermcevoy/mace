@@ -1,0 +1,22 @@
+# Municipal Finance Research Dependencies
+
+# Core data analysis
+pandas>=2.0.0
+
+# Census data downloading
+census>=0.8.21          # Official US Census Bureau API wrapper
+us>=3.0.0               # State/FIPS code lookups
+
+# Excel file handling
+openpyxl>=3.1.0         # Read/write .xlsx files
+xlrd>=2.0.0             # Read older .xls files
+
+# PDF data extraction
+pdfplumber>=0.10.0      # Extract text and tables from PDFs
+tabula-py>=2.8.0        # Specialized PDF table extraction
+PyPDF2>=3.0.0           # Lightweight PDF text extraction
+
+# Charts and visualization
+matplotlib>=3.7.0       # Standard plotting library
+seaborn>=0.13.0         # Statistical visualizations
+plotly>=5.18.0          # Interactive charts
