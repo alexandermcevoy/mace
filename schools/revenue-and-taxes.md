@@ -107,7 +107,7 @@ We could not gather comparable local and state revenue shares for Shaker Heights
 
 ## 6. Money that passes through: EdChoice, community schools, open enrollment
 
-- **Before FY2022**, Ohio paid for EdChoice vouchers by **deducting** them from the resident district's state aid. CH-UH reported deductions of **$4.2 million (FY2019)** and a projected **$6.8 million (FY2020)** [[12]](#sources).
+- **Before FY2022**, Ohio paid for EdChoice vouchers by **deducting** them from the resident district's state aid. CH-UH reported deductions of **$4.2 million** for the prior fiscal year (reported as 2019) and a projected **$6.8 million** for the following year [[12]](#sources).
 - The district has also said that in FY2022 it received only about **$1,700 per pupil** in core foundation funding, while about **$11 million** went to roughly 2,000 EdChoice students living within its boundaries [[32]](#sources). That figure is a district claim about money flowing to students in the area. It is not a deduction from CH-UH's own budget.
 - **Since FY2022**, HB 110 has the state fund EdChoice, community (charter) schools, and open enrollment **directly** instead of deducting them from districts [[13]](#sources). The district still cites "recovery from EdChoice voucher losses" as a source of financial strain [[8]](#sources). CH-UH was a plaintiff in the EdChoice lawsuit, in which a Franklin County judge ruled the program unconstitutional in June 2025. The program continues while the case is appealed [[33]](#sources). The EdChoice page has more detail.
 
@@ -130,7 +130,7 @@ We could not gather comparable local and state revenue shares for Shaker Heights
 
 1. CH-UH, "Public School Funding" (undated): https://www.chuh.org/departments/finance/public-school-funding
 2. Malia Lewis, CH-UH Board of Education, testimony to the Ohio House Education Committee on HB 96, Feb 25, 2025: https://search-prod.lis.state.oh.us/api/v2/general_assembly_136/committees/cmte_h_education_1/meetings/cmte_h_education_1_2025-02-25-0215_45/testimony/1460/lewistestimony.pdf
-3. (reserved)
+3. Ohio Capital Journal, "Co-creator of Ohio's public school funding model pushes state to implement final phase" (Feb 17, 2025): https://ohiocapitaljournal.com/2025/02/17/co-creator-of-ohios-public-school-funding-model-pushes-state-to-implement-final-phase/
 4. U.S. News, Cleveland Heights-University Heights City district profile: https://www.usnews.com/education/k12/ohio/districts/cleveland-heights-university-heights-city-108002
 5. NCES Common Core of Data, district detail (FY2022–23 fiscal data): https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=3904379
 6. USAFacts, "How are public schools in Ohio funded?" (2023–24): https://usafacts.org/answers/how-are-public-schools-in-the-us-funded/state/ohio/
