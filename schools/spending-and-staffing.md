@@ -5,7 +5,7 @@ title: "Spending, Staffing, and Facilities"
 
 # Spending, Staffing, and Facilities
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#spending)
 
 *Cleveland Heights-University Heights City School District (CH-UH). Research current as of October 12, 2026. This page covers how the district spends money and how it is staffed. Separate pages cover the Issue 4 levy and five-year forecast, revenue and taxes, enrollment, academics, and EdChoice.*
 

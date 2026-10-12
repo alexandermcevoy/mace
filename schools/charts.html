@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CH-UH Schools in Charts · OpenHeights</title>
+<meta name="description" content="Interactive charts on the Cleveland Heights-University Heights City School District's finances, students and results, ahead of the November 2026 Issue 4 levy vote.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300;
+  --deemph: #b4b3ac;
+  --deemph-ink: #6b6a65;
+  --div-pos: #2a78d6; --div-neg: #e34948;
+  --link: #1c5cab;
+  --tip-bg: #ffffff;
+  --shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+    --deemph: #4d4c48; --deemph-ink: #a3a29b;
+    --div-pos: #3987e5; --div-neg: #e66767; --link: #86b6ef; --tip-bg: #252524;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300;
+  --deemph: #4d4c48; --deemph-ink: #a3a29b;
+  --div-pos: #3987e5; --div-neg: #e66767; --link: #86b6ef; --tip-bg: #252524;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.4);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+header.top { padding: 20px 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.crumb { font-size: 14px; color: var(--ink-2); }
+.crumb a { text-decoration: none; }
+.crumb a:hover { text-decoration: underline; }
+.theme-btn {
+  font: inherit; font-size: 13px; color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+.theme-btn:hover { color: var(--ink); }
+h1 { font-size: clamp(28px, 4.2vw, 42px); line-height: 1.12; margin: 18px 0 10px; letter-spacing: -0.015em; font-weight: 700; }
+.lede { font-size: 18px; color: var(--ink-2); max-width: 760px; margin: 0 0 8px; }
+.note { font-size: 14px; color: var(--muted); max-width: 760px; margin: 0 0 28px; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+nav.toc a {
+  font-size: 14px; text-decoration: none; color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px;
+}
+nav.toc a:hover { color: var(--ink); }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 40px; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+.tile .label { font-size: 13px; color: var(--ink-2); }
+.tile .value { font-size: 34px; font-weight: 650; line-height: 1.15; margin: 6px 0 4px; letter-spacing: -0.01em; }
+.tile .ctx { font-size: 13px; color: var(--muted); }
+section.part { margin: 0 0 48px; }
+section.part > h2 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+section.part > p.intro { color: var(--ink-2); margin: 0 0 18px; max-width: 760px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+figure.card {
+  margin: 0 0 16px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 18px 18px 14px; min-width: 0;
+}
+figure.card h3 { font-size: 17px; line-height: 1.3; margin: 0 0 4px; font-weight: 650; }
+figure.card .sub { font-size: 14px; color: var(--ink-2); margin: 0 0 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); margin: 0 0 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.legend i.line { width: 16px; height: 2px; border-radius: 1px; }
+.legend i.dot { width: 10px; height: 10px; border-radius: 50%; }
+.legend i.tick { width: 2px; height: 12px; border-radius: 1px; }
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: inherit; }
+figcaption { font-size: 12.5px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+figcaption a { color: var(--muted); }
+details.table { margin-top: 8px; font-size: 13px; }
+details.table summary { cursor: pointer; color: var(--ink-2); font-size: 13px; }
+details.table table { border-collapse: collapse; margin-top: 8px; width: 100%; font-variant-numeric: tabular-nums; }
+details.table th, details.table td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+details.table th:first-child, details.table td:first-child { text-align: left; }
+details.table th { color: var(--ink-2); font-weight: 600; }
+.tablewrap { overflow-x: auto; }
+.tip {
+  position: absolute; pointer-events: none; z-index: 10; background: var(--tip-bg); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow);
+  padding: 8px 10px; font-size: 12.5px; line-height: 1.35; min-width: 120px; max-width: 260px;
+  opacity: 0; transition: opacity .08s;
+}
+.tip.on { opacity: 1; }
+.tip .t { color: var(--ink-2); margin-bottom: 4px; font-weight: 600; }
+.tip .r { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.tip .r b { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tip .r span.n { color: var(--ink-2); }
+.tip .k { display: inline-block; width: 12px; height: 2px; border-radius: 1px; flex: none; }
+.tip .k.box { height: 10px; width: 10px; border-radius: 2px; }
+.tip .x { color: var(--muted); margin-top: 4px; white-space: normal; }
+.callout { border-left: 3px solid var(--axis); padding: 2px 0 2px 12px; color: var(--ink-2); font-size: 14px; margin: 8px 0 0; }
+footer { border-top: 1px solid var(--border); padding: 20px 0 40px; font-size: 13px; color: var(--muted); }
+.mark-hit { cursor: default; }
+.mark-hit:focus { outline: none; }
+.mark-hit:focus-visible + .focusring, .focusring.on { opacity: 1; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } .tiles { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .tile .value { font-size: 28px; } figure.card { padding: 14px 12px 12px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="crumb"><a href="../">OpenHeights</a> › <a href="./">CH-UH schools guide</a> › Charts</div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Color theme">Theme: auto</button>
+  </header>
+
+  <h1>CH-UH schools in charts</h1>
+  <p class="lede">Fifteen charts on the Cleveland Heights-University Heights City School District: its finances, the families it serves, and how its students are doing. Voters decide Issue 4, a 6.5-mill operating levy, on November 3, 2026.</p>
+  <p class="note">Every chart is drawn from figures checked against primary sources on Oct. 12, 2026. Hover or tap a mark for exact values; each chart has a data table and a link to the guide page with full sourcing. OpenHeights takes no position on the levy.</p>
+
+  <nav class="toc" aria-label="Sections">
+    <a href="#money">The money</a><a href="#spending">Spending &amp; staff</a><a href="#families">Who the district serves</a><a href="#results">Results</a>
+  </nav>
+
+  <div class="tiles" role="list">
+    <div class="tile" role="listitem"><div class="label">Issue 4 would raise</div><div class="value">$11.1M</div><div class="ctx">per year, continuing</div></div>
+    <div class="tile" role="listitem"><div class="label">Cost to a homeowner</div><div class="value">$228</div><div class="ctx">per year per $100,000 of county market value</div></div>
+    <div class="tile" role="listitem"><div class="label">General Fund, June 2030, without levy</div><div class="value">−$3.7M</div><div class="ctx">district's August 2026 forecast</div></div>
+    <div class="tile" role="listitem"><div class="label">School operating tax on homes</div><div class="value">51.05 mills</div><div class="ctx">4th-highest of 606 Ohio districts (TY2024)</div></div>
+  </div>
+
+  <section class="part" id="money">
+    <h2>The money</h2>
+    <p class="intro">Ohio law holds voted levies to the dollars they raised when they passed, so districts well above the 20-mill floor, as CH-UH is, must return to voters as costs rise. The forecast shows when the money runs short.</p>
+
+    <figure class="card" data-chart="forecast">
+      <h3>Without new money, the General Fund goes negative in FY2030. Issue 4 delays that but does not end the decline.</h3>
+      <p class="sub">General Fund balance available for appropriation (Line 10.010), June 30 of each year, $ millions</p>
+      <div class="legend"></div><div class="chart"></div>
+      <p class="callout">The "with Issue 4" line is an OpenHeights illustration: the district's August forecast plus $5.55M in FY27 and $11.1M a year after. Even with the levy, spending exceeds revenue by about $5.7M in FY2030.</p>
+      <figcaption>Source: CH-UH August 2026 five-year forecast and assumptions; February 2026 forecast (Ohio DEW). <a href="levy-2026">Levy page →</a></figcaption>
+    </figure>
+
+    <div class="grid2">
+      <figure class="card" data-chart="millage">
+        <h3>Homeowners pay about a third of the voted rate, and the 2024 reappraisal cut it further</h3>
+        <p class="sub">CH-UH current-operating millage, by tax year</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>Effective rates fall when values rise so that each levy collects the same dollars (HB 920). Source: Ohio DEW District Profile Reports; CH-UH ACFR. <a href="revenue-and-taxes">Revenue page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="revmix">
+        <h3>CH-UH relies on local taxes far more than the typical Ohio district</h3>
+        <p class="sub">Share of revenue by source, FY2025</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>The state formula now pays the legal minimum share (10%) of CH-UH's base cost. Source: Ohio DEW District Profile Report FY2025. <a href="revenue-and-taxes">Revenue page →</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="grid2">
+      <figure class="card" data-chart="taxpeers">
+        <h3>Among neighbors, only Shaker Heights taxes homes at a higher school operating rate</h3>
+        <p class="sub">Effective Class I (residential) operating mills, tax year 2024</p>
+        <div class="chart"></div>
+        <figcaption>Source: Ohio DEW District Profile Report FY2025. <a href="revenue-and-taxes">Revenue page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="levyhistory">
+        <h3>Heights levies have been close calls; the last passed by 135 votes</h3>
+        <p class="sub">Share voting yes on CH-UH tax issues since 2011</p>
+        <div class="chart"></div>
+        <figcaption>Nov. 2020 certified: 15,061 to 14,926, followed by an automatic recount. Source: Cuyahoga County Board of Elections; Patch; Heights Observer; Cleveland Jewish News. <a href="levy-2026">Levy page →</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="part" id="spending">
+    <h2>Spending &amp; staff</h2>
+    <p class="intro">CH-UH spends well above the state average on every measure. The staffing record supports both sides: the district has cut teachers faster than enrollment fell, while support staff grew.</p>
+
+    <div class="grid2">
+      <figure class="card" data-chart="spending">
+        <h3>CH-UH spends about 45% more per pupil than the state, but the gap has narrowed</h3>
+        <p class="sub">Current spending per pupil, Census Annual Survey of School System Finances</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>FY2014–FY2021 CH-UH figures include EdChoice and charter payments then deducted from district budgets; from FY2022 the state pays those directly. Source: U.S. Census; Urban Institute Education Data Portal. <a href="spending-and-staffing">Spending page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="staffing">
+        <h3>Enrollment fell 11%; instruction staff fell 14%; pupil-support staff rose 71%</h3>
+        <p class="sub">Full-time employees by function, indexed to FY2016 = 100</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>Pupil support covers counselors, nurses, psychologists and social workers. Some shifts between categories may be reclassification. Source: CH-UH audited annual financial reports (ACFR). <a href="spending-and-staffing">Spending page →</a></figcaption>
+      </figure>
+    </div>
+
+    <figure class="card" data-chart="teacherpeers">
+      <h3>CH-UH cut teachers faster than enrollment fell; most neighbors cut roughly in step</h3>
+      <p class="sub">Change from 2015-16 to 2024-25, NCES Common Core of Data</p>
+      <div class="legend"></div><div class="chart"></div>
+      <figcaption>Students per teacher at CH-UH rose from 12.1 to 14.4. Source: NCES CCD via Urban Institute Education Data Portal. <a href="spending-and-staffing">Spending page →</a></figcaption>
+    </figure>
+  </section>
+
+  <section class="part" id="families">
+    <h2>Who the district serves</h2>
+    <p class="intro">Enrollment has fallen by a third since 2000. More of the district's resident students now use state scholarships to attend private schools, and about a third of resident children are in private school or homeschool.</p>
+
+    <figure class="card" data-chart="residents">
+      <h3>Only 55% of resident students counted by the state now attend CH-UH, down from 72% in 2018-19</h3>
+      <p class="sub">Where students who live in the district are enrolled, report-card snapshot. Labels show the share attending CH-UH.</p>
+      <div class="legend"></div><div class="chart"></div>
+      <figcaption>Excludes private-school students without a state scholarship, and homeschoolers, whom the state does not count. Source: Ohio School Report Cards, "Place of Enrollment for Students Residing in the District." <a href="enrollment-and-demographics">Enrollment page →</a></figcaption>
+    </figure>
+
+    <div class="grid2">
+      <figure class="card" data-chart="enrollment">
+        <h3>District enrollment is down a third since 2000</h3>
+        <p class="sub">Fall enrollment, NCES Common Core of Data</p>
+        <div class="chart"></div>
+        <figcaption>2024-25 includes 169 preschoolers. Source: NCES CCD. <a href="enrollment-and-demographics">Enrollment page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="privateshare">
+        <h3>A third of resident K–12 children are in private school or homeschool, more than in any neighbor</h3>
+        <p class="sub">Share of resident K–12 students not in public school, ACS 2020–24 (bars, with margin of error) and 2008–12 (tick)</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>Source: U.S. Census Bureau, American Community Survey 5-year estimates, school-district geography. <a href="enrollment-and-demographics">Enrollment page →</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="part" id="results">
+    <h2>Results</h2>
+    <p class="intro">Scores are below the state but have risen quickly since 2023-24. Adjusted for child poverty, CH-UH performs about as expected. Different growth measures disagree.</p>
+
+    <figure class="card" data-chart="pi">
+      <h3>The Performance Index has recovered to its highest level since 2018-19, but remains below the typical Ohio district</h3>
+      <p class="sub">Performance Index (0–120), by report-card year</p>
+      <div class="legend"></div><div class="chart"></div>
+      <figcaption>Ohio changed its tests in 2014-15 and 2015-16, so earlier and later values are not strictly comparable; no tests were given in 2019-20. 2015-16 to 2017-18 converted from percent of 120. Source: Ohio DEW report card data. <a href="academic-outcomes">Academics page →</a></figcaption>
+    </figure>
+
+    <figure class="card" data-chart="scatter">
+      <h3>Compared with all 607 Ohio districts, CH-UH scores about where its child-poverty rate predicts</h3>
+      <p class="sub">Performance Index, 2025-26, against child poverty rate (Census SAIPE 2024). Each dot is a district; the line is the statewide fit.</p>
+      <div class="legend"></div><div class="chart"></div>
+      <p class="callout">Census child poverty counts all resident children, including the many CH-UH residents in private schools. The adjusted-outcomes page shows models with more controls; CH-UH sits near the middle on most, and near the top when race is controlled for.</p>
+      <figcaption>OpenHeights calculation from Ohio DEW 2025-26 report card data and Census SAIPE 2024. <a href="data/pi_vs_child_poverty_2025-26.csv">Download the data (CSV)</a> · <a href="adjusted-outcomes">Adjusted outcomes page →</a></figcaption>
+    </figure>
+
+    <div class="grid2">
+      <figure class="card" data-chart="valueadded">
+        <h3>Ohio's growth measure swung from the 14th to the 87th percentile in two years</h3>
+        <p class="sub">CH-UH value-added growth index, with statewide percentile. Above 0 means students grew more than expected.</p>
+        <div class="chart"></div>
+        <figcaption>Source: Ohio DEW report card Progress component data. <a href="adjusted-outcomes">Adjusted outcomes page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="learningrate">
+        <h3>Stanford's learning-rate measure ranks CH-UH last among nearby districts</h3>
+        <p class="sub">Average grade levels gained per school year, grades 3–8, 2022–25</p>
+        <div class="chart"></div>
+        <figcaption>Source: Stanford Educational Opportunity Project, 2025 district reports. <a href="adjusted-outcomes">Adjusted outcomes page →</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="grid2">
+      <figure class="card" data-chart="gaps">
+        <h3>Black and white students both outscore their statewide peers, but CH-UH's gap is wider</h3>
+        <p class="sub">Percent proficient or above, 2025-26</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>Source: Ohio DEW report card achievement and subgroup data. <a href="academic-outcomes">Academics page →</a></figcaption>
+      </figure>
+      <figure class="card" data-chart="absent">
+        <h3>More than a third of students are chronically absent, well above the state rate</h3>
+        <p class="sub">Students missing 10% or more of the school year</p>
+        <div class="legend"></div><div class="chart"></div>
+        <figcaption>Source: Ohio DEW report card data. <a href="academic-outcomes">Academics page →</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    Built by OpenHeights from public data. Chart data: <a href="data/viz.json">viz.json</a> · build script: <a href="data/build_viz_data.py">build_viz_data.py</a>. Full sourcing and caveats are on each <a href="./">guide page</a>.
+  </footer>
+</div>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var DATA = null;
+  var tip = document.getElementById("tip");
+
+  /* ---------- theme ---------- */
+  var themeBtn = document.getElementById("themeBtn");
+  var modes = ["auto", "light", "dark"];
+  var mode = "auto";
+  try { mode = localStorage.getItem("oh-theme") || "auto"; } catch (e) {}
+  function applyTheme() {
+    if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    themeBtn.textContent = "Theme: " + mode;
+    if (DATA) renderAll();
+  }
+  themeBtn.addEventListener("click", function () {
+    mode = modes[(modes.indexOf(mode) + 1) % modes.length];
+    try { localStorage.setItem("oh-theme", mode); } catch (e) {}
+    applyTheme();
+  });
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var onMq = function () { if (mode === "auto" && DATA) renderAll(); };
+    if (mq.addEventListener) mq.addEventListener("change", onMq); else if (mq.addListener) mq.addListener(onMq);
+  }
+
+  function css(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function C() {
+    return { ink: css("--ink"), ink2: css("--ink-2"), muted: css("--muted"), grid: css("--grid"), axis: css("--axis"),
+      surface: css("--surface"), s: [css("--s1"), css("--s2"), css("--s3"), css("--s4"), css("--s5"), css("--s6")],
+      de: css("--deemph"), deInk: css("--deemph-ink"), pos: css("--div-pos"), neg: css("--div-neg") };
+  }
+
+  /* ---------- helpers ---------- */
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    if (attrs) for (var k in attrs) if (attrs[k] !== undefined && attrs[k] !== null) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, attrs) {
+    var a = { x: x, y: y, "font-size": 12 };
+    for (var k in attrs || {}) a[k] = attrs[k];
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+  function halo(t) { t.setAttribute("stroke", css("--surface")); t.setAttribute("stroke-width", 3); t.setAttribute("stroke-linejoin", "round"); t.setAttribute("paint-order", "stroke"); return t; }
+  function svgFor(container, w, h, label) {
+    container.innerHTML = "";
+    var s = el("svg", { viewBox: "0 0 " + w + " " + h, width: w, height: h, role: "img", "aria-label": label });
+    container.appendChild(s);
+    return s;
+  }
+  function niceTicks(lo, hi, n) {
+    var span = hi - lo, step = Math.pow(10, Math.floor(Math.log10(span / n))), err = span / n / step;
+    if (err >= 7.5) step *= 10; else if (err >= 3.5) step *= 5; else if (err >= 1.5) step *= 2;
+    var t = [], v = Math.floor(lo / step + 1e-9) * step, end = Math.ceil(hi / step - 1e-9) * step;
+    for (; v <= end + step * 1e-6; v += step) t.push(+v.toFixed(10));
+    return t;
+  }
+  function fmtNum(v, d) { return v.toLocaleString("en-US", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+  function measure(svg, s, size, weight) {
+    var t = el("text", { "font-size": size || 12, "font-weight": weight || 400, x: -9999, y: -9999 }, svg);
+    t.textContent = s; var w = t.getComputedTextLength(); svg.removeChild(t); return w;
+  }
+  // rounded data-end bar (square at baseline)
+  function barPath(x0, y0, x1, y1, dir, r) {
+    // dir: 'right' | 'left' | 'up' | 'down' = direction the bar grows
+    var w = Math.abs(x1 - x0), h = Math.abs(y1 - y0);
+    var L = Math.min(x0, x1), T = Math.min(y0, y1), R = L + w, B = T + h;
+    if (dir === "right" || dir === "left") r = Math.min(r, h / 2, w); else r = Math.min(r, w / 2, h);
+    if (r <= 0.5) return "M" + L + "," + T + "H" + R + "V" + B + "H" + L + "Z";
+    if (dir === "right") return "M" + L + "," + T + "H" + (R - r) + "Q" + R + "," + T + " " + R + "," + (T + r) + "V" + (B - r) + "Q" + R + "," + B + " " + (R - r) + "," + B + "H" + L + "Z";
+    if (dir === "left") return "M" + R + "," + T + "H" + (L + r) + "Q" + L + "," + T + " " + L + "," + (T + r) + "V" + (B - r) + "Q" + L + "," + B + " " + (L + r) + "," + B + "H" + R + "Z";
+    if (dir === "up") return "M" + L + "," + B + "V" + (T + r) + "Q" + L + "," + T + " " + (L + r) + "," + T + "H" + (R - r) + "Q" + R + "," + T + " " + R + "," + (T + r) + "V" + B + "Z";
+    return "M" + L + "," + T + "V" + (B - r) + "Q" + L + "," + B + " " + (L + r) + "," + B + "H" + (R - r) + "Q" + R + "," + B + " " + R + "," + (B - r) + "V" + T + "Z";
+  }
+
+  /* ---------- tooltip ---------- */
+  function showTip(container, px, py, title, rows, extra) {
+    tip.innerHTML = "";
+    var t = document.createElement("div"); t.className = "t"; t.textContent = title; tip.appendChild(t);
+    rows.forEach(function (r) {
+      var row = document.createElement("div"); row.className = "r";
+      if (r.color) { var k = document.createElement("i"); k.className = "k" + (r.box ? " box" : ""); k.style.background = r.color; row.appendChild(k); }
+      var b = document.createElement("b"); b.textContent = r.value; row.appendChild(b);
+      if (r.name) { var n = document.createElement("span"); n.className = "n"; n.textContent = r.name; row.appendChild(n); }
+      tip.appendChild(row);
+    });
+    if (extra) { var x = document.createElement("div"); x.className = "x"; x.textContent = extra; tip.appendChild(x); }
+    var rect = container.getBoundingClientRect();
+    var ax = rect.left + window.scrollX + px, ay = rect.top + window.scrollY + py;
+    tip.classList.add("on");
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    var left = ax + 14; if (left + tw > window.scrollX + document.documentElement.clientWidth - 8) left = ax - tw - 14;
+    if (left < window.scrollX + 8) left = window.scrollX + 8;
+    var top = ay - th - 12; if (top < window.scrollY + 8) top = ay + 16;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.classList.remove("on"); }
+  function pointerXY(svg, evt) {
+    var r = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal;
+    var sx = vb.width / r.width, sy = vb.height / r.height;
+    return { x: (evt.clientX - r.left) * sx, y: (evt.clientY - r.top) * sy, k: 1 / sx };
+  }
+  function bindMark(svg, container, node, getTip, focusTarget) {
+    node.setAttribute("tabindex", "0");
+    node.setAttribute("class", "mark-hit");
+    var on = function (evt) {
+      var info = getTip(); var p;
+      if (evt && evt.clientX !== undefined) { var r = container.getBoundingClientRect(); p = { x: evt.clientX - r.left, y: evt.clientY - r.top }; }
+      else { var bb = node.getBoundingClientRect(), cr = container.getBoundingClientRect(); p = { x: bb.left - cr.left + bb.width / 2, y: bb.top - cr.top }; }
+      showTip(container, p.x, p.y, info.title, info.rows, info.extra);
+      if (focusTarget) focusTarget.setAttribute("opacity", "0.78");
+    };
+    var off = function () { hideTip(); if (focusTarget) focusTarget.removeAttribute("opacity"); };
+    node.addEventListener("pointermove", on); node.addEventListener("pointerleave", off);
+    node.addEventListener("focus", function () { on(null); }); node.addEventListener("blur", off);
+  }
+
+  /* ---------- legend & table ---------- */
+  function legend(card, items) {
+    var lg = card.querySelector(".legend"); if (!lg) return; lg.innerHTML = "";
+    items.forEach(function (it) {
+      var s = document.createElement("span"), i = document.createElement("i");
+      i.className = it.kind || ""; i.style.background = it.color;
+      if (it.kind === "dot" && it.ring) i.style.boxShadow = "0 0 0 2px " + it.ring;
+      s.appendChild(i); s.appendChild(document.createTextNode(it.name)); lg.appendChild(s);
+    });
+  }
+  function table(card, head, rows) {
+    var old = card.querySelector("details.table"); if (old) old.remove();
+    var d = document.createElement("details"); d.className = "table";
+    var sm = document.createElement("summary"); sm.textContent = "Show data table"; d.appendChild(sm);
+    var wrap = document.createElement("div"); wrap.className = "tablewrap";
+    var t = document.createElement("table"), thead = document.createElement("thead"), tr = document.createElement("tr");
+    head.forEach(function (h) { var th = document.createElement("th"); th.textContent = h; tr.appendChild(th); });
+    thead.appendChild(tr); t.appendChild(thead);
+    var tb = document.createElement("tbody");
+    rows.forEach(function (r) { var tr2 = document.createElement("tr"); r.forEach(function (c) { var td = document.createElement("td"); td.textContent = c; tr2.appendChild(td); }); tb.appendChild(tr2); });
+    t.appendChild(tb); wrap.appendChild(t); d.appendChild(wrap);
+    var cap = card.querySelector("figcaption"); card.insertBefore(d, cap);
+  }
+
+  /* ---------- line chart ---------- */
+  function lineChart(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth), H = o.height || 300;
+    var compact = W < 420;
+    var svg = svgFor(box, W, H, o.aria);
+    var xs = o.xpos || o.x.map(function (_, i) { return i; });
+    var all = []; o.series.forEach(function (s) { s.values.forEach(function (v) { if (v !== null) all.push(v); }); });
+    var lo = o.yMin !== undefined ? o.yMin : Math.min.apply(null, all), hi = o.yMax !== undefined ? o.yMax : Math.max.apply(null, all);
+    var ticks = niceTicks(lo, hi, compact ? 4 : 5); lo = Math.min(lo, ticks[0]); hi = Math.max(hi, ticks[ticks.length - 1]);
+    var yl = o.yfmt || function (v) { return fmtNum(v); };
+    var labW = Math.max.apply(null, ticks.map(function (t) { return measure(svg, yl(t), 12); }));
+    var endLabW = o.endLabels ? Math.max.apply(null, o.series.map(function (s) { return measure(svg, s.short || s.name, 12) + measure(svg, s.endFmt ? s.endFmt(s.values[s.values.length - 1]) : "", 12, 650) + 14; })) : 0;
+    if (compact) endLabW = 0;
+    var m = { l: labW + 10, r: Math.max(12, endLabW), t: 10, b: 28 };
+    var pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var xmin = Math.min.apply(null, xs), xmax = Math.max.apply(null, xs);
+    var X = function (v) { return m.l + (xmax === xmin ? pw / 2 : (v - xmin) / (xmax - xmin) * pw); };
+    var Y = function (v) { return m.t + (hi - v) / (hi - lo) * ph; };
+    var g = el("g", null, svg);
+    ticks.forEach(function (t) {
+      var zero = t === 0 && lo < 0;
+      el("line", { x1: m.l, x2: m.l + pw, y1: Y(t), y2: Y(t), stroke: zero ? c.muted : c.grid, "stroke-width": 1 }, g);
+      txt(g, m.l - 8, Y(t) + 4, yl(t), { "text-anchor": "end", fill: c.muted, "font-variant-numeric": "tabular-nums" });
+    });
+    var every = o.xEvery || 1;
+    if (compact && o.x.length > 8) every = Math.max(every, Math.ceil(o.x.length / 5));
+    o.x.forEach(function (lab, i) {
+      if (o.xShow ? o.xShow.indexOf(i) < 0 && !(compact && i === o.x.length - 1) : (i % every !== 0 && i !== o.x.length - 1)) return;
+      if (compact && o.xShow && o.xShow.indexOf(i) >= 0 && i % 2 === 1 && i !== o.x.length - 1) return;
+      txt(g, X(xs[i]), H - 8, lab, { "text-anchor": "middle", fill: c.muted });
+    });
+    el("line", { x1: m.l, x2: m.l + pw, y1: Y(Math.max(lo, Math.min(0, hi))) , y2: Y(Math.max(lo, Math.min(0, hi))), stroke: lo < 0 ? c.muted : c.axis, "stroke-width": 1 }, g);
+    if (o.annot) o.annot(svg, X, Y, m, pw, ph, c);
+    // lines
+    o.series.forEach(function (s, si) {
+      var col = s.color || c.s[si];
+      var d = "", pen = false;
+      s.values.forEach(function (v, i) {
+        if (v === null) { pen = false; return; }
+        d += (pen ? "L" : "M") + X(xs[i]).toFixed(1) + "," + Y(v).toFixed(1); pen = true;
+      });
+      el("path", { d: d, fill: "none", stroke: col, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", "stroke-dasharray": s.dash ? "5 4" : null }, svg);
+      // end dot
+      var li = -1; s.values.forEach(function (v, i) { if (v !== null) li = i; });
+      if (li >= 0) {
+        el("circle", { cx: X(xs[li]), cy: Y(s.values[li]), r: 4, fill: col, stroke: c.surface, "stroke-width": 2 }, svg);
+        s._end = { x: X(xs[li]), y: Y(s.values[li]), v: s.values[li], col: col };
+      }
+      if (o.markers) s.values.forEach(function (v, i) { if (v !== null && i !== li) el("circle", { cx: X(xs[i]), cy: Y(v), r: 3, fill: col, stroke: c.surface, "stroke-width": 1.5 }, svg); });
+    });
+    // end labels with collision check
+    if (o.endLabels && !compact) {
+      var ends = o.series.map(function (s) { return s._end ? { s: s, y: s._end.y } : null; }).filter(Boolean).sort(function (a, b) { return a.y - b.y; });
+      for (var i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+      ends.forEach(function (e) {
+        var s = e.s, x = s._end.x + 10;
+        if (Math.abs(e.y - s._end.y) > 2) el("line", { x1: s._end.x + 5, y1: s._end.y, x2: x - 2, y2: e.y, stroke: c.axis, "stroke-width": 1 }, svg);
+        var t = txt(svg, x, e.y + 4, "", { fill: c.ink2 });
+        if (s.endFmt) { var b = el("tspan", { "font-weight": 650, fill: c.ink }, t); b.textContent = s.endFmt(s._end.v) + " "; }
+        var n = el("tspan", null, t); n.textContent = s.short || s.name;
+      });
+    }
+    // crosshair
+    var hair = el("line", { y1: m.t, y2: m.t + ph, stroke: c.muted, "stroke-width": 1, opacity: 0 }, svg);
+    var dots = o.series.map(function (s, si) { return el("circle", { r: 4.5, fill: s.color || c.s[si], stroke: c.surface, "stroke-width": 2, opacity: 0 }, svg); });
+    var hit = el("rect", { x: m.l - 10, y: m.t, width: pw + 20, height: ph, fill: "transparent", tabindex: 0, "aria-label": o.aria + " — use arrow keys to step through values" }, svg);
+    var cur = -1;
+    function at(i) {
+      cur = i; var xi = X(xs[i]);
+      hair.setAttribute("x1", xi); hair.setAttribute("x2", xi); hair.setAttribute("opacity", 1);
+      var rows = [];
+      o.series.forEach(function (s, si) {
+        var v = s.values[i];
+        if (v === null || v === undefined) { dots[si].setAttribute("opacity", 0); return; }
+        dots[si].setAttribute("cx", xi); dots[si].setAttribute("cy", Y(v)); dots[si].setAttribute("opacity", 1);
+        rows.push({ color: s.color || c.s[si], value: (o.tipfmt || yl)(v), name: s.short || s.name });
+      });
+      var r = svg.getBoundingClientRect(), k = r.width / W;
+      showTip(box, xi * k, (rows.length ? Math.min.apply(null, o.series.map(function (s) { var v = s.values[i]; return v === null || v === undefined ? 1e9 : Y(v); })) : m.t) * k, (o.tipTitle ? o.tipTitle(i) : o.x[i]), rows, o.tipExtra ? o.tipExtra(i) : null);
+    }
+    function clear() { hair.setAttribute("opacity", 0); dots.forEach(function (d) { d.setAttribute("opacity", 0); }); hideTip(); cur = -1; }
+    hit.addEventListener("pointermove", function (evt) {
+      var p = pointerXY(svg, evt), best = 0, bd = 1e9;
+      xs.forEach(function (xv, i) { var dd = Math.abs(X(xv) - p.x); if (dd < bd) { bd = dd; best = i; } });
+      at(best);
+    });
+    hit.addEventListener("pointerleave", clear);
+    hit.addEventListener("focus", function () { at(xs.length - 1); });
+    hit.addEventListener("blur", clear);
+    hit.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { at(Math.min(xs.length - 1, cur + 1)); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { at(Math.max(0, cur - 1)); e.preventDefault(); }
+    });
+  }
+
+  /* ---------- horizontal bars (highlight one) ---------- */
+  function hbar(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var rowH = 26, n = o.rows.length, H = n * rowH + 34 + (o.refs ? 14 : 0);
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r[0], 12, r[0] === o.highlight ? 650 : 400); }));
+    var vf = o.vfmt || function (v) { return fmtNum(v, 2); };
+    var valW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, vf(r[1]), 12, 650); })) + 8;
+    var m = { l: labW + 12, r: valW + 8, t: (o.refs ? 18 : 4), b: 24 };
+    var pw = W - m.l - m.r;
+    var lo = o.min || 0, hi = o.max || Math.max.apply(null, o.rows.map(function (r) { return r[1]; }));
+    var ticks = niceTicks(lo, hi, W < 480 ? 3 : 5); hi = Math.max(hi, ticks[ticks.length - 1]);
+    var X = function (v) { return m.l + (v - lo) / (hi - lo) * pw; };
+    ticks.forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + n * rowH, stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), H - 6, (o.tfmt || fmtNum)(t), { "text-anchor": "middle", fill: c.muted });
+    });
+    el("line", { x1: X(lo), x2: X(lo), y1: m.t, y2: m.t + n * rowH, stroke: c.axis, "stroke-width": 1 }, svg);
+    (o.refs || []).forEach(function (rf, ri) {
+      el("line", { x1: X(rf.value), x2: X(rf.value), y1: m.t - 4, y2: m.t + n * rowH, stroke: c.ink2, "stroke-width": 1 }, svg);
+      var rl = rf.label || (rf.name + " " + vf(rf.value)), rlw = measure(svg, rl, 11), rx = X(rf.value) + 4, anc = "start";
+      if (rx + rlw > W - 2) { rx = X(rf.value) - 4; anc = "end"; }
+      txt(svg, rx, m.t - 7, rl, { "text-anchor": anc, fill: c.ink2, "font-size": 11 });
+    });
+    o.rows.forEach(function (r, i) {
+      var hl = r[0] === o.highlight || (o.highlightAlso && o.highlightAlso.indexOf(r[0]) >= 0);
+      var isRef = o.refRows && o.refRows.indexOf(r[0]) >= 0;
+      var y = m.t + i * rowH + 4, bh = 18;
+      var col = r[0] === o.highlight ? c.s[0] : (isRef ? c.axis : c.de);
+      txt(svg, m.l - 8, y + 13, r[0], { "text-anchor": "end", fill: hl ? c.ink : c.ink2, "font-weight": r[0] === o.highlight ? 650 : 400, "font-style": isRef ? "italic" : null });
+      var p = el("path", { d: barPath(X(lo), y, X(r[1]), y + bh, "right", 4), fill: col }, svg);
+      halo(txt(svg, X(r[1]) + 6, y + 13, vf(r[1]), { fill: hl ? c.ink : c.ink2, "font-weight": r[0] === o.highlight ? 650 : 400, "font-variant-numeric": "tabular-nums" }));
+      var hitr = el("rect", { x: m.l - labW - 8, y: y - 3, width: W - (m.l - labW - 8), height: rowH, fill: "transparent", "aria-label": r[0] + ": " + vf(r[1]) }, svg);
+      bindMark(svg, box, hitr, function () { return { title: r[0], rows: [{ color: col, box: true, value: vf(r[1]) + (o.unitTip ? " " + o.unitTip : "") }], extra: o.extra ? o.extra(r) : null }; }, p);
+    });
+  }
+
+  /* ---------- stacked horizontal 100% ---------- */
+  function stack100(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var rowH = 46, H = o.rows.length * rowH + 8;
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r.name, 12, 650); }));
+    var m = { l: labW + 12, r: 4 }, pw = W - m.l - m.r;
+    o.rows.forEach(function (r, ri) {
+      var y = ri * rowH + 8, bh = 24, x = m.l;
+      txt(svg, m.l - 8, y + 16, r.name, { "text-anchor": "end", fill: c.ink, "font-weight": ri === 0 ? 650 : 400 });
+      var tot = r.values.reduce(function (a, b) { return a + b; }, 0);
+      r.values.forEach(function (v, i) {
+        var w = v / tot * pw, gap = i < r.values.length - 1 ? 2 : 0;
+        var first = i === 0, last = i === r.values.length - 1;
+        var rr = 4, x0 = x, x1 = x + w - gap;
+        var d;
+        if (first) d = "M" + (x0 + rr) + "," + y + "H" + x1 + "V" + (y + bh) + "H" + (x0 + rr) + "Q" + x0 + "," + (y + bh) + " " + x0 + "," + (y + bh - rr) + "V" + (y + rr) + "Q" + x0 + "," + y + " " + (x0 + rr) + "," + y + "Z";
+        else if (last) d = barPath(x0, y, x1, y + bh, "right", rr);
+        else d = "M" + x0 + "," + y + "H" + x1 + "V" + (y + bh) + "H" + x0 + "Z";
+        var p = el("path", { d: d, fill: c.s[i] }, svg);
+        var lab = fmtNum(v, 1) + "%";
+        var lw = measure(svg, lab, 11.5, 600);
+        if (lw + 10 < w - gap) {
+          var lum = [0, 3, 2, 4].indexOf(i) >= 0 ? "#fff" : "#0b0b0b";
+          var fill = (i === 0 || i === 2) ? "#ffffff" : "#0b0b0b";
+          txt(svg, x0 + (w - gap) / 2, y + 16, lab, { "text-anchor": "middle", fill: fill, "font-size": 11.5, "font-weight": 600 });
+        }
+        var hitr = el("rect", { x: x0, y: y - 2, width: Math.max(w, 6), height: bh + 4, fill: "transparent", "aria-label": r.name + ", " + o.categories[i] + ": " + lab }, svg);
+        bindMark(svg, box, hitr, function () { return { title: r.name, rows: [{ color: c.s[i], box: true, value: lab, name: o.categories[i] }] }; }, p);
+        x += w;
+      });
+    });
+  }
+
+  /* ---------- stacked columns (absolute) ---------- */
+  function stackCols(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth), H = o.height || 320;
+    var compact = W < 560;
+    var svg = svgFor(box, W, H, o.aria);
+    var totals = o.rows.map(function (r) { return r.values.reduce(function (a, b) { return a + b; }, 0); });
+    var hi = Math.max.apply(null, totals), ticks = niceTicks(0, hi, 4); hi = ticks[ticks.length - 1];
+    var labW = measure(svg, fmtNum(hi), 12);
+    var m = { l: labW + 10, r: 4, t: 22, b: 28 }, pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var n = o.rows.length, band = pw / n, bw = Math.min(compact ? 26 : 40, band * 0.62);
+    var Y = function (v) { return m.t + (hi - v) / hi * ph; };
+    ticks.forEach(function (t) {
+      el("line", { x1: m.l, x2: m.l + pw, y1: Y(t), y2: Y(t), stroke: t === 0 ? c.axis : c.grid, "stroke-width": 1 }, svg);
+      txt(svg, m.l - 8, Y(t) + 4, fmtNum(t), { "text-anchor": "end", fill: c.muted, "font-variant-numeric": "tabular-nums" });
+    });
+    o.rows.forEach(function (r, ri) {
+      var cx = m.l + band * (ri + 0.5), x0 = cx - bw / 2, acc = 0;
+      var lab = compact ? r.name.replace(/^20(\d\d)-(\d\d)$/, "'$2") : r.name;
+      txt(svg, cx, H - 8, lab, { "text-anchor": "middle", fill: c.muted });
+      r.values.forEach(function (v, i) {
+        var yTop = Y(acc + v), yBot = Y(acc), last = i === r.values.length - 1;
+        var y1 = yBot - (i > 0 ? 2 : 0);
+        var hgt = y1 - yTop; if (hgt <= 0) { acc += v; return; }
+        var d = last ? barPath(x0, yTop, x0 + bw, y1, "up", 4) : "M" + x0 + "," + yTop + "H" + (x0 + bw) + "V" + y1 + "H" + x0 + "Z";
+        var p = el("path", { d: d, fill: c.s[i] }, svg);
+        var share = (v / totals[ri] * 100);
+        var hitr = el("rect", { x: cx - band / 2 + 2, y: yTop, width: band - 4, height: Math.max(hgt, 4), fill: "transparent", "aria-label": r.name + ", " + o.categories[i] + ": " + fmtNum(v) }, svg);
+        bindMark(svg, box, hitr, function () {
+          return { title: r.name + " · " + o.categories[i], rows: [{ color: c.s[i], box: true, value: fmtNum(v), name: "students" }, { value: fmtNum(share, 1) + "%", name: "of counted residents" }], extra: "Total counted: " + fmtNum(totals[ri]) };
+        }, p);
+        acc += v;
+      });
+      var sh = r.values[0] / totals[ri] * 100;
+      if (!compact || ri === 0 || ri === n - 1) txt(svg, cx, Y(totals[ri]) - 7, fmtNum(sh, 0) + "%", { "text-anchor": "middle", fill: c.ink, "font-weight": 650, "font-size": 11.5 });
+    });
+  }
+
+  /* ---------- grouped horizontal bars around zero ---------- */
+  function groupedH(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth), narrow = W < 560;
+    var k = o.categories.length, head = narrow ? 18 : 0, rowH = 14 * k + 18 + head, n = o.rows.length, H = n * rowH + 30;
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = narrow ? 0 : Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r.name, 12, 650); }));
+    var all = []; o.rows.forEach(function (r) { all = all.concat(r.values); });
+    var lo = Math.min(0, Math.min.apply(null, all)), hi = Math.max(0, Math.max.apply(null, all));
+    var ticks = niceTicks(lo, hi, narrow ? 3 : 5); lo = Math.min(lo, ticks[0]); hi = Math.max(hi, ticks[ticks.length - 1]);
+    var padL = measure(svg, "-30%", 11) + 8;
+    var m = { l: (narrow ? 0 : labW + 12) + padL, r: 16, t: 4, b: 24 }, pw = W - m.l - m.r;
+    var X = function (v) { return m.l + (v - lo) / (hi - lo) * pw; };
+    ticks.forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + n * rowH, stroke: t === 0 ? c.muted : c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), H - 6, (t > 0 ? "+" : "") + t + "%", { "text-anchor": "middle", fill: c.muted });
+    });
+    o.rows.forEach(function (r, ri) {
+      var y0 = m.t + ri * rowH + 6 + head;
+      if (narrow) halo(txt(svg, 0, y0 - 5, r.name, { fill: ri === 0 ? c.ink : c.ink2, "font-weight": ri === 0 ? 650 : 400 }));
+      else txt(svg, labW + 4, y0 + (k * 14) / 2 + 3, r.name, { "text-anchor": "end", fill: ri === 0 ? c.ink : c.ink2, "font-weight": ri === 0 ? 650 : 400 });
+      r.values.forEach(function (v, i) {
+        var y = y0 + i * 14, bh = 12;
+        var p = el("path", { d: barPath(X(0), y, X(v), y + bh, v < 0 ? "left" : "right", 3), fill: c.s[i] }, svg);
+        var lab = (v > 0 ? "+" : "") + v + "%";
+        halo(txt(svg, X(v) + (v < 0 ? -5 : 5), y + 10, lab, { "text-anchor": v < 0 ? "end" : "start", fill: c.ink2, "font-size": 11, "font-variant-numeric": "tabular-nums" }));
+        var hitr = el("rect", { x: 0, y: y - 1, width: W, height: 14, fill: "transparent", "aria-label": r.name + ", " + o.categories[i] + ": " + lab }, svg);
+        bindMark(svg, box, hitr, function () { return { title: r.name, rows: o.categories.map(function (cn, j) { return { color: c.s[j], box: true, value: (r.values[j] > 0 ? "+" : "") + r.values[j] + "%", name: cn }; }) }; }, p);
+      });
+    });
+  }
+
+  /* ---------- diverging columns ---------- */
+  function divCols(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth), H = 260;
+    var svg = svgFor(box, W, H, o.aria);
+    var vals = o.rows.map(function (r) { return r[1]; });
+    var lim = Math.max(Math.abs(Math.min.apply(null, vals)), Math.abs(Math.max.apply(null, vals)));
+    var ticks = niceTicks(-lim, lim, 4); var lo = ticks[0], hi = ticks[ticks.length - 1];
+    var m = { l: 34, r: 8, t: 22, b: 28 }, pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var Y = function (v) { return m.t + (hi - v) / (hi - lo) * ph; };
+    ticks.forEach(function (t) {
+      el("line", { x1: m.l, x2: m.l + pw, y1: Y(t), y2: Y(t), stroke: t === 0 ? c.muted : c.grid, "stroke-width": 1 }, svg);
+      txt(svg, m.l - 8, Y(t) + 4, (t > 0 ? "+" : "") + t, { "text-anchor": "end", fill: c.muted });
+    });
+    var n = o.rows.length, band = pw / n, bw = Math.min(28, band * 0.5);
+    o.rows.forEach(function (r, i) {
+      var cx = m.l + band * (i + 0.5), v = r[1], col = v >= 0 ? c.pos : c.neg;
+      var p = el("path", { d: barPath(cx - bw / 2, Y(0), cx + bw / 2, Y(v), v >= 0 ? "up" : "down", 4), fill: col }, svg);
+      txt(svg, cx, H - 8, W < 420 ? r[0].replace(/^20(\d\d)-(\d\d)$/, "'$2") : r[0], { "text-anchor": "middle", fill: c.muted });
+      var lab = (v > 0 ? "+" : "") + v.toFixed(2);
+      var ly = v >= 0 ? Y(v) - 8 : Y(v) + 16;
+      var t = txt(svg, cx, ly, lab, { "text-anchor": "middle", fill: c.ink, "font-weight": 650, "font-size": 11.5, "font-variant-numeric": "tabular-nums" });
+      if (r[2] !== null) txt(svg, cx, v >= 0 ? ly - 13 : ly + 13, ordinal(r[2]) + " pct.", { "text-anchor": "middle", fill: c.ink2, "font-size": 11 });
+      var hitr = el("rect", { x: cx - band / 2 + 2, y: m.t, width: band - 4, height: ph, fill: "transparent", "aria-label": r[0] + ": " + lab }, svg);
+      bindMark(svg, box, hitr, function () { return { title: r[0], rows: [{ color: col, box: true, value: lab, name: "growth index" }].concat(r[2] !== null ? [{ value: ordinal(r[2]), name: "statewide percentile" }] : []) }; }, p);
+    });
+  }
+  function ordinal(n) { var s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+
+  /* ---------- dumbbell ---------- */
+  function dumbbell(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var rowH = 40, n = o.rows.length, H = n * rowH + 30;
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r.name, 12, 650); }));
+    var m = { l: labW + 14, r: 16, t: 6, b: 24 }, pw = W - m.l - m.r;
+    var X = function (v) { return m.l + v / 100 * pw; };
+    [0, 25, 50, 75, 100].forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + n * rowH, stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), H - 6, t + "%", { "text-anchor": "middle", fill: c.muted });
+    });
+    o.rows.forEach(function (r, i) {
+      var y = m.t + i * rowH + rowH / 2, chuh = r.name.indexOf("CH-UH") === 0;
+      if (i === 2) el("line", { x1: 0, x2: W, y1: m.t + i * rowH, y2: m.t + i * rowH, stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, m.l - 10, y + 4, r.name, { "text-anchor": "end", fill: chuh ? c.ink : c.ink2, "font-weight": chuh ? 650 : 400 });
+      el("line", { x1: X(r.black), x2: X(r.white), y1: y, y2: y, stroke: c.axis, "stroke-width": 2, "stroke-linecap": "round" }, svg);
+      var gap = r.white - r.black;
+      halo(txt(svg, (X(r.black) + X(r.white)) / 2, y - 9, fmtNum(gap, 1) + "-pt gap", { "text-anchor": "middle", fill: c.ink2, "font-size": 11 }));
+      var d1 = el("circle", { cx: X(r.black), cy: y, r: 6, fill: c.s[0], stroke: c.surface, "stroke-width": 2 }, svg);
+      var d2 = el("circle", { cx: X(r.white), cy: y, r: 6, fill: c.s[1], stroke: c.surface, "stroke-width": 2 }, svg);
+      var hitr = el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent", "aria-label": r.name + ": Black " + r.black + "%, white " + r.white + "%" }, svg);
+      bindMark(svg, box, hitr, function () { return { title: r.name, rows: [{ color: c.s[1], value: r.white + "%", name: "White students" }, { color: c.s[0], value: r.black + "%", name: "Black students" }], extra: "Gap: " + fmtNum(gap, 1) + " points" }; });
+    });
+  }
+
+  /* ---------- error-bar bars (private share) ---------- */
+  function errBars(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var rowH = 30, n = o.rows.length, H = n * rowH + 30;
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r[0], 12, 650); }));
+    var m = { l: labW + 12, r: 46, t: 4, b: 24 }, pw = W - m.l - m.r, hi = 40;
+    var X = function (v) { return m.l + v / hi * pw; };
+    [0, 10, 20, 30, 40].forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + n * rowH, stroke: t === 0 ? c.axis : c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), H - 6, t + "%", { "text-anchor": "middle", fill: c.muted });
+    });
+    o.rows.forEach(function (r, i) {
+      var y = m.t + i * rowH + 6, bh = 18, hl = r[0] === o.highlight, col = hl ? c.s[0] : c.de;
+      txt(svg, m.l - 8, y + 13, r[0], { "text-anchor": "end", fill: hl ? c.ink : c.ink2, "font-weight": hl ? 650 : 400 });
+      var p = el("path", { d: barPath(X(0), y, X(r[1]), y + bh, "right", 4), fill: col }, svg);
+      var cy = y + bh / 2;
+      el("line", { x1: X(r[1] - r[2]), x2: X(r[1] + r[2]), y1: cy, y2: cy, stroke: c.ink2, "stroke-width": 1.25 }, svg);
+      el("line", { x1: X(r[1] - r[2]), x2: X(r[1] - r[2]), y1: cy - 4, y2: cy + 4, stroke: c.ink2, "stroke-width": 1.25 }, svg);
+      el("line", { x1: X(r[1] + r[2]), x2: X(r[1] + r[2]), y1: cy - 4, y2: cy + 4, stroke: c.ink2, "stroke-width": 1.25 }, svg);
+      el("line", { x1: X(r[3]), x2: X(r[3]), y1: y - 3, y2: y + bh + 3, stroke: c.ink, "stroke-width": 2.5, "stroke-linecap": "round" }, svg);
+      txt(svg, X(r[1] + r[2]) + 6, y + 13, fmtNum(r[1], 1) + "%", { fill: hl ? c.ink : c.ink2, "font-weight": hl ? 650 : 400 });
+      var hitr = el("rect", { x: 0, y: y - 4, width: W, height: rowH, fill: "transparent", "aria-label": r[0] + ": " + r[1] + "% (±" + r[2] + "), 2008–12: " + r[3] + "%" }, svg);
+      bindMark(svg, box, hitr, function () { return { title: r[0], rows: [{ color: col, box: true, value: fmtNum(r[1], 1) + "% ± " + r[2], name: "2020–24" }, { color: c.ink, value: fmtNum(r[3], 1) + "%", name: "2008–12" }] }; }, p);
+    });
+  }
+
+  /* ---------- scatter ---------- */
+  function scatter(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var compact = W < 560, H = compact ? 340 : 440;
+    var svg = svgFor(box, W, H, o.aria);
+    var pts = o.points, xs = pts.map(function (p) { return p[2]; }), ys = pts.map(function (p) { return p[3]; });
+    var xlo = 0, xhi = Math.ceil(Math.max.apply(null, xs) / 10) * 10, yt = niceTicks(Math.min.apply(null, ys), Math.max.apply(null, ys), 5);
+    var ylo = yt[0], yhi = yt[yt.length - 1];
+    var m = { l: 40, r: 12, t: 12, b: 42 }, pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var X = function (v) { return m.l + (v - xlo) / (xhi - xlo) * pw; }, Y = function (v) { return m.t + (yhi - v) / (yhi - ylo) * ph; };
+    yt.forEach(function (t) {
+      el("line", { x1: m.l, x2: m.l + pw, y1: Y(t), y2: Y(t), stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, m.l - 8, Y(t) + 4, t, { "text-anchor": "end", fill: c.muted });
+    });
+    niceTicks(xlo, xhi, compact ? 4 : 6).forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + ph, stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), m.t + ph + 16, t + "%", { "text-anchor": "middle", fill: c.muted });
+    });
+    txt(svg, m.l + pw / 2, H - 4, "Child poverty rate (Census SAIPE 2024)", { "text-anchor": "middle", fill: c.ink2 });
+    txt(svg, m.l, m.t - 2 + 10, "", {});
+    // fit line
+    var f = o.fit, x1 = xlo, x2 = Math.max.apply(null, xs);
+    var cid = "clip" + Math.random().toString(36).slice(2);
+    var defsEl = el("defs", null, svg), cp = el("clipPath", { id: cid }, defsEl);
+    el("rect", { x: m.l, y: m.t, width: pw, height: ph }, cp);
+    el("line", { x1: X(x1), y1: Y(f.a + f.b * x1), x2: X(x2), y2: Y(f.a + f.b * x2), stroke: c.ink2, "stroke-width": 1.5, "clip-path": "url(#" + cid + ")" }, svg);
+    var gpts = el("g", null, svg);
+    var labeled = o.label, hl = o.highlight;
+    pts.forEach(function (p) { if (!labeled[p[0]]) el("circle", { cx: X(p[2]), cy: Y(p[3]), r: compact ? 2.5 : 3, fill: c.de, "fill-opacity": 0.75 }, gpts); });
+    var labs = [];
+    pts.forEach(function (p) {
+      if (!labeled[p[0]] || p[0] === hl) return;
+      el("circle", { cx: X(p[2]), cy: Y(p[3]), r: 4, fill: c.deInk, stroke: c.surface, "stroke-width": 2 }, svg);
+      labs.push({ p: p, name: labeled[p[0]], col: c.ink2, w: 400 });
+    });
+    var me = pts.filter(function (p) { return p[0] === hl; })[0];
+    el("circle", { cx: X(me[2]), cy: Y(me[3]), r: 7, fill: c.s[0], stroke: c.surface, "stroke-width": 2 }, svg);
+    labs.push({ p: me, name: labeled[hl], col: c.ink, w: 650 });
+    if (!compact || true) labs.forEach(function (L) {
+      var px = X(L.p[2]), py = Y(L.p[3]);
+      var right = px < m.l + pw * 0.7, tw = measure(svg, L.name, 12, L.w);
+      var lx = right ? px + 10 : px - 10, ly = py + 4;
+      if (L.name === "CH-UH") { ly = py - 12; lx = px + 10; right = true; }
+      if (L.name === "Beachwood") ly = py + 14;
+      if (compact && L.name !== "CH-UH" && ["Shaker Heights", "Cleveland", "Beachwood"].indexOf(L.name) < 0) return;
+      halo(txt(svg, lx, ly, L.name, { "text-anchor": right ? "start" : "end", fill: L.col, "font-weight": L.w }));
+    });
+    // nearest-point hover
+    var ring = el("circle", { r: 7, fill: "none", stroke: c.ink, "stroke-width": 1.5, opacity: 0 }, svg);
+    var hit = el("rect", { x: m.l, y: m.t, width: pw, height: ph, fill: "transparent", tabindex: 0, "aria-label": o.aria }, svg);
+    function show(p) {
+      ring.setAttribute("cx", X(p[2])); ring.setAttribute("cy", Y(p[3])); ring.setAttribute("opacity", 1);
+      var pred = f.a + f.b * p[2], res = p[3] - pred;
+      var r = svg.getBoundingClientRect(), k = r.width / W;
+      showTip(box, X(p[2]) * k, Y(p[3]) * k, p[1], [{ value: fmtNum(p[3], 1), name: "Performance Index" }, { value: fmtNum(p[2], 1) + "%", name: "child poverty" }], (res >= 0 ? "+" : "") + fmtNum(res, 1) + " vs. the line");
+    }
+    hit.addEventListener("pointermove", function (evt) {
+      var q = pointerXY(svg, evt), best = null, bd = 1e9;
+      pts.forEach(function (p) { var dx = X(p[2]) - q.x, dy = Y(p[3]) - q.y, d = dx * dx + dy * dy; if (d < bd) { bd = d; best = p; } });
+      if (best && bd < 900) show(best); else { ring.setAttribute("opacity", 0); hideTip(); }
+    });
+    hit.addEventListener("pointerleave", function () { ring.setAttribute("opacity", 0); hideTip(); });
+    hit.addEventListener("focus", function () { show(me); });
+    hit.addEventListener("blur", function () { ring.setAttribute("opacity", 0); hideTip(); });
+  }
+
+  /* ---------- chart definitions ---------- */
+  function usd(v) { return (v < 0 ? "−$" : "$") + fmtNum(Math.abs(v), 1) + "M"; }
+  var defs = {
+    forecast: function (card, d) {
+      var c = C(), cols = [c.s[0], c.s[1], c.s[2]];
+      var series = d.series.map(function (s, i) { return { name: s.name, values: s.values, color: cols[i], short: ["August forecast", "February forecast", "With Issue 4"][i], endFmt: usd }; });
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      lineChart(card, { x: d.x, series: series, yfmt: function (v) { return (v < 0 ? "−$" : "$") + Math.abs(v) + "M"; }, tipfmt: usd, endLabels: true, markers: true, height: 300, aria: "Line chart of projected General Fund balance FY27 to FY30",
+        tipTitle: function (i) { return "June 30, 20" + d.x[i].slice(2); } });
+      table(card, ["Year"].concat(d.series.map(function (s) { return s.name; })), d.x.map(function (x, i) { return [x].concat(d.series.map(function (s) { return s.values[i] === null ? "—" : usd(s.values[i]); })); }));
+    },
+    millage: function (card, d) {
+      var c = C();
+      var series = d.series.map(function (s, i) { return { name: s.name, values: s.values, color: c.s[i], short: ["Voted", "Effective, homes"][i], endFmt: function (v) { return fmtNum(v, 2); } }; });
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      lineChart(card, { x: d.x, series: series, yMin: 0, yMax: 160, endLabels: true, markers: true, height: 260, aria: "Voted versus effective operating mills", tipfmt: function (v) { return fmtNum(v, 2) + " mills"; } });
+      table(card, ["Tax year"].concat(d.series.map(function (s) { return s.name; })), d.x.map(function (x, i) { return [x].concat(d.series.map(function (s) { return fmtNum(s.values[i], 2); })); }));
+    },
+    revmix: function (card, d) {
+      var c = C();
+      legend(card, d.categories.map(function (n, i) { return { name: n, color: c.s[i] }; }));
+      stack100(card, { rows: d.rows, categories: d.categories, aria: "Revenue by source, CH-UH versus Ohio average" });
+      table(card, ["", ].concat(d.categories), d.rows.map(function (r) { return [r.name].concat(r.values.map(function (v) { return v + "%"; })); }));
+    },
+    taxpeers: function (card, d) {
+      var rows = d.rows.slice().sort(function (a, b) { return b[1] - a[1]; });
+      hbar(card, { rows: rows, highlight: d.highlight, refs: d.refs.slice(0, 1), unitTip: "mills", aria: "Effective residential operating mills by district" });
+      table(card, ["District", "Effective Class I mills (TY2024)"], rows.map(function (r) { return [r[0], fmtNum(r[1], 2)]; }).concat(d.refs.map(function (r) { return [r.name, fmtNum(r.value, 2)]; })));
+    },
+    levyhistory: function (card, d) {
+      hbar(card, { rows: d.rows.map(function (r) { return [r[0], r[1], r[2]]; }), highlight: null, min: 0, max: 70, refs: [{ name: "50%", value: 50, label: "50% needed to pass" }],
+        vfmt: function (v) { return fmtNum(v, 1) + "%"; }, tfmt: function (v) { return v + "%"; }, aria: "Share voting yes on CH-UH levies",
+        extra: function (r) { return r[2]; } });
+      // add pass/fail words after value labels
+      var svg = card.querySelector("svg"), c = C();
+      table(card, ["Election", "% yes", "Result"], d.rows.map(function (r) { return [r[0], fmtNum(r[1], 1) + "%", r[2]]; }));
+      var texts = svg.querySelectorAll("text");
+      texts.forEach(function (t) { var m = /^(\d+\.\d)%$/.exec(t.textContent); if (m) { var row = d.rows.filter(function (r) { return fmtNum(r[1], 1) === m[1]; })[0]; if (row) { var s = el("tspan", { fill: c.muted, "font-weight": 400 }, t); s.textContent = "  " + row[2]; } } });
+    },
+    spending: function (card, d) {
+      var c = C();
+      var xpos = [2014, 2016, 2018, 2020, 2021, 2022, 2023, 2024];
+      var f = function (v) { return "$" + fmtNum(v); };
+      var series = d.series.map(function (s, i) { return { name: s.name, values: s.values, color: i ? c.de : c.s[0], endFmt: f }; });
+      series[1].color = C().deInk;
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      lineChart(card, { x: d.x, xpos: xpos, series: series, yMin: 0, yfmt: function (v) { return "$" + (v / 1000) + "K"; }, tipfmt: f, endLabels: true, markers: true, height: 270, aria: "Per-pupil spending CH-UH versus Ohio",
+        tipExtra: function (i) { return "CH-UH ÷ Ohio: " + (d.series[0].values[i] / d.series[1].values[i]).toFixed(2) + "×"; } });
+      table(card, ["Fiscal year", "CH-UH", "Ohio", "Ratio"], d.x.map(function (x, i) { return [x, f(d.series[0].values[i]), f(d.series[1].values[i]), (d.series[0].values[i] / d.series[1].values[i]).toFixed(2)]; }));
+    },
+    staffing: function (card, d) {
+      var c = C(), cols = [c.deInk, c.s[0], c.s[1], c.s[2]];
+      var series = d.series.map(function (s, i) { return { name: s.name, values: s.values, color: cols[i], short: ["Enrollment", "All staff", "Instruction", "Pupil support"][i], endFmt: function (v) { return fmtNum(v, 0); } }; });
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      var keys = ["ADM", "Total", "Instruction", "Pupil support"];
+      lineChart(card, { x: d.x, series: series, endLabels: true, markers: true, height: 280, aria: "Staff and enrollment indexed to FY2016",
+        annot: function (svg, X, Y, m, pw) { var cc = C(); el("line", { x1: m.l, x2: m.l + pw, y1: Y(100), y2: Y(100), stroke: cc.muted, "stroke-width": 1 }, svg); },
+        tipfmt: function (v) { return fmtNum(v, 0); },
+        tipExtra: function (i) { return "Counts: " + keys.map(function (k, j) { return ["ADM", "staff", "instruction", "support"][j] + " " + fmtNum(d.raw[k][i]); }).join(" · "); } });
+      table(card, ["Fiscal year", "Enrollment (ADM)", "All FT employees", "Instruction", "Pupil support"], d.x.map(function (x, i) { return [x].concat(keys.map(function (k) { return fmtNum(d.raw[k][i]); })); }));
+    },
+    teacherpeers: function (card, d) {
+      var c = C();
+      legend(card, d.categories.map(function (n, i) { return { name: n, color: c.s[i] }; }));
+      groupedH(card, { rows: d.rows, categories: d.categories, aria: "Change in enrollment and teachers by district" });
+      table(card, ["District"].concat(d.categories), d.rows.map(function (r) { return [r.name].concat(r.values.map(function (v) { return v + "%"; })); }));
+    },
+    residents: function (card, d) {
+      var c = C();
+      legend(card, d.categories.map(function (n, i) { return { name: n, color: c.s[i] }; }));
+      stackCols(card, { rows: d.rows, categories: d.categories, height: 340, aria: "Where resident students enroll, 2018-19 to 2025-26" });
+      table(card, ["Year"].concat(d.categories).concat(["Total", "Share in CH-UH"]), d.rows.map(function (r) { var t = r.values.reduce(function (a, b) { return a + b; }, 0); return [r.name].concat(r.values.map(function (v) { return fmtNum(v); })).concat([fmtNum(t), (r.values[0] / t * 100).toFixed(1) + "%"]); }));
+    },
+    enrollment: function (card, d) {
+      var c = C(), xpos = d.x.map(function (x) { return +x.slice(0, 4); });
+      var s = [{ name: d.series[0].name, values: d.series[0].values, color: c.s[0], short: "", endFmt: function (v) { return fmtNum(v); } }];
+      var show = [0, 6, 11, 17];
+      lineChart(card, { x: d.x, xpos: xpos, xShow: show, series: s, yMin: 0, yMax: 8000, yfmt: function (v) { return v ? (v / 1000) + "K" : "0"; }, tipfmt: function (v) { return fmtNum(v) + " students"; }, markers: true, endLabels: true, height: 250, aria: "District enrollment 1999 to 2025",
+        annot: function (svg, X, Y) { var cc = C(); txt(svg, X(1999) + 6, Y(7451) - 8, "7,451", { fill: cc.ink, "font-weight": 650 }); } });
+      table(card, ["School year", "Enrollment"], d.x.map(function (x, i) { return [x, fmtNum(d.series[0].values[i])]; }));
+    },
+    privateshare: function (card, d) {
+      var c = C();
+      legend(card, [{ name: "CH-UH, 2020–24", color: c.s[0] }, { name: "Peers, 2020–24", color: c.de }, { name: "2008–12", color: c.ink, kind: "tick" }]);
+      errBars(card, { rows: d.rows, highlight: d.highlight, aria: "Private school share of resident K-12 students" });
+      table(card, ["District", "2020–24", "Margin of error", "2008–12"], d.rows.map(function (r) { return [r[0], r[1] + "%", "±" + r[2], r[3] + "%"]; }));
+    },
+    pi: function (card, d) {
+      var c = C();
+      var series = [{ name: "CH-UH", values: d.series[0].values, color: c.s[0], endFmt: function (v) { return fmtNum(v, 1); } },
+                    { name: "Median Ohio district", values: d.series[1].values, color: c.deInk, short: "Median district", endFmt: function (v) { return fmtNum(v, 1); } }];
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      lineChart(card, { x: d.x, series: series, yMin: 50, yMax: 100, endLabels: true, markers: true, height: 290, aria: "Performance Index 2005-06 to 2025-26", xEvery: 3,
+        tipfmt: function (v) { return fmtNum(v, 1); }, tipTitle: function (i) { return "20" + d.x[i]; },
+        tipExtra: function (i) { return d.x[i] === "19-20" ? "No state tests (COVID-19)" : (i >= 10 && i <= 12 ? "Converted from % of 120" : null); },
+        annot: function (svg, X, Y, m, pw, ph) { var cc = C(); var x0 = X(9.5), x1 = X(10.5); el("rect", { x: x0, y: m.t, width: x1 - x0, height: ph, fill: cc.grid, opacity: 0.5 }, svg); txt(svg, (x0 + x1) / 2, m.t + 12, "New tests", { "text-anchor": "middle", fill: cc.muted, "font-size": 11 }); } });
+      table(card, ["Year", "CH-UH", "Median Ohio district"], d.x.map(function (x, i) { return ["20" + x, d.series[0].values[i] === null ? "no tests" : fmtNum(d.series[0].values[i], 1), d.series[1].values[i] === null ? "—" : fmtNum(d.series[1].values[i], 1)]; }));
+    },
+    scatter: function (card, d) {
+      var c = C();
+      legend(card, [{ name: "CH-UH", color: c.s[0], kind: "dot" }, { name: "Nearby districts", color: c.deInk, kind: "dot" }, { name: "Other Ohio districts", color: c.de, kind: "dot" }, { name: "Statewide fit (R² " + d.fit.r2.toFixed(2) + ")", color: c.ink2, kind: "line" }]);
+      scatter(card, { points: d.points, fit: d.fit, label: d.label, highlight: d.highlight, aria: "Scatter plot of Performance Index against child poverty for 607 Ohio districts" });
+      var rows = d.points.filter(function (p) { return d.label[p[0]]; }).map(function (p) { var pred = d.fit.a + d.fit.b * p[2]; return [p[1], fmtNum(p[2], 1) + "%", fmtNum(p[3], 1), fmtNum(pred, 1), (p[3] - pred >= 0 ? "+" : "") + fmtNum(p[3] - pred, 1)]; });
+      table(card, ["District", "Child poverty", "PI 2025-26", "Line predicts", "Difference"], rows);
+    },
+    valueadded: function (card, d) {
+      divCols(card, { rows: d.rows, aria: "CH-UH value-added growth index by year" });
+      table(card, ["Year", "Growth index", "Statewide percentile"], d.rows.map(function (r) { return [r[0], r[1].toFixed(2), r[2] === null ? "—" : ordinal(r[2])]; }));
+    },
+    learningrate: function (card, d) {
+      hbar(card, { rows: d.rows, highlight: d.highlight, refRows: ["Ohio average", "Similar districts (Stanford)"], refs: d.refs.map(function (r) { return { name: r.name, value: r.value, label: "1 grade level per year" }; }), max: 1.2, vfmt: function (v) { return v.toFixed(2); }, tfmt: function (v) { return v.toFixed(1); }, unitTip: "grade levels / year", aria: "Learning rates by district" });
+      table(card, ["District", "Grade levels per year"], d.rows.map(function (r) { return [r[0], r[1].toFixed(2)]; }));
+    },
+    gaps: function (card, d) {
+      var c = C();
+      legend(card, [{ name: "White students", color: c.s[1], kind: "dot" }, { name: "Black students", color: c.s[0], kind: "dot" }]);
+      dumbbell(card, { rows: d.rows, aria: "Proficiency of Black and white students, CH-UH versus Ohio" });
+      table(card, ["", "Black", "White", "Gap"], d.rows.map(function (r) { return [r.name, r.black + "%", r.white + "%", fmtNum(r.white - r.black, 1)]; }));
+    },
+    absent: function (card, d) {
+      var c = C();
+      var series = [{ name: "CH-UH", values: d.series[0].values, color: c.s[0], endFmt: function (v) { return fmtNum(v, 1) + "%"; } }, { name: "Ohio", values: d.series[1].values, color: c.deInk, endFmt: function (v) { return fmtNum(v, 1) + "%"; } }];
+      legend(card, series.map(function (s) { return { name: s.name, color: s.color, kind: "line" }; }));
+      lineChart(card, { x: d.x, series: series, yMin: 0, yMax: 50, yfmt: function (v) { return v + "%"; }, tipfmt: function (v) { return fmtNum(v, 1) + "%"; }, endLabels: true, markers: true, height: 250, aria: "Chronic absenteeism, CH-UH versus Ohio" });
+      table(card, ["Year", "CH-UH", "Ohio"], d.x.map(function (x, i) { return [x, d.series[0].values[i] + "%", d.series[1].values[i] + "%"]; }));
+    }
+  };
+
+  function renderAll() {
+    hideTip();
+    document.querySelectorAll("figure.card[data-chart]").forEach(function (card) {
+      var key = card.getAttribute("data-chart");
+      try { defs[key](card, DATA[key]); } catch (e) { card.querySelector(".chart").textContent = "Chart failed to load."; if (window.console) console.error(key, e); }
+    });
+  }
+
+  var lastW = 0, rt = null;
+  window.addEventListener("resize", function () {
+    var w = document.documentElement.clientWidth; if (Math.abs(w - lastW) < 4) return; lastW = w;
+    clearTimeout(rt); rt = setTimeout(function () { if (DATA) renderAll(); }, 120);
+  });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  fetch("data/viz.json").then(function (r) { return r.json(); }).then(function (j) { DATA = j; lastW = document.documentElement.clientWidth; applyTheme(); renderAll(); })
+    .catch(function () { document.querySelectorAll(".chart").forEach(function (c) { c.textContent = "Chart data could not be loaded."; }); });
+  applyTheme();
+})();
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ title: "Revenue, State Aid, and the Property Tax Base"
 
 # Revenue, State Aid, and the Property Tax Base
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#money)
 
 *Cleveland Heights-University Heights City School District (CH-UH), IRN 043794. Research current as of October 12, 2026.*
 

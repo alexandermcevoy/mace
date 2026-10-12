@@ -5,7 +5,7 @@ title: "Outcomes Adjusted for Who the District Serves"
 
 # Outcomes Adjusted for Who the District Serves
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#results)
 
 *Research status as of October 12, 2026. This page answers a narrower question than a raw report card: **given the students Cleveland Heights-University Heights City Schools (CH-UH) serves, how much are they learning, and is that improving?** It combines Ohio's own data files, an OpenHeights regression across all 607 Ohio districts, and the Stanford/Harvard reports. Every figure carries a source and a data year. Calculations by OpenHeights are labeled as such.*
 

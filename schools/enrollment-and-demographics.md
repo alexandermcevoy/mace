@@ -5,7 +5,7 @@ title: "Enrollment, Demographics, and Where Heights Kids Go to School"
 
 # Enrollment, Demographics, and Where Heights Kids Go to School
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#families)
 
 *Research snapshot as of October 12, 2026. Every figure below links to its source and states its time period. Figures marked "OpenHeights calculation" are our own arithmetic, and the arithmetic or method is shown. Anything we could not confirm is listed under [Gaps / unverified](#gaps--unverified). This page doesn't take a position on Issue 4.*
 
@@ -170,7 +170,7 @@ Funding counts use full-time equivalents over the year, not a one-day headcount,
 |---|---|---|
 | 1,132 voucher students ($7.36M) | FY2019 | NEPC blog quoting the Heights Coalition for Public Education [[7]](#sources) (not re-checked) |
 | 1,400 EdChoice students; "94 percent of those 1,400 kids never attended our schools" (district CFO Scott Gainer) | Feb. 2020 | Ideastream [[8]](#sources) (quote confirmed) |
-| about 1,800 ($11M) | 2020 court filing, as reported | News 5 [[21]](#sources) (not re-checked) |
+| about 1,800 ($11M) | FY2022 (per the plaintiffs-side source; see EdChoice page) | News 5 [[21]](#sources) (not re-checked) |
 | more than $21M cumulative deductions since 2015–16 | opinion piece, date not confirmed | [[22]](#sources) (not re-checked) |
 
 The state's own counts in 3a are the better series. EdChoice is covered in detail on the [EdChoice page](school-choice-edchoice).

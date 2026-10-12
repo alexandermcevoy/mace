@@ -5,7 +5,7 @@ title: "Academic Outcomes: The Report Card Record"
 
 # Academic Outcomes: The Report Card Record
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#results)
 
 *Cleveland Heights-University Heights City School District (CH-UH). Research current to October 12, 2026. Issue 4, a 6.5-mill continuing operating levy, is on the November 3, 2026 ballot. This page covers the district's academic record only. Finances, demographics and a demographically-adjusted analysis are on separate pages.*
 

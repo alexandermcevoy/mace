@@ -11,6 +11,8 @@ On **November 3, 2026**, voters in the CH-UH district will decide **Issue 4**, a
 
 > **Verification status: checked against primary sources on Oct. 12, 2026.** Figures on every page were checked against the original documents: state report-card and school-finance data files, the district's five-year forecasts and audited financial reports, county tax-rate tables, Census and NCES data, and the Stanford and Harvard research reports. Each page lists what could not be confirmed under "Gaps / unverified" and records changes from the first draft in a "Corrections log." Corrections are welcome.
 
+**[See the data: CH-UH schools in 15 interactive charts →](charts.html)**
+
 ## The guide
 
 | Page | What it covers |

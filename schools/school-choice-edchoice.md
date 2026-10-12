@@ -5,7 +5,7 @@ title: "EdChoice, Private Schools, and School Choice in the Heights"
 
 # EdChoice, Private Schools, and School Choice in the Heights
 
-[← Back to the CH-UH schools guide](./)
+[← Back to the CH-UH schools guide](./) · [See this in charts](charts.html#families)
 
 > **Verification status: checked against primary sources on Oct. 12, 2026**, except items listed under *Gaps / unverified*. The district-level counts and dollar figures below come from the Ohio Department of Education & Workforce's (DEW) final School Finance Payment Reports (SFPRs) and EdChoice designated-building list. Statewide figures come from DEW and the Legislative Service Commission. Opinion pieces and advocacy sources are labeled as such. **Main limit:** since FY2022 the state's public payment reports no longer list how many CH-UH residents use vouchers or charter schools. We found no official count for FY2022–FY2026.
 
