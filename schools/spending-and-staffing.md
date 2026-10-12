@@ -5,9 +5,11 @@ title: "Spending, Staffing, and Facilities"
 
 # Spending, Staffing, and Facilities
 
+[← Back to the CH-UH schools guide](./)
+
 *Cleveland Heights-University Heights City School District (CH-UH). Research current as of October 12, 2026. This page covers how the district spends money and how it is staffed. Separate pages cover the Issue 4 levy and five-year forecast, revenue and taxes, enrollment, academics, and EdChoice.*
 
-> **Note on method.** The research tools for this page could not open several primary data portals directly (the Ohio Department of Education and Workforce report card, NCES, and the Auditor of State PDFs). Figures below come from published pages and documents as indexed and quoted by search. Each is cited, with its fiscal year where the source gives one. Items we could not check against a primary source are flagged, and many are listed under [Gaps / unverified](#gaps--unverified). Readers should check the primary sources before relying on any single figure.
+> **Verification status: preliminary.** This page was compiled from search-indexed excerpts of the cited sources; during research the primary documents (state report card files, district PDFs, county tables) could not be opened directly. Every figure links to its source and gives its year, but has not yet been checked line-by-line against the original document. Items we could not confirm are listed under "Gaps / unverified." See [About this guide](./#about-this-guide).
 
 ## Key facts
 
@@ -134,18 +136,18 @@ Per position, the reductions average about **$106,000 in salary and benefits** (
 
 **Bond ratings.** We found no current Moody's or S&P rating for CH-UH (see Gaps). Ratings would be in official statements on MSRB EMMA.
 
-**Auditor of State.** The FY2024 financial audit (July 1, 2023 to June 30, 2024) was done by Rea & Associates and accepted by the Auditor of State, with an opinion dated December 27, 2024 [6][39]. Separate SERS and STRS census examinations for the same year were released in 2024 [39]. No findings for recovery or performance audit for CH-UH appeared in our searches. We could not review the full report text to confirm the absence of findings. No state performance audit of CH-UH was found. Nearby East Cleveland had one in 2024 [39].
+**Auditor of State.** The FY2024 financial audit (July 1, 2023 to June 30, 2024) was done by Rea & Associates and accepted by the Auditor of State, with an opinion dated December 27, 2024 [6][39]. Separate SERS and STRS census examinations for the same year were released in 2024 [39]. Our searches for this page found no findings for recovery in the FY2024 audit. Separately, in May 2021 the Auditor of State issued a **$34,675 finding for recovery** over district-funded levy polling (see [Governance and Timeline](governance-and-timeline)). We could not review the full report text to confirm the absence of findings. No state performance audit of CH-UH was found. Nearby East Cleveland had one in 2024 [39].
 
 ## Gaps / unverified
 
-- **Ohio report card financial data for CH-UH** (operating spending per pupil, per equivalent pupil, classroom-instruction percentage) for any year. The page returned under ID 043786 does not appear to be CH-UH. The district IRN given in our brief (043687) and the one other sites list (043794) were both unconfirmed.
+- **Ohio report card financial data for CH-UH** (operating spending per pupil, per equivalent pupil, classroom-instruction percentage) for any year. The page returned under ID 043786 does not appear to be CH-UH. CH-UH's IRN is 043794; its report-card financial page was not retrieved.
 - **Ten-year series** of expenditure per pupil and per equivalent pupil (DEW Expenditure Flow Model / District Profile reports).
 - **Breakdown** of transportation, building operations, pupil support and administration, in dollars and per pupil.
 - **Peer comparison** for all twelve peer districts and the state, on the same DEW measure.
 - **Cost of nonpublic-student transportation** and **auxiliary services** pass-through funds.
 - **Ten-year staff FTE trend** compared with enrollment decline. Administrator FTEs.
 - **Average teacher salary and experience** (DEW report card). **Administrator salaries.**
-- **Raise percentages** in the 2022–2025 and 2025–2028 CHTU contracts. The brief referred to a 2022–2025 "strike threat," but the strike notice we found dates to 2020.
+- **Raise percentages** in the 2022–2025 and 2025–2028 CHTU contracts. The only strike notice we found dates to 2020.
 - **Special education:** current share of students with disabilities and costs. The 19% figure is a district statement from about 2020.
 - **Bond ratings** (Moody's and S&P) and remaining debt service on the 2013 bonds.
 - **Audit findings:** full FY2024 and FY2025 audit text not reviewed.

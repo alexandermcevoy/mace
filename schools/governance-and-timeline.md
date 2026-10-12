@@ -5,7 +5,9 @@ title: "Governance, Leadership, and a Timeline of Recent Events"
 
 # Governance, Leadership, and a Timeline of Recent Events
 
-*Cleveland Heights-University Heights City School District (CH-UH), Ohio, IRN 043687. Research compiled 2026-10-12. Every statement below links to its source. Items we could not confirm are listed under "Gaps / unverified." Bracketed numbers refer to the numbered source list at the end.*
+[← Back to the CH-UH schools guide](./)
+
+*Cleveland Heights-University Heights City School District (CH-UH), Ohio, IRN 043794. Research compiled 2026-10-12. Every statement below links to its source. Items we could not confirm are listed under "Gaps / unverified." Bracketed numbers refer to the numbered source list at the end.*
 
 ## Key facts
 
@@ -101,7 +103,7 @@ In the 2025 election, two seats went to newcomers (Howard-Primes and Hodgkiss-Li
 
 ### Labor relations
 
-**Note on the research brief:** The brief mentioned a 2022–23 strike authorization. We found no evidence of one. The documented dispute took place in **November–December 2020**. The board imposed its final offer, which the union said would raise health premiums and cut other compensation; the union said the cost to members would be $3,000–$5,000 a year. The Cleveland Heights Teachers Union, with about 500 members, gave notice of a December 2 strike. A tentative deal reached in an overnight session prevented the strike, and members ratified it with 93% approval ([News5][27]; [WKYC][26]; [CJN][28]). Since then, a 2022 agreement filed with the State Employment Relations Board included 2% raises effective July 1, 2024 ([SERB][29]). The current agreement covers July 1, 2025 to June 30, 2028 ([CHTU CBA][30]). We could not confirm the raise schedule in the 2025–28 agreement.
+**Note:** Some accounts refer to a 2022–23 strike threat. We found no evidence of one. The documented dispute took place in **November–December 2020**. The board imposed its final offer, which the union said would raise health premiums and cut other compensation; the union said the cost to members would be $3,000–$5,000 a year. The Cleveland Heights Teachers Union, with about 500 members, gave notice of a December 2 strike. A tentative deal reached in an overnight session prevented the strike, and members ratified it with 93% approval ([News5][27]; [WKYC][26]; [CJN][28]). Since then, a 2022 agreement filed with the State Employment Relations Board included 2% raises effective July 1, 2024 ([SERB][29]). The current agreement covers July 1, 2025 to June 30, 2028 ([CHTU CBA][30]). We could not confirm the raise schedule in the 2025–28 agreement.
 
 ### Facilities
 
@@ -131,7 +133,7 @@ The 2026 plan, "Excellence For All," has five goals: student outcomes, education
 
 ## Gaps / unverified
 
-Web searching was cut off by a shared search-budget limit, and direct page fetches failed with DNS errors. As a result, several items in the brief could not be checked:
+Research relied on search-indexed excerpts; primary pages could not be opened directly. Several items could not be checked:
 
 - **Superintendent:** Kirby's current contract term, salary and any extension votes.
 - **2023 board election:** Vote totals, and whether Crenshaw was elected or appointed. BallotReady shows a term ending 2027 and service "2024–present."
@@ -139,7 +141,6 @@ Web searching was cut off by a shared search-budget limit, and direct page fetch
 - **2024–2026 consolidation:** Any closure or reconfiguration plan, and which buildings it would affect. None was found.
 - **Wiley:** Current status of the building.
 - **Millikin:** Status after 2020. We found no lawsuit involving the city and Mosdos; the dispute was over price and support for the sale.
-- **Brief items not found:** "Severance/Taylor sale" and "Lake Erie academy." No sources turned up for either.
 - **Fiscal designation:** Any Ohio fiscal caution, watch or emergency designation. None was found, but we did not search specifically for one.
 - **2021 audit:** Whether the $34,675 finding was repaid, and findings from audits after FY2020.
 - **2025–28 CHTU contract:** Salary terms and the ratification date.

@@ -5,6 +5,8 @@ title: "Enrollment, Demographics, and Where Heights Kids Go to School"
 
 # Enrollment, Demographics, and Where Heights Kids Go to School
 
+[← Back to the CH-UH schools guide](./)
+
 *Research snapshot as of October 12, 2026. Every figure below links to its source and states its time period. Figures marked "OpenHeights calculation" are our own arithmetic, and the arithmetic is shown. Anything we could not confirm is listed under [Gaps / unverified](#gaps--unverified). This page doesn't take a position on Issue 4.*
 
 ## Key facts
@@ -29,7 +31,7 @@ title: "Enrollment, Demographics, and Where Heights Kids Go to School"
 
 The two cities together had about 57,300 residents in mid-2024 (*OpenHeights calculation: 44,064 + 13,265 = 57,329*). That total closely matches the district-geography ACS figure, even though part of Cleveland Heights may sit outside the district and part of South Euclid sits inside it. We have not confirmed the exact boundary exceptions; see Gaps.
 
-**District identifiers.** The NCES ID is 3904379 [[5]](#sources), and NCES lists the state district ID as **OH-043794** [[17]](#sources). The research brief for this page gave the Ohio IRN as 043687. That number doesn't match the NCES listing, so the IRN should be confirmed on reportcard.education.ohio.gov before it is published.
+**District identifiers.** The NCES ID is 3904379 [[5]](#sources), and the Ohio state district ID (IRN) is **043794** [[17]](#sources).
 
 ## 2. Enrollment trend, 2000–2026
 
@@ -155,7 +157,7 @@ We were not able to gather comparable, sourced figures for Shaker Heights, Lakew
 ## Gaps / unverified
 
 1. **Our tools were limited.** During this research, direct page retrieval failed for every site we tried. That included census.gov, nces.ed.gov, censusreporter.org, chuh.org, and reportcard.education.ohio.gov. All figures above come from search-engine excerpts of those pages. Before publication, someone should open each linked source and confirm each number.
-2. **District IRN.** NCES lists **043794** [[17]](#sources). The brief said 043687. Confirm on the Ohio report card site.
+2. **District IRN.** NCES lists **043794** [[17]](#sources); this matches state school IDs.
 3. **Exact boundary.** The "most of Cleveland Heights, small part of South Euclid" description comes from Wikipedia [[13]](#sources). We have not confirmed which parts of Cleveland Heights, if any, are served by another district (East Cleveland has been suggested), or the size of the South Euclid portion. Check the district boundary map at chuh.org/district/registration.
 4. **Conflicting current enrollment.** 4,655 (district, Mar. 2026), 4,683 (report card), 4,686 (Auditor, FY2024), 4,916 (Ballotpedia/U.S. News, 2023–24), and 5,019 (NCES, 2024–25). We have not reconciled them or obtained the October 2025 headcount or average daily membership (ADM).
 5. **Voucher counts by year.** Reported figures are 1,132 (FY2019), about 1,300, about 1,400 (2020), about 1,800 (2020 court filing), and 1,743/1,924 in a Heights Observer opinion piece whose years we could not confirm. The 2024–26 counts after universal EdChoice eligibility were not retrieved. Another OpenHeights page covers EdChoice.

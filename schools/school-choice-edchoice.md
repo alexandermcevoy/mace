@@ -5,7 +5,9 @@ title: "EdChoice, Private Schools, and School Choice in the Heights"
 
 # EdChoice, Private Schools, and School Choice in the Heights
 
-*Last researched: October 12, 2026. This page is part of OpenHeights' nonpartisan coverage of the Cleveland Heights-University Heights City School District (CH-UH, IRN 043687) ahead of the November 3, 2026 vote on Issue 4, a 6.5-mill continuing operating levy. It explains private-school vouchers and other choice programs and what they mean for CH-UH. It takes no position on the levy or on vouchers. Every figure has a source and a year. Where the sources disagree, we say so.*
+[← Back to the CH-UH schools guide](./)
+
+*Last researched: October 12, 2026. This page is part of OpenHeights' nonpartisan coverage of the Cleveland Heights-University Heights City School District (CH-UH, IRN 043794) ahead of the November 3, 2026 vote on Issue 4, a 6.5-mill continuing operating levy. It explains private-school vouchers and other choice programs and what they mean for CH-UH. It takes no position on the levy or on vouchers. Every figure has a source and a year. Where the sources disagree, we say so.*
 
 ## Key facts
 

@@ -5,9 +5,11 @@ title: "Outcomes Adjusted for Who the District Serves"
 
 # Outcomes Adjusted for Who the District Serves
 
+[← Back to the CH-UH schools guide](./)
+
 *Research status as of October 12, 2026. This page answers a narrower question than a raw report card: **given the students Cleveland Heights-University Heights City Schools (CH-UH) serves, how much are they learning, and is that improving?** Several parts of this question could not be fully verified during research. Those parts are marked plainly and listed under [Gaps / unverified](#gaps--unverified). Everything else carries a source link and a data year.*
 
-> **Research note.** During this research the primary data sites (edopportunity.org, educationrecoveryscorecard.org, reportcard.education.ohio.gov, chuh.org) could not be opened directly. Figures from them were read from the search-indexed text of the published PDFs and pages. Each such figure is marked "(search-indexed text)". Before publishing, an editor should check those figures against the source documents.
+> **Verification status: preliminary.** This page was compiled from search-indexed excerpts of the cited sources; during research the primary documents (state report card files, district PDFs, county tables) could not be opened directly. Every figure links to its source and gives its year, but has not yet been checked line-by-line against the original document. Items we could not confirm are listed under "Gaps / unverified." See [About this guide](./#about-this-guide). Figures read from search-indexed text of a PDF are marked "(search-indexed text)".
 
 ## Key facts / bottom line
 
@@ -15,7 +17,7 @@ title: "Outcomes Adjusted for Who the District Serves"
 - **CH-UH ranks above the "similar districts" Stanford compares it to.** The same report puts the similar-district average at about **9,677th of 10,205** in math, roughly the 5th percentile [1] (search-indexed text). If that is right, CH-UH scores above districts with comparable demographics. Comparison with similar districts is the closest thing to an adjusted measure this research could verify.
 - **Pandemic loss was large in math, and recovery since 2022 has been strong by national standards.** According to the Education Recovery Scorecard's January 2024 district report [2] (search-indexed text), CH-UH's grade 3–8 math average went from **−1.03** grade levels below the 2019 national average (2019) to **−2.62** (2022) to **−1.92** (2023). Reading went from **−0.57** to **−1.15** to **−0.95** over the same years.
 - **Outside researchers have singled out the recent gains.** The Education Recovery Scorecard's 2025 Ohio page lists CH-UH with Euclid City and Fairborn City among Ohio districts **"leading the way" in reading** [3]. Its "Districts on the Rise" list for 2024–25 includes CH-UH for **math and reading** [4].
-- **Ohio's value-added (Progress) rating has risen.** District Progress went from **2 stars (2023–24)** to **3 stars (2024–25)**, which means students met expected growth [5][6]. The district says Progress rose again in **2025–26**, with Heights High rated **5 stars** on Progress [7]. Because Progress compares each student's growth with what was expected from their own prior scores, it is the state's main measure that partly adjusts for background.
+- **Ohio's value-added (Progress) rating has risen.** District Progress went from **2 stars (2023–24)** to **3 stars (2024–25)**, which means students met expected growth [5][6]. The district says Progress rose again to **4 stars in 2025–26**, with Heights High rated **5 stars** on Progress [7]. Because Progress compares each student's growth with what was expected from their own prior scores, it is the state's main measure that partly adjusts for background.
 - **Honest assessment.** The verified evidence fits this picture: a district with low raw achievement that is roughly in line with or somewhat above what its demographics predict, and that has improved since 2022 on both national (Stanford/Harvard) and state (value-added) growth measures. **Not verified here:** a regression-based "residual" against poverty, CH-UH's rank within its Ohio typology, subgroup-versus-state comparisons, and any cost-effectiveness figure. Treat this page as partial evidence, not a final verdict.
 
 ## Why adjustment matters
@@ -34,7 +36,7 @@ No single measure is clean. That is why this page puts several side by side.
 
 ## 1. Stanford Educational Opportunity Project (SEDA) and Education Recovery Scorecard
 
-**District identifier.** The Stanford/Harvard reports file CH-UH under NCES LEA ID **3904379** (see the URLs for [1] and [2]). The ID 3904381 given in this project's brief does **not** match what the Stanford/Harvard reports use; see [Gaps](#gaps--unverified).
+**District identifier.** The Stanford/Harvard reports file CH-UH under NCES LEA ID **3904379** (see the URLs for [1] and [2]); its Ohio IRN is 043794.
 
 ### 1a. Pandemic loss and recovery (Education Recovery Scorecard, 2024 release)
 
@@ -72,7 +74,7 @@ The same report gives grade-level averages and annual trend rates since 2022. Th
 
 ### 1d. Learning rates (grade 3→8 growth)
 
-**Not verified.** SEDA publishes a district "learning rate": the average gain per grade, where 1.0 means one grade level of learning per year, as nationally typical. CH-UH's learning rate, and those for the peer districts named in the brief (Shaker Heights, Lakewood, South Euclid-Lyndhurst, Euclid, Cleveland Metropolitan, Bedford, Maple Heights, Garfield Heights, Richmond Heights, Beachwood), could not be retrieved, because the SEDA explorer is an interactive application that could not be opened during research. This is the most valuable missing number on this page. It can be read directly from edopportunity.org/explorer by searching for each district.
+**Not verified.** SEDA publishes a district "learning rate": the average gain per grade, where 1.0 means one grade level of learning per year, as nationally typical. CH-UH's learning rate, and those for peer districts (Shaker Heights, Lakewood, South Euclid-Lyndhurst, Euclid, Cleveland Metropolitan, Bedford, Maple Heights, Garfield Heights, Richmond Heights, Beachwood), could not be retrieved, because the SEDA explorer is an interactive application that could not be opened during research. This is the most valuable missing number on this page. It can be read directly from edopportunity.org/explorer by searching for each district.
 
 ## 2. Ohio's Progress component (value-added)
 
@@ -82,7 +84,7 @@ Ohio's Progress component uses EVAAS value-added. Each student's growth is compa
 |---|---|---|---|
 | 2023–24 | 2 stars (implied: 2024–25 was "one star higher") | 2.5 stars | [5][6] |
 | 2024–25 | 3 stars | 3.5 stars | [5][6] |
-| 2025–26 | Increased (district says Progress rose; exact star count not verified) | 3.5 stars | [7] |
+| 2025–26 | 4 stars (district: "increased one star") | 3.5 stars | [7] |
 | 2022–23 and earlier | Not verified | Not verified | — |
 
 School-level Progress, 2025–26, as reported by the district [7]: **Heights High 5 stars**. **Roxboro Middle and one other school 4 stars.** The indexed text names Baumgardner, which may be a misreading; verify. **Boulevard, Fairfax and Gearity elementary schools 3 stars.** For 2024–25, the district said **seven of 10 schools** met or exceeded expected growth [5].
@@ -93,18 +95,18 @@ Other 2024–25 and 2025–26 ratings reported by the district and local press: 
 
 ## 3. Ohio typology and "similar districts"
 
-**Not verified.** The Ohio Department of Education and Workforce (DEW) classifies districts into typology groups. The 2013 typology uses codes from 1 (Rural – High Poverty, Small) to 8 (Urban – Very High Poverty) and is based on poverty, population density and enrollment. The report card also offers a "similar districts" comparison. CH-UH's typology code and its rank on Performance Index within that group could not be retrieved. To complete this section, an editor should download DEW's typology file and the district Performance Index data (reportcard.education.ohio.gov, Download Data), filter to CH-UH's typology code, and rank PI.
+**Not verified.** The Ohio Department of Education and Workforce (DEW) classifies districts into typology groups. The 2013 typology uses codes from 1 (Rural – High Poverty, Small) to 8 (Urban – Very High Poverty) and is based on poverty, population density and enrollment. The report card also offers a "similar districts" comparison. CH-UH's typology code and its rank on Performance Index within that group could not be retrieved. To complete this section, one would download DEW's typology file and the district Performance Index data (reportcard.education.ohio.gov, Download Data), filter to CH-UH's typology code, and rank PI.
 
 ## 4. Performance relative to poverty (residual analysis)
 
-**Not computed.** The brief asked for CH-UH's residual from a regression of Ohio Performance Index on % economically disadvantaged. That requires the full statewide file of about 600 districts' PI and econ-disadvantaged share. The file could not be downloaded during this research. Under this project's evidence rules, no residual is estimated and no peer figures are quoted from memory.
+**Not computed.** The ideal test is CH-UH's residual from a regression of Ohio Performance Index on % economically disadvantaged. That requires the full statewide file of about 600 districts' PI and econ-disadvantaged share. The file could not be downloaded during this research. Under this project's evidence rules, no residual is estimated and no peer figures are quoted from memory.
 
 What can be said from verified sources:
 
 - Stanford's similar-district comparison [1] suggests CH-UH's math level is **above** the average of districts with comparable demographics (about the 11th versus about the 5th percentile nationally). This is a published, demographically matched comparison, though the matching criteria were not verified.
 - The 2025 Scorecard groups CH-UH with **Euclid** (a nearby, higher-poverty inner-ring district) as a reading recovery leader [3][4]. Recovery is measured against each district's own past, so this comparison is less sensitive to demographics.
 
-**Method an editor should use** when the data is available: for every Ohio district, regress PI on % economically disadvantaged (optionally adding % students with disabilities and % English learners). Report CH-UH's actual PI, predicted PI and residual. Name the year, and note that the residual is a descriptive gap, not a causal effect.
+**Method to use** when the data is available: for every Ohio district, regress PI on % economically disadvantaged (optionally adding % students with disabilities and % English learners). Report CH-UH's actual PI, predicted PI and residual. Name the year, and note that the residual is a descriptive gap, not a causal effect.
 
 ## 5. Cost-effectiveness
 
@@ -142,8 +144,8 @@ The Gap Closing component, which compares each subgroup with state targets, rose
 7. **Ohio typology code** and within-typology PI rank for CH-UH.
 8. **Statewide PI-versus-poverty regression and residual**: not computed, because the data was not obtained.
 9. **Subgroup comparisons** (Black and economically disadvantaged students against state and peer averages).
-10. **Identifiers.** The Stanford/Harvard reports use NCES ID **3904379**, not 3904381 as given in the brief. Ohio IRN **043687** was not confirmed. One search result linked the state report card district page **043794** in connection with CH-UH, but that link was not confirmed either.
-11. **Exact 2025–26 Performance Index** and Achievement stars.
+10. **Identifiers.** NCES ID **3904379**; Ohio IRN **043794**.
+11. **2025–26 Performance Index (79) and Achievement (3 stars)** are district-reported; see the [Academic Outcomes](academic-outcomes) page.
 
 ## Sources
 

@@ -5,9 +5,13 @@ title: "Academic Outcomes: The Report Card Record"
 
 # Academic Outcomes: The Report Card Record
 
+[← Back to the CH-UH schools guide](./)
+
 *Cleveland Heights-University Heights City School District (CH-UH). Research current to October 12, 2026. Issue 4, a 6.5-mill continuing operating levy, is on the November 3, 2026 ballot. This page covers the district's academic record only. Finances, demographics and a demographically-adjusted analysis are on separate pages.*
 
-> **About the sources.** We could not open the Ohio Department of Education and Workforce (DEW) report card site directly while writing this page. Most of the component ratings below come from **the district's own report card announcements** on chuh.org. Where a news outlet (cleveland.com, News 5 Cleveland) reported the same figure separately, we say so. Figures we could only infer, or could not verify, are labeled as such and listed under [Gaps / unverified](#gaps--unverified). Readers can check every number against the state's official site, [reportcard.education.ohio.gov](https://reportcard.education.ohio.gov) [1].
+> **Verification status: preliminary.** This page was compiled from search-indexed excerpts of the cited sources; during research the primary documents (state report card files, district PDFs, county tables) could not be opened directly. Every figure links to its source and gives its year, but has not yet been checked line-by-line against the original document. Items we could not confirm are listed under "Gaps / unverified." See [About this guide](./#about-this-guide).
+>
+> Most of the component ratings below come from **the district's own report card announcements** on chuh.org. Where a news outlet (cleveland.com, News 5 Cleveland) reported the same figure separately, we say so. Figures we could only infer, or could not verify, are labeled as such and listed under [Gaps / unverified](#gaps--unverified). Readers can check every number against the state's official site, [reportcard.education.ohio.gov](https://reportcard.education.ohio.gov) [1].
 
 ## Key facts
 
@@ -18,7 +22,8 @@ title: "Academic Outcomes: The Report Card Record"
 - **Progress (value-added growth) went to 4 stars and Gap Closing to 5 stars in 2025-26**, each up one star from the year before ([CH-UH 2026](https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-announces-report-card-gains-for-2025-2026) [2]).
 - **Third-grade reading:** 64% of third graders read at or above grade level in 2024-25 and **68.9% in 2025-26**. The Early Literacy component stayed at 3 stars both years ([CH-UH 2026](https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-announces-report-card-gains-for-2025-2026) [2]).
 - **Weighted graduation rate:** 92.4% in 2024-25 and **93.0% in 2025-26**. The Graduation component stayed at 3 stars ([CH-UH 2025](https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-announces-report-card-gains-for-2024-2025) [4]; [CH-UH 2026](https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-announces-report-card-gains-for-2025-2026) [2]).
-- **Not verified for this page:** proficiency rates by subject and grade, subgroup (racial, income, disability) results and the size of achievement gaps, chronic absenteeism, ACT/SAT, and AP/College Credit Plus. See [Gaps / unverified](#gaps--unverified).
+- **Racial achievement gap:** in 2021-22, the most recent year we found, 20% of Black students and 73% of white students were proficient, a gap of about 53 points ([Ballotpedia](https://ballotpedia.org/Cleveland_Heights-University_Heights_City_School_District,_Ohio) [18]).
+- **Not verified for this page:** proficiency rates by subject and grade, current subgroup results, chronic absenteeism, ACT/SAT, and AP/College Credit Plus. See [Gaps / unverified](#gaps--unverified).
 
 ## How to read Ohio's report card
 
@@ -73,6 +78,14 @@ title: "Academic Outcomes: The Report Card Record"
 - The district says 68.9% is its highest third-grade reading proficiency since the pandemic. Its stated goal is 100% of third graders reading at grade level by 2026 [4][2].
 - *OpenHeights calculation:* third-grade reading rose 68.9 − 64 = **4.9 percentage points** in one year. About 31% of third graders (100 − 68.9) were still below grade level in 2025-26.
 
+## Achievement gaps by race (older data)
+
+The most recent race-disaggregated proficiency figures we could find come from Ballotpedia's compilation of state data. For **2021-22**, it lists overall proficiency of **30%**, with **20% of Black students** and **73% of white students** proficient. For **2020-21**, the figures were **13%** (Black) and **64%** (white) ([Ballotpedia](https://ballotpedia.org/Cleveland_Heights-University_Heights_City_School_District,_Ohio) [18], search-indexed text). The subject (or combination of subjects) behind these figures was not clear in the excerpt, so treat them as indicative of the size of the gap, roughly 50 percentage points, rather than as exact values.
+
+*OpenHeights calculation:* 73 − 20 = **53 percentage points** in 2021-22; 64 − 13 = **51 points** in 2020-21.
+
+The district says the Black-white gap is narrowing and points to its 5-star Gap Closing rating for 2025-26 [2]. As noted below, Gap Closing measures whether subgroups hit state targets, not the size of the gap itself. Current subgroup proficiency rates are on the state report card's Gap Closing detail pages and were not retrieved.
+
 ## Building-level ratings (key ratings only)
 
 **2025-26, as stated by the district:** Heights High School, Roxboro Middle School and Baumgardner Middle School (named Monticello Middle School until 2025) each earned **4 stars overall**. The district also said 80% of its schools met or exceeded state standards ([CH-UH 2026](https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-announces-report-card-gains-for-2025-2026) [2]; on the renaming, [CH-UH](https://www.chuh.org/p/~board/district-board-posts/post/community-invited-to-baumgardner-dedication-ceremony-october-23) [10]). The elementary ratings in the summaries we could reach contradicted each other, so we have not published them here (see Gaps).
@@ -106,13 +119,13 @@ Neighboring districts' 2025-26 overall ratings, as reported by cleveland.com and
 
 ## Gaps / unverified
 
-1. **Direct state data was not accessible.** The state report card site, chuh.org, cleveland.com, News 5 and Patch could not be fetched directly while this page was written. The figures above come from search-indexed excerpts of those pages, and every number should be checked on [reportcard.education.ohio.gov](https://reportcard.education.ohio.gov) [1] before publishing. The research also hit a search limit before these items could be finished.
-2. **District IRN.** The assignment listed IRN 043687. The state's school IDs for CH-UH, such as OH-043794-015842 for Heights High in an [OHSAA listing](https://ohsaa.finalforms.com/state_districts/13684) [17], suggest the district IRN is **043794**. This needs checking.
+1. **Direct state data was not accessible.** The figures above come from search-indexed excerpts of the cited pages; every number should be checked on [reportcard.education.ohio.gov](https://reportcard.education.ohio.gov) [1].
+2. **District IRN.** CH-UH's state district IRN is **043794** (e.g., state ID OH-043794-015842 for Heights High in an [OHSAA listing](https://ohsaa.finalforms.com/state_districts/13684) [17]; NCES CCD).
 3. **Undated state page.** A search excerpt of the state's district page for IRN 043794 showed: overall 3.5, Achievement 3, Progress 3, Gap Closing 4, **Early Literacy 2**, 61.8% (measure unclear), four-year graduation rate 92.1%. These do not match any single year in the district's releases (for example, the district reports Early Literacy at 3 stars in both 2024-25 and 2025-26). The excerpt may mix years. Not used in the tables above.
 4. **2021-22 and 2022-23 ratings** for CH-UH were not found. The overall rating for 2022-23 is unknown, and the exact 2023-24 Progress rating is unknown.
 5. **Not collected for this page:**
    - percent proficient by subject and grade, and state averages;
-   - subgroup results (Black, white, multiracial, economically disadvantaged, students with disabilities) and the size of the racial achievement gap;
+   - current (2022-23 onward) subgroup results (Black, white, multiracial, economically disadvantaged, students with disabilities); the older gap figures above need subject-level verification;
    - Progress ratings by subgroup;
    - chronic absenteeism;
    - ACT/SAT participation and scores;
@@ -144,3 +157,4 @@ Neighboring districts' 2025-26 overall ratings, as reported by cleveland.com and
 15. MSN/cleveland.com, "Warrensville Heights slips to 3 stars: Ohio school report cards 2026." https://www.msn.com/en-us/news/other/warrensville-heights-slips-to-3-stars-ohio-school-report-cards-2026/ar-AA2cn0fF
 16. MSN/cleveland.com, "After years of low scores, East Cleveland schools snags three-star rating for second time: Ohio school report cards 2026." https://www.msn.com/en-us/news/other/after-years-of-low-scores-east-cleveland-schools-snags-three-star-rating-for-second-time-ohio-school-report-cards-2026/ar-AA2cmZi2
 17. OHSAA FinalForms, CH-UH district listing. https://ohsaa.finalforms.com/state_districts/13684
+18. Ballotpedia, "Cleveland Heights-University Heights City School District, Ohio." https://ballotpedia.org/Cleveland_Heights-University_Heights_City_School_District,_Ohio

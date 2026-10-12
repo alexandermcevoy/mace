@@ -5,11 +5,13 @@ title: "Revenue, State Aid, and the Property Tax Base"
 
 # Revenue, State Aid, and the Property Tax Base
 
-*Cleveland Heights-University Heights City School District (CH-UH), IRN 043687. Research current as of October 12, 2026.*
+[← Back to the CH-UH schools guide](./)
+
+*Cleveland Heights-University Heights City School District (CH-UH), IRN 043794. Research current as of October 12, 2026.*
 
 This page covers where CH-UH's money comes from: local property taxes, state aid under Ohio's Fair School Funding Plan, federal funds, and the deductions that once sent district money to vouchers. It also explains why a home's value can go up sharply while the district's tax revenue does not. The levy itself (Issue 4), spending, enrollment, and EdChoice in depth are on other OpenHeights pages.
 
-> **A note on how this page was built.** Our page-fetching tool could not reach the source websites during this research, so the figures below come from search-engine excerpts of the cited documents. We did not open and read the full PDFs. Each number links to the document it came from. Treat everything here as **provisional until checked against the original**. The "Gaps / unverified" section lists what still needs checking.
+> **Verification status: preliminary.** This page was compiled from search-indexed excerpts of the cited sources; during research the primary documents (state report card files, district PDFs, county tables) could not be opened directly. Every figure links to its source and gives its year, but has not yet been checked line-by-line against the original document. Items we could not confirm are listed under "Gaps / unverified." See [About this guide](./#about-this-guide).
 
 ## Key facts
 
