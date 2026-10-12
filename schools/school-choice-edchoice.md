@@ -58,6 +58,17 @@ What the table shows:
 - **EdChoice use rose more than sixfold in five years**, from 271 FTEs (FY2016) to 1,777 (FY2021). Charter-school use fell over the same period, from 423 to 402 FTEs.
 - **CH-UH accepts no open-enrollment students from other districts.** "Entering open enrollment" is 0 in every SFPR from FY2016 through FY2026 [[45]](#sources). About 85–150 resident students a year leave through other districts' open enrollment.
 - **For FY2022–FY2026, the state no longer prints these counts in the payment reports**, because it now pays scholarships and charters directly. DEW's FY2025 Scholarship Annual Report says per-district breakdowns exist only for the Jon Peterson program, in an interactive dashboard [[8]](#sources). We could not extract CH-UH figures from that dashboard.
+- **A second state source fills the gap.** The Ohio School Report Card publishes a one-day snapshot, "Place of Enrollment for Students Residing in the District." It counts CH-UH resident students using state scholarships (EdChoice, Cleveland, Autism, Jon Peterson) as follows ([Enrollment page](enrollment-and-demographics), from report-card data):
+
+| School year | Traditional EdChoice / Cleveland | EdChoice Expansion (income-based) | Autism / Jon Peterson | Total scholarship users | Community (charter) schools |
+|---|---|---|---|---|---|
+| 2018–19 | 882 | 153 | 260 | 1,295 | 337 |
+| 2021–22 | 1,885 | 182 | 267 | 2,334 | 351 |
+| 2023–24 | 1,816 | 465 | 271 | 2,552 | 316 |
+| 2024–25 | 1,730 | 888 | 283 | 2,901 | 310 |
+| 2025–26 | 1,592 | 1,052 | 294 | **2,938** | 343 |
+
+*Totals and charter sums (online + site-based) are OpenHeights calculations. These are snapshot headcounts, not the FTEs used in the payment reports, so they are not directly comparable with the FY2016–FY2021 table above.* Since universal Expansion eligibility began in 2023–24, Expansion users rose from 210 (2022–23) to 1,052. Traditional EdChoice use has eased since its 2022–23 peak of 1,926.
 
 ## What "cost" to CH-UH means: before and after 2021
 
@@ -156,7 +167,7 @@ The **plaintiffs** argue that the Constitution's "thorough and efficient system 
 |---|---|---|
 | **Scholarship donation tax credit** | Ohio taxpayers get a credit for gifts to certified scholarship-granting organizations: up to **$750 per person**, or $1,500 for a married couple filing jointly when each spouse gives $750. The credit is limited to the donor's tax liability. | [[33]](#sources) |
 | **ACE (Afterschool Child Enrichment)** | Accounts for tutoring, camps and enrichment. Created in 2021 with **$125M** in federal COVID relief money. Started at $500 per child and rose to **$1,000** in 2023. | Payments paused in 2025 after federal extensions were withdrawn. A third-party listing says the program closed Oct. 15, 2025 [[34]](#sources), [[35]](#sources) |
-| **Community (charter) schools** | Publicly funded, independently run schools, paid directly by the state since FY2022 [[1]](#sources). | 401.70 CH-UH resident FTEs in FY2021 [[45]](#sources). No state count published since. |
+| **Community (charter) schools** | Publicly funded, independently run schools, paid directly by the state since FY2022 [[1]](#sources). | 401.70 CH-UH resident FTEs in FY2021 [[45]](#sources). Report-card snapshot: 343 resident students in 2025–26 (see table above). |
 | **Inter-district open enrollment** | Each district decides whether to accept non-resident students [[36]](#sources). | **CH-UH does not take open-enrollment students:** entering open enrollment is 0 in every SFPR from FY2016 to FY2026. About 85–150 CH-UH residents a year attend other districts that accept them [[45]](#sources). |
 | **Transportation to private/charter schools** | Districts must bus resident K–8 students to nonpublic and charter schools and face penalties if they don't. AP (Sept. 2025) reported some districts cutting public-student routes as voucher-related demand grew. HB 545, the "School Busing Improvement Act," was introduced in Oct. 2025. | [[22]](#sources), [[37]](#sources). No CH-UH-specific cost figures found. |
 
@@ -209,7 +220,7 @@ Since FY2022, EdChoice scholarships for CH-UH residents are not subtracted from 
 
 ## Gaps / unverified
 
-- **CH-UH resident voucher and charter counts for FY2022–FY2026, split by traditional vs. Expansion.** DEW's payment reports stopped printing them after FY2021. Its per-district scholarship data sits in interactive dashboards on reports.education.ohio.gov that we could not query. The FY2022 "about 1,800 / $11 million" figure comes from the plaintiffs' side [[18]](#sources). A public-records request to DEW, or the district's own EMIS reports, would settle this.
+- **Dollar amounts of scholarships paid for CH-UH residents, FY2022–FY2026.** Headcounts are now available from the report card's place-of-enrollment snapshot (table above), but the state does not publish per-district scholarship dollars. The FY2022 "about 1,800 / $11 million" figure comes from the plaintiffs' side [[18]](#sources).
 - **The 10th District case number and any decision after Oct. 12, 2026.** Check the Franklin County Court of Appeals docket.
 - **The 2025–26 designated-building list.** We retrieved only 2026–27. DEW's historical list is in a dashboard we could not query. The 2019–20 list is from a third-party copy [[23]](#sources).
 - **OEPI and Buckeye Institute fiscal analyses.** We did not retrieve either (the OEPI site was unreachable).
