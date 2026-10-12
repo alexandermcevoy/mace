@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+title: OpenHeights
+description: Evidence-based civic information for Cleveland Heights and University Heights, Ohio.
+markdown: kramdown
+kramdown:
+  input: GFM
