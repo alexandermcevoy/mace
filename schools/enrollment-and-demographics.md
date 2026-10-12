@@ -7,186 +7,321 @@ title: "Enrollment, Demographics, and Where Heights Kids Go to School"
 
 [← Back to the CH-UH schools guide](./)
 
-*Research snapshot as of October 12, 2026. Every figure below links to its source and states its time period. Figures marked "OpenHeights calculation" are our own arithmetic, and the arithmetic is shown. Anything we could not confirm is listed under [Gaps / unverified](#gaps--unverified). This page doesn't take a position on Issue 4.*
+*Research snapshot as of October 12, 2026. Every figure below links to its source and states its time period. Figures marked "OpenHeights calculation" are our own arithmetic, and the arithmetic or method is shown. Anything we could not confirm is listed under [Gaps / unverified](#gaps--unverified). This page doesn't take a position on Issue 4.*
+
+> **Verification status: checked against primary sources on Oct. 12, 2026**, except items listed under Gaps / unverified. Primary sources used: Ohio School Report Card data (Ohio Department of Education and Workforce, DEW), NCES Common Core of Data, Census Bureau ACS tables for the district's geography (2008–12 and 2020–24), 2020 Census block files, the district's FY2024 annual financial report, and the district website. A few secondary items (history, private-school counts, some news quotes) are marked where they were not re-checked.
 
 ## Key facts
 
-- **Enrollment has fallen by about a third since 2000.** District enrollment went from **7,451 in 1999–2000** to **4,916 in 2023–24**, according to Ballotpedia's year-by-year table [[1]](#sources). That is 2,535 fewer students, or −34.0% (*OpenHeights calculation: (4,916 − 7,451) ÷ 7,451*).
-- **Current enrollment is roughly 4,650–5,020, and the sources disagree.** The Ohio Auditor of State reports **4,686** for FY2024 [[2]](#sources). The Ohio School Report Card directory reports **4,683** [[3]](#sources). The district's own table reports **4,655 as of March 19, 2026** [[4]](#sources). NCES reports **5,019** for 2024–25 [[5]](#sources). The counts use different dates and different rules about who is included.
-- **Many resident children don't attend district schools.** In 2018–19 the state's funding base for CH-UH was **6,578 resident students**. **22.3%** of them were educated elsewhere at district expense, through vouchers or community (charter) schools, and they accounted for about **34.6% of state funding** [[6]](#sources)[[7]](#sources). That 22.3% leaves out private-school students who don't use a voucher, and it leaves out homeschoolers. The share of all school-age residents outside the district is therefore higher.
-- **Voucher use is large and mostly by students who never enrolled in the district.** In 2020 about **1,400 resident students** used EdChoice vouchers. The district's CFO said **94%** of them had never attended district schools [[8]](#sources). One analyst cited by Ideastream estimated that about **90% of the district's EdChoice recipients were white**, compared with a district enrollment that is about **18% white** [[8]](#sources).
-- **The community and the student body look very different.** The district's student body is about **71% Black and 16–17% white** (2021–22 to 2023–24) [[9]](#sources)[[10]](#sources). In the two cities, **58.7%** of adults in Cleveland Heights hold a bachelor's degree or higher (ACS 2020–24) [[11]](#sources). Median household income across the district's area is **$74,845** (ACS 2020–24) [[12]](#sources).
-- **About 57,300 people live in the district**, according to the ACS 2020–24 5-year estimate [[12]](#sources). The district covers all of University Heights, most of Cleveland Heights, and a small part of South Euclid [[13]](#sources).
+- **Enrollment has fallen by about a third since 1999.** Fall enrollment (preschool–12) went from **7,451 in 1999–2000** to **4,916 in 2023–24** and **5,019 in 2024–25**, according to NCES [[1]](#sources). From 1999–2000 to 2024–25 that is **−32.6%** (*OpenHeights calculation: (5,019 − 7,451) ÷ 7,451*). On Ohio's report-card measure, enrollment fell from **5,438 in 2014–15 to 4,683 in 2025–26 (−13.9%)** [[3]](#sources).
+- **About one-third of resident K–12 students attend private school (or are homeschooled), and that share has not changed much since about 2010.** The Census Bureau's American Community Survey (ACS) puts **34.3% (±3.2 points)** of K–12 students living in the district in private school or homeschool in 2020–24, vs. **34.7% (±2.9)** in 2008–12 [[9]](#sources)[[10]](#sources). That is well above Shaker Heights (21.6%), Euclid (27.8%), South Euclid-Lyndhurst (25.1%) and Lakewood (16.9%) (*OpenHeights calculations from ACS table B14002*).
+- **Only about 55% of the resident students the state counts attend district schools.** On the state's 2025–26 snapshot, **4,281** resident students attended CH-UH. Another **2,938** used state vouchers (EdChoice, Cleveland, Autism or Jon Peterson scholarships), **343** attended community (charter) schools, and **161** attended other public districts [[3]](#sources). So **55.4%** of the 7,723 counted residents were in district schools (*OpenHeights calculation: 4,281 ÷ 7,723*). The state does not count private students who don't use a voucher, or homeschoolers, so the true share is lower. In 2018–19 the comparable figure was **71.8%**. Voucher users more than doubled over that period, from 1,295 to 2,938 [[3]](#sources).
+- **The student body is about 69% Black and 17% white (2025–26), while school-age children living in the district are about 49% Black and 40% white (ACS 2020–24)** [[3]](#sources)[[9]](#sources).
+- **Nearly every student is now counted as economically disadvantaged (99.9% in 2025–26).** That has been true since 2016–17; it was about 66–67% in 2014–15 and 2015–16 [[3]](#sources). The jump likely reflects how students are identified (see section 4), not a sudden change in family incomes. On a Census measure, **18.6%** of children under 18 in the district live below the poverty line (ACS 2020–24) [[9]](#sources).
+- **About 57,300 people live in the district** (ACS 2020–24: 57,331 ±939) [[9]](#sources). The district covers **all of University Heights, about 93% of Cleveland Heights' residents, and a small part of South Euclid** (about 1,570 residents in 2020). About **3,090 Cleveland Heights residents live in the East Cleveland City School District** (*OpenHeights calculation from 2020 Census block data* [[12]](#sources)).
 
 ## 1. District boundary and population
 
 | Item | Figure | Vintage | Source |
 |---|---|---|---|
-| Area covered | Most of Cleveland Heights, all of University Heights, a small part of South Euclid | Current (secondary source) | [[13]](#sources) |
-| Population inside district boundary | 57,331 | ACS 2020–24 5-yr | [[12]](#sources) |
-| Population inside district boundary (NCES ACS-ED) | 57,521 | ACS 2019–23 5-yr | [[14]](#sources) |
-| Population inside district boundary | 57,781 | ACS 2008–12 5-yr (centered on 2010) | [[15]](#sources) |
-| Cleveland Heights city population | 45,312 (Census); 44,064 (estimate) | April 1, 2020; July 1, 2024 | [[11]](#sources) |
-| University Heights city population | 13,265 (estimate); 13,200 (estimate) | July 1, 2024; July 1, 2025 | [[16]](#sources) |
+| Population inside district boundary | 57,331 (±939) | ACS 2020–24 5-yr | [[9]](#sources) |
+| Population inside district boundary | 57,781 (±502) | ACS 2008–12 5-yr | [[10]](#sources)[[15]](#sources) |
+| Population inside district boundary (2020 Census count) | 57,712 | April 1, 2020 | [[12]](#sources) (*OpenHeights calculation*) |
+| Children under 18 inside boundary | 12,848 (±896) | ACS 2020–24 | [[9]](#sources) |
+| Children under 18 inside boundary | 13,057 (±689) | ACS 2008–12 | [[10]](#sources) |
+| Children aged 5–17 inside boundary | 9,561 (±813); was 9,182 (±556) in 2008–12 | ACS | [[9]](#sources)[[10]](#sources) |
 
-The two cities together had about 57,300 residents in mid-2024 (*OpenHeights calculation: 44,064 + 13,265 = 57,329*). That total closely matches the district-geography ACS figure, even though part of Cleveland Heights may sit outside the district and part of South Euclid sits inside it. We have not confirmed the exact boundary exceptions; see Gaps.
+**Who lives inside the boundary (2020 Census).** We matched every 2020 census block to its school district and city using the Census Bureau's 2020 block assignment files, then added up block populations from the 2020 redistricting (PL 94-171) file [[12]](#sources):
 
-**District identifiers.** The NCES ID is 3904379 [[5]](#sources), and the Ohio state district ID (IRN) is **043794** [[17]](#sources).
+| City | Residents in CH-UH district | Residents in another district | Other district |
+|---|---|---|---|
+| Cleveland Heights (45,312) | 42,220 (93.2%) | 3,092 (6.8%) | East Cleveland City SD |
+| University Heights (13,914) | 13,914 (100%) | 0 | — |
+| South Euclid (21,883) | 1,569 (7.2%) | 20,314 | South Euclid-Lyndhurst City SD |
+| Cleveland | 9 | — | — |
 
-## 2. Enrollment trend, 2000–2026
+*OpenHeights calculation; the city totals match the official 2020 counts for Cleveland Heights (45,312). Shares are of each city's 2020 population.* The district's own street-level boundary map is posted on its website [[32]](#sources). We did not map which Cleveland Heights streets are in the East Cleveland district.
 
-**District enrollment by school year (Ballotpedia, which compiles Ohio Department of Education data) [[1]](#sources)**
+**District identifiers.** NCES district ID 3904379; Ohio district IRN 043794 [[5]](#sources).
 
-| School year | Enrollment | Notes |
-|---|---|---|
-| 1999–2000 | 7,451 | |
-| 2000–01 | 7,311 | |
-| 2005–06 | 6,376 | −1.9% from prior year |
-| 2009–10 | 6,056 | The 2010 DeJong-Healy projection report gives **5,995** for this year and a 1,066-student drop over the prior decade [[18]](#sources) |
-| 2012–13 | 5,845 | −1.3% |
-| 2015–16 | 5,349 | −4.2% |
-| 2019–20 | 5,169 | Wikipedia cites 5,062 as of Jan. 10, 2020 [[13]](#sources) |
-| 2020–21 | 4,936 | −4.7% (first pandemic year) |
-| 2021–22 | 4,967 | +0.6% |
-| 2022–23 | 5,010 | +0.9% |
-| 2023–24 | 4,916 | |
-| FY2024 (auditor) | 4,686 | Ohio Auditor of State audit [[2]](#sources) |
-| 2024–25 (NCES) | 5,019 | NCES Common Core of Data [[5]](#sources) |
-| 2025–26 (district, Mar. 19, 2026) | 4,655 | 1,996 elementary; 1,009 middle; 1,418 Heights High; the rest in other programs [[4]](#sources) |
+## 2. Enrollment trend and why the counts differ
 
-**Rates of decline (*OpenHeights calculation*)**
+**Fall enrollment, preschool through grade 12 (NCES Common Core of Data, October count) [[1]](#sources)**
+
+| School year | Enrollment | | School year | Enrollment |
+|---|---|---|---|---|
+| 1999–2000 | 7,451 | | 2012–13 | 5,845 |
+| 2000–01 | 7,311 | | 2014–15 | 5,572 |
+| 2002–03 | 7,044 | | 2015–16 | 5,349 |
+| 2004–05 | 6,494 | | 2017–18 | 5,217 |
+| 2005–06 | 6,376 | | 2019–20 | 5,169 |
+| 2007–08 | 6,257 | | 2020–21 | 4,936 |
+| 2009–10 | 6,056 | | 2021–22 | 4,967 |
+| 2010–11 | 6,032 | | 2022–23 | 5,010 |
+| | | | 2023–24 | 4,916 |
+| | | | 2024–25 | 5,019 (incl. 169 preschool) |
+
+**Ohio report card enrollment (DEW) [[3]](#sources)**
+
+| School year | Enrollment | Black | White | Hispanic | Multiracial | Asian/Pac. Isl. | Students with disabilities | English learners | Econ. disadvantaged |
+|---|---|---|---|---|---|---|---|---|---|
+| 2014–15 | 5,438 | 72.5% | 17.4% | 2.6% | 5.5% | 1.9% | 17.1% | 2.6% | 67.2% |
+| 2015–16 | 5,257 | 72.9% | 16.9% | 2.7% | 5.4% | 2.1% | 17.5% | 2.6% | 65.7% |
+| 2016–17 | 5,184 | 72.2% | 17.6% | 2.6% | 5.5% | 2.0% | 18.3% | 2.4% | 99.9% |
+| 2017–18 | 5,126 | 71.8% | 17.5% | 3.0% | 5.4% | 2.2% | 19.0% | 1.9% | 100% |
+| 2018–19 | 5,148 | 70.9% | 18.0% | 3.7% | 5.5% | 1.9% | 19.5% | 1.5% | 100% |
+| 2019–20 | 5,096 | 71.2% | 17.6% | 3.9% | 5.4% | 1.8% | 19.5% | 1.3% | 100% |
+| 2020–21 | 4,850 | 71.7% | 16.9% | 4.0% | 5.6% | 1.6% | 19.3% | 1.3% | 100% |
+| 2021–22 | 4,841 | 71.1% | 17.2% | 4.4% | 5.6% | 1.3% | 19.5% | 1.1% | 100% |
+| 2022–23 | 4,903 | 70.5% | 17.3% | 5.0% | 5.8% | 1.1% | 20.5% | 1.3% | 100% |
+| 2023–24 | 4,811 | 70.8% | 16.9% | 5.2% | 5.7% | 1.1% | 21.6% | 1.7% | 100% |
+| 2024–25 | 4,863 | 69.8% | 16.9% | 6.0% | 5.8% | 1.3% | 21.9% | 2.2% | 99.9% |
+| 2025–26 | 4,683 | 69.1% | 16.9% | 6.5% | 6.1% | 1.2% | 22.2% | 2.2% | 99.9% |
+
+*Percentages are OpenHeights calculations: each subgroup count in the report card data divided by total enrollment. The state reports these counts with decimals (students enrolled part of the year count fractionally); we rounded totals to whole students.*
+
+**Rates of decline (*OpenHeights calculation, NCES series*)**
 
 - 2000–01 to 2009–10: (6,056 − 7,311) ÷ 7,311 = **−17.2%**
 - 2009–10 to 2019–20: (5,169 − 6,056) ÷ 6,056 = **−14.6%**
-- 2019–20 to 2023–24: (4,916 − 5,169) ÷ 5,169 = **−4.9%**
+- 2019–20 to 2024–25: (5,019 − 5,169) ÷ 5,169 = **−2.9%**
 
-Enrollment roughly held steady from 2020–21 to 2022–23 and then started falling again.
+Since the pandemic, enrollment has moved within a narrow band (about 4,900–5,000 on NCES; 4,700–4,900 on the report card). The report-card count fell 3.7% in the most recent year (4,863 → 4,683).
 
-**Why the sources disagree.** For 2024–25 and 2025–26, NCES (5,019), the Auditor (4,686), the report card (4,683), and the district (4,655) don't match. These counts are probably taken on different dates (the October count versus a later-quarter snapshot). They may also treat preschool, students placed outside the district, and the Options alternative school differently. We have not reconciled them. The Ohio report card's enrollment figure is the official state number.
+**Why the current numbers disagree.** Each published figure counts something different:
 
-**Projections.** The district has commissioned at least two enrollment projection studies. One was a 10-year, school-by-school study by DeJong-Healy in 2010 [[18]](#sources). The other was a working draft by FutureThink in November 2015, done for the Ohio School Facilities Commission. It used birth data, historical enrollment, community-school and open-enrollment data, and housing information [[19]](#sources). We could not open either document to pull out the projected numbers; see Gaps. We found no projection study from 2020 or later.
+| Figure | What it counts | Source |
+|---|---|---|
+| **5,019** | NCES fall membership (October count), 2024–25, **including 169 preschoolers**; 4,850 in grades K–12 | [[1]](#sources)[[5]](#sources) |
+| **4,863 / 4,683** | Ohio report-card enrollment for 2024–25 / 2025–26. Reported with decimals, so part-year students count fractionally; the totals line up with the K–12 NCES count, which suggests preschool is excluded | [[3]](#sources) |
+| **4,686** | "School District records" for FY2024 (2023–24), as printed in the district's FY2024 Annual Comprehensive Financial Report (statistical table 14), which the Auditor of State published with its audit. Count date and definition aren't stated. The same table gives 5,393 for FY2015 | [[2]](#sources) |
+| **4,655** | District headcount as of March 19, 2026 (2025–26, third quarter): 1,996 elementary; 1,009 middle; 1,418 Heights High; 97 Options Program; 135 Early Childhood Center (special-education preschool only) | [[4]](#sources) |
+
+The figure nearest to "official" for state accountability is the report card's: **4,683 for 2025–26**. For national comparisons, use NCES (October count, includes preschool).
+
+**Projections.** The district has commissioned at least two enrollment projection studies. DeJong-Healy did a 10-year, school-by-school study in 2010 [[18]](#sources). FutureThink did a working draft in November 2015 for the Ohio School Facilities Commission [[19]](#sources). The district's website still links a "FutureThink Enrollment Projections Report (through 2026)" [[4]](#sources). We did not pull out projected numbers; see Gaps.
 
 ## 3. Where resident children go to school
 
-Ohio funds students based on where they live. Students who live in the district but attend a community school, or use an EdChoice voucher at a private school, are counted in the district's funding base, and money is then deducted for them. That makes it possible to estimate part of the "capture rate."
+### 3a. The state's count of resident students (report card "School Choice Options")
 
-| Measure | Figure | Vintage | Source |
-|---|---|---|---|
-| Resident students in the state funding base | 6,578 | FY2019 (2018–19) | [[6]](#sources) |
-| Share of that base not attending district schools (vouchers + community schools) | 22.3% (about 1,467 students; *OpenHeights calculation: 6,578 × 0.223*) | FY2019 | [[6]](#sources) |
-| Share of state aid tied to those students | 34.6% | FY2019 | [[6]](#sources)[[7]](#sources) |
-| EdChoice/voucher students | 1,132 ($7.36M) | FY2019 | [[7]](#sources) |
-| EdChoice/voucher students | about 1,300 | about 2019–20 | [[20]](#sources) |
-| EdChoice voucher students | about 1,400 (94% never attended the district) | Feb. 2020 | [[8]](#sources) |
-| EdChoice voucher students | about 1,800 ($11M) | 2020 court filing, as reported | [[21]](#sources) |
-| Cumulative voucher deductions since 2015–16 (when the first 73 vouchers were issued) | more than $21M | Heights Observer opinion piece, date not confirmed | [[22]](#sources) |
+Each year the report card publishes a one-day snapshot of where students who **live** in the district are enrolled. DEW notes that it "does not collect and cannot report information on district residents who are non-voucher students attending a non-public school" [[3]](#sources). Homeschoolers are also left out.
 
-**Rough capture-rate estimate, about 2010 (*OpenHeights calculation*).** The ACS 2008–12 count for the district's area puts **9,278** residents in public or private primary and secondary school [[15]](#sources). District enrollment in 2009–10 was **6,056** [[1]](#sources). Dividing gives 6,056 ÷ 9,278 ≈ **65%** of resident K–12 students attending district schools, and about **35%** attending elsewhere: private, parochial, charter, or other public. This is approximate. The two figures don't cover exactly the same years. ACS counts are sample estimates with margins of error. District enrollment may also include some non-residents or preschool students.
+| Report card year | In CH-UH | Other districts (open enrollment) | Other districts (other means) | Online community schools | Site-based community schools | EdChoice / Cleveland Scholarship | EdChoice Expansion (income-based) | Autism / Jon Peterson scholarships | **Total counted** | **Share in CH-UH** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2018–19 | 4,701 | 154 | 62 | 108 | 229 | 882 | 153 | 260 | 6,549 | **71.8%** |
+| 2019–20 | 4,669 | 128 | 90 | 105 | 235 | 1,400 | 148 | 261 | 7,036 | 66.4% |
+| 2020–21 | 4,501 | 130 | 83 | 142 | 267 | 1,772 | 144 | 265 | 7,304 | 61.6% |
+| 2021–22 | 4,438 | 129 | 106 | 112 | 239 | 1,885 | 182 | 267 | 7,358 | 60.3% |
+| 2022–23 | 4,488 | 113 | 84 | 115 | 207 | 1,926 | 210 | 278 | 7,421 | 60.5% |
+| 2023–24 | 4,387 | 130 | 82 | 117 | 199 | 1,816 | 465 | 271 | 7,467 | 58.8% |
+| 2024–25 | 4,431 | 122 | 80 | 128 | 182 | 1,730 | 888 | 283 | 7,844 | 56.5% |
+| 2025–26 | 4,281 | 89 | 72 | 113 | 230 | 1,592 | 1,052 | 294 | 7,723 | **55.4%** |
 
-**The "large share don't attend" claim.** We could not find a current, sourced statement of the exact percentage. The evidence above supports two narrower statements:
+*Source: Ohio School Report Card district data, "School Choice Options: Place of Enrollment for Students Residing in the District," report-card years 2019–2026 [[3]](#sources). Totals and shares are OpenHeights calculations: the sum of the eight columns shown, and "In CH-UH" divided by that sum. A ninth reported count, dropout-prevention-and-recovery programs, is excluded because DEW says those students are already in the community-school counts. School years are inferred from the report-card year (the 2026 report card covers 2025–26).*
 
-1. At least **22% of resident students in the state funding base** were outside the district in 2018–19 [[6]](#sources).
-2. Roughly **a third of resident K–12 students** attended somewhere else around 2010 (the *OpenHeights calculation* above).
+What the table shows (*OpenHeights calculations*):
 
-Neither figure counts non-voucher private-school students and homeschoolers together with charter and voucher students for a recent year. That would require the current ACS table B14003 or S1401 for the district's area; see Gaps.
+- **Voucher users:** 1,295 → 2,938 (+127%) between 2018–19 and 2025–26. Since 2023–24, much of the growth has come from EdChoice Expansion, the income-based program that became universal in 2023–24 (153 → 1,052).
+- **Residents in district schools:** 4,701 → 4,281 (−8.9%).
+- **Community (charter) schools:** roughly flat at 310–410.
+- **Other public districts:** about 160–235 a year.
 
-**Private schools inside the boundary.** ProPublica's analysis of the federal Private School Survey shows eight private schools inside the district boundary that responded at least once since 2017 [[23]](#sources). The largest in 2021–22 were:
+### 3b. The Census measure: public vs. private, all resident K–12 students
 
-- Hebrew Academy of Cleveland: 1,047
-- Yeshiva Derech Hatorah: 756
-- Gesu School (Catholic): 627
-- Mosdos Ohr Hatorah Girls' Division: 438
+The ACS asks every household whether each child attends a public school or a "private school, private college, or home school." Charter (community) schools count as **public**. Voucher students and homeschoolers count as **private**. The figures cover all children living inside the district boundary, wherever they go to school.
 
-Those four total **2,868** (*OpenHeights calculation*). They also enroll students from outside the district, so the total should not be read as a count of resident children. ProPublica reports that the private-school students as a group were much less likely to be Black than the public-school students. For example, Gesu was 84.5% white, while the district was 71.4% Black [[23]](#sources).
+**Resident K–12 students, ACS 5-year estimates (table B14002) [[9]](#sources)[[10]](#sources)**
 
-**Open enrollment out and homeschool.** We found no sourced counts for CH-UH residents leaving through inter-district open enrollment, or for homeschooled children. See Gaps.
+| District | 2008–12: private share | 2020–24: private share | 2020–24: public | 2020–24: private/home | Change |
+|---|---|---|---|---|---|
+| **CH-UH** | **34.7% (±2.9)** | **34.3% (±3.2)** | 6,213 (±683) | 3,246 (±407) | no significant change |
+| Shaker Heights | 16.5% (±2.5) | 21.6% (±3.8) | 4,209 | 1,162 | up |
+| South Euclid-Lyndhurst | 16.8% (±3.3) | 25.1% (±5.9) | 2,939 | 987 | up |
+| Euclid | 22.4% (±2.9) | 27.8% (±4.8) | 6,115 | 2,358 | up (within margin) |
+| Lakewood | 20.2% (±2.6) | 16.9% (±3.7) | 4,164 | 849 | down (within margin) |
+
+*OpenHeights calculation: private ÷ (public + private), summing kindergarten, grades 1–4, 5–8 and 9–12 for both sexes. Margins of error (90% confidence) are approximated with the Census Bureau's formulas for sums and proportions. The 2008–12 figures come from the Census Bureau's ACS 2012 5-year summary file; the 2020–24 figures come from the ACS 2024 5-year release.*
+
+**By grade band, CH-UH, 2020–24 (private/home share):** kindergarten 41.5%, grades 1–4 35.1%, grades 5–8 45.6%, grades 9–12 24.3% (*OpenHeights calculation*; each band has a wide margin of error). Many families appear to return to public school for high school.
+
+**How the two measures fit together (rough, *OpenHeights calculation*).** In 2023–24 the state counted **4,387** residents in CH-UH schools [[3]](#sources). The ACS estimates about **9,459** resident K–12 students in any school (2020–24) [[9]](#sources). By that rough measure, fewer than half (4,387 ÷ 9,459 ≈ **46%**) of resident K–12 students attend CH-UH schools. Treat this as approximate:
+
+- It mixes a one-day state count with a five-year survey average.
+- The ACS total has a margin of about ±800.
+- The state's resident count may include some preschoolers.
+
+The ACS private/home figure (3,246 ±407) is larger than the state's 2023–24 voucher count (2,552). That fits a few hundred non-voucher private students and homeschoolers, but the margin of error is too wide to estimate them.
+
+### 3c. The FY2019 "22.3% of 6,578" figure
+
+The figure comes from a November 2019 Heights Observer column by Ari Klein, in the "A Teacher's Voice" series. It is not a state publication. Klein wrote: "In 2018–19 our district's state funding was based on 6,578 students. Of those, 77.7% attended our schools. The 22.3% who did not attend our schools accounted for about 34.6% of the state funding, resulting in a net loss of $4.4 million." He also wrote that for 2019–20 the district was "still funded based on 6,578 students" under the state's funding freeze but was "responsible for at least 7,200" [[6]](#sources).
+
+We confirmed the quotation. We did not find the state funding report behind the 6,578. It is broadly consistent with the report card's 2018–19 snapshot (6,549 residents counted), but the shares differ:
+
+- On the snapshot, 1,632 residents (24.9%) were in community schools or on vouchers.
+- 1,848 (28.2%) were outside the district counting open enrollment and other districts (*OpenHeights calculations*).
+
+Funding counts use full-time equivalents over the year, not a one-day headcount, so an exact match is not expected.
+
+### 3d. Other voucher figures in news reports
+
+| Figure | Vintage | Source |
+|---|---|---|
+| 1,132 voucher students ($7.36M) | FY2019 | NEPC blog quoting the Heights Coalition for Public Education [[7]](#sources) (not re-checked) |
+| 1,400 EdChoice students; "94 percent of those 1,400 kids never attended our schools" (district CFO Scott Gainer) | Feb. 2020 | Ideastream [[8]](#sources) (quote confirmed) |
+| about 1,800 ($11M) | 2020 court filing, as reported | News 5 [[21]](#sources) (not re-checked) |
+| more than $21M cumulative deductions since 2015–16 | opinion piece, date not confirmed | [[22]](#sources) (not re-checked) |
+
+The state's own counts in 3a are the better series. EdChoice is covered in detail on the [EdChoice page](school-choice-edchoice).
+
+### 3e. Private schools inside the boundary
+
+ProPublica's analysis of the federal Private School Survey lists **eight private schools** inside the district boundary [[23]](#sources). Their 2021–22 enrollments:
+
+| School | Enrollment |
+|---|---|
+| Hebrew Academy of Cleveland | 1,047 |
+| Yeshiva Derech Hatorah | 756 |
+| Gesu School (Catholic) | 627 |
+| Mosdos Ohr Hatorah Girls' Division | 438 |
+| Lutheran High School East | 320 |
+| Ruffing Montessori | 271 |
+| Communion of Saints | 177 |
+| Chaviva High School | 38 |
+
+That totals **3,674** (*OpenHeights calculation*). These schools also enroll students from outside the district, and many resident students attend private schools elsewhere, so the total is not a count of resident children. ProPublica says the private schools "had a much lower share of [Black] students" than the public schools in 2021–22, and that most of the eight schools are predominantly white [[23]](#sources).
 
 ## 4. Who the district's students are
 
-| Measure | Figure | Vintage | Source |
+The report-card table in section 2 is the primary source for race, disability and English-learner shares. Other indicators from the same data [[3]](#sources):
+
+| Measure | CH-UH | Ohio | Year |
 |---|---|---|---|
-| Black | 71.4% | 2021–22 | [[23]](#sources) |
-| Black / white | 71.3% / 16.6% | about 2023–24 (U.S. News) | [[9]](#sources) |
-| Black / white / two or more races | 71% / 17% / 6% | 2025 listing (ProPublica) | [[23]](#sources) |
-| Black / white | 70% / 16.3% | undated (Niche) | [[10]](#sources) |
-| Black / white | 75.7% / 17.6% | 2023–24 test-taker data (NeighborhoodScout) | [[24]](#sources) |
-| White share cited for comparison with voucher users | about 18% | about 2019 | [[8]](#sources) |
-| Minority enrollment | 80% | U.S. News | [[9]](#sources) |
+| Chronic absenteeism (missing 10%+ of school) | 26.4% | n/a | 2018–19 |
+| | 46.3% | 30.2% | 2021–22 |
+| | 39.5% | 26.8% | 2022–23 |
+| | 37.5% | 25.6% | 2023–24 |
+| | 38.2% | 25.1% | 2024–25 |
+| | **37.9%** | **23.9%** | **2025–26** |
+| Chronic absenteeism, 2025–26, by group | Black 43.9%; white 17.2%; Hispanic 29.8%; students with disabilities 45.6% | | 2025–26 |
+| Attendance rate | 89.3% | | 2025–26 |
+| Mobility rate | 13.7% (Black 15.4%, white 6.9%) | | 2025–26 |
 
-**Heights High, 2024–25 (NCES) [[17]](#sources):** 1,717 students. 1,281 are Black (**74.6%**) and 254 are white (**14.8%**). 814 qualify for free lunch through direct certification (**47.4%**). (*OpenHeights calculations: 1,281 ÷ 1,717; 254 ÷ 1,717; 814 ÷ 1,717.*) The district's own March 2026 table lists Heights High at 1,418 [[4]](#sources). The NCES count probably includes programs that the district reports separately.
+*Chronic absenteeism for 2019–20 (16.6%) and 2020–21 (37.2%) is distorted by pandemic closures and remote learning.*
 
-**Not yet sourced.** We have not yet verified a district-wide trend for economically disadvantaged students, students with disabilities, English learners, chronic absenteeism, or mobility. These are published in the Ohio School Report Card "Students" data (reportcard.education.ohio.gov), but we could not retrieve them for this snapshot. They will be added after they are checked; see Gaps.
+**About "economically disadvantaged."** The district's share jumped from 65.7% in 2015–16 to 99.9% in 2016–17 and has stayed at about 100% [[3]](#sources). The district serves free breakfast and lunch to all students (its website lists "Free Breakfast and Lunch" [[4]](#sources)). Under the federal Community Eligibility Provision, Ohio allows districts to count all students as economically disadvantaged. The flat 100% therefore likely reflects how students are identified, not the share of low-income families. That share is not reported separately. We have not confirmed the district's CEP start date; see Gaps. The Census child-poverty rate (18.6%, section 5) is a better gauge of family income among resident children.
 
-**Historical comparison.** ProPublica's Miseducation data reports **5,217** students in 2017–18 [[25]](#sources).
+**Students with disabilities** rose steadily, from 17.1% (2014–15) to 22.2% (2025–26).
+
+**English learners** rose from 1.1% in 2021–22 to 2.2% in 2025–26 [[3]](#sources).
+
+**Heights High, 2024–25 (NCES; not re-checked) [[17]](#sources):** 1,717 students. 74.6% are Black and 14.8% white, and 47.4% qualify for free lunch through direct certification. The district's March 2026 table lists Heights High at 1,418 [[4]](#sources). The NCES count probably includes programs the district reports separately.
+
+**Historical comparison.** ProPublica's Miseducation data reports **5,217** students in 2017–18 [[25]](#sources), the same as the NCES count for that year [[1]](#sources).
 
 ## 5. Community demographics (Census ACS)
 
-| Measure | District area | Cleveland Heights city | University Heights city | Vintage | Source |
+**District area vs. peer districts, ACS 2020–24 5-year [[9]](#sources)** (*shares are OpenHeights calculations from the tables named*)
+
+| Measure | CH-UH | Shaker Hts | S. Euclid-Lyndhurst | Euclid | Lakewood |
 |---|---|---|---|---|---|
-| Median household income | $74,845 (±$3,333) | $72,826 | $96,971 | ACS 2020–24 | [[12]](#sources)[[11]](#sources)[[16]](#sources) |
-| Median household income (prior vintage) | $74,847 | $72,302 | n/a | ACS 2019–23 | [[14]](#sources)[[11]](#sources) |
-| Per capita income | $45,870 (±$2,145) | n/a | n/a | ACS 2020–24 | [[12]](#sources) |
-| Poverty rate, all persons | 13.9% (±2.3%), about 7,687 people | 15.9% (2020–24); 14.7% (2019–23) | 11.1% | ACS 5-yr | [[12]](#sources)[[11]](#sources)[[16]](#sources) |
-| Families receiving SNAP | 33.1% (as labeled by NCES ACS-ED) | n/a | n/a | ACS 2019–23 | [[14]](#sources) |
-| Bachelor's degree or higher (age 25+) | n/a | 58.7% (U.S. 35.7%) | n/a | ACS 2020–24 | [[11]](#sources) |
-| Owner-occupied housing rate | n/a | 58.2% (U.S. 65.2%) | 66.4% (Data USA, 2023) | ACS | [[11]](#sources)[[26]](#sources) |
-| Median value, owner-occupied homes | n/a | $192,100 (U.S. $332,700) | $224,900 (Data USA, 2023) | ACS | [[11]](#sources)[[26]](#sources) |
+| Population (B01003) | 57,331 | 33,139 | 33,916 | 48,823 | 49,926 |
+| Median household income (B19013) | $74,845 (±$3,333) | $95,126 | $86,087 | $50,285 | $68,865 |
+| Children under 18 in poverty (B17001) | **18.6%** (±4.2) | 14.3% | 5.0% | 17.7% | 9.4% |
+| All persons in poverty (B17001) | 13.9% (±2.3) | 10.0% | 5.9% | 16.6% | 10.3% |
+| Adults 25+ with bachelor's or higher (B15003) | **61.2%** | 66.6% | 49.9% | 23.2% | 55.2% |
+| Resident K–12 students in private school/homeschool (B14002) | **34.3%** | 21.6% | 25.1% | 27.8% | 16.9% |
+| Children 5–17: Black alone (B01001B) | **48.8%** | 33.7% | 50.3% | 76.5% | 1.8% |
+| Children 5–17: white alone, non-Hispanic (B01001H) | **40.2%** | 49.6% | 40.6% | 13.3% | 75.7% |
+| Children 5–17: Hispanic (B01001I) | 1.9% | 5.9% | 4.1% | 2.2% | 6.2% |
 
-**School-age population.** The ACS 2008–12 estimate for the district's area counted about **13,057 residents under 18** [[15]](#sources). That breaks down as 3,875 aged 0–4, 3,321 aged 5–9, 3,620 aged 10–14, and 2,241 aged 15–17 (*OpenHeights calculation: sum of the four age groups*). We have not retrieved a current (2020–24) figure, so the trend in the school-age population can't yet be shown.
+**CH-UH trend, ACS 2008–12 vs. 2020–24 [[10]](#sources)[[9]](#sources)**
 
-**The gap between residents and students.** Comparing who lives here with who attends district schools:
+| Measure | 2008–12 | 2020–24 |
+|---|---|---|
+| Population | 57,781 | 57,331 |
+| Children under 18 | 13,057 | 12,848 |
+| Resident K–12 students enrolled (public + private) | 9,278 | 9,459 |
+| Private/home share of resident K–12 | 34.7% | 34.3% |
+| Child poverty (under 18) | 19.3% | 18.6% |
+| All-persons poverty | 16.2% | 13.9% |
+| Median household income (nominal) | $51,518 | $74,845 |
+| Bachelor's or higher, age 25+ | 54.7% | 61.2% |
+| Children 5–17: Black / white non-Hispanic | 46.3% / 46.0% | 48.8% / 40.2% |
 
-- **Adults.** Cleveland Heights adults are highly educated: 58.7% hold a bachelor's degree or higher [[11]](#sources). Median income across the area is near the regional middle [[12]](#sources).
-- **District students.** About 71% are Black [[9]](#sources)[[23]](#sources). At Heights High, nearly half of students qualify for free lunch through direct certification [[17]](#sources).
-- **Children who leave.** Voucher users are disproportionately white [[8]](#sources). The large private schools inside the boundary are mostly Jewish and Catholic schools with low Black enrollment [[23]](#sources).
+*Shares are OpenHeights calculations. In 2024 dollars, the 2008–12 median income is roughly $70,400 (CPI-U annual averages: 2012 = 229.6, 2024 = 313.7). That implies a real increase of about 6%, within the margins of error.*
 
-We have not yet compiled the racial and income makeup of *all resident children*, available from ACS tables B01001B–I and B17001 for the district's area. A direct "residents vs. enrollees" comparison table is therefore still pending; see Gaps.
+**Residents vs. students.** Black children are about **49%** of school-age residents but about **69%** of district students. White non-Hispanic children are about **40%** of school-age residents but about **17%** of district students [[9]](#sources)[[3]](#sources). That fits ProPublica's finding that nearby private schools enroll far fewer Black students [[23]](#sources). The ACS doesn't break down public vs. private enrollment by race for this geography, so we can't directly measure each group's private-school share.
+
+**The two cities (ACS 2020–24, Census Reporter place tables) [[11]](#sources)[[16]](#sources)**
+
+| Measure | Cleveland Heights | University Heights |
+|---|---|---|
+| Median household income | $72,826 | $96,971 |
+| Poverty rate, all persons | 15.9% | 11.1% |
+| Bachelor's degree or higher (25+) | 58.7% | 67.5% |
+| Owner-occupied housing | 58.2% | 67.7% |
+| Median value, owner-occupied homes | $192,100 | $242,700 |
+
+The NCES ACS-ED profile for 2019–23 reports 57,521 residents, $74,847 median household income, and "33.1%" of families receiving SNAP [[14]](#sources). We did not re-check these; the SNAP label is ambiguous.
 
 ## 6. Historical context
 
-- **Building closures.** The Heights Observer reports that steep enrollment drops and changing enrollment patterns led to building closures only a few years after a major construction program ended. It names the 2008 closure of Coventry Elementary as one of the controversial closings [[27]](#sources).
-- **Heights High's "small schools" period.** In 2004 Heights High became a pilot site for the Gates Foundation's small-schools initiative, and in 2015 it returned to a single comprehensive high school [[28]](#sources). A 2007 Cleveland Magazine article described the effort as an attempt to "stem an exodus of students" from "one of Greater Cleveland's most integrated communities" [[29]](#sources). Heights High was once a comprehensive high school of about 2,000 students [[28]](#sources).
-- **EdChoice eligibility (2020).** Nine district buildings appeared on the state's EdChoice eligibility list: Boulevard, Canterbury, Gearity, Noble, Oxford, and Roxboro elementaries; Roxboro and Monticello middle schools; and Heights High [[20]](#sources).
-- **Current building configuration.** The district describes itself as seven elementary schools, two middle schools, one high school, a career-tech consortium, an alternative school (Options), an early childhood center, and a school for students with emotional needs [[30]](#sources).
-- **2026 staffing.** The board approved cutting 32 staff positions effective July 1, 2026, citing state funding [[31]](#sources). Funding is covered in detail on other OpenHeights pages.
+*(Secondary sources; not re-checked in this pass.)*
 
-## 7. Peer comparison
+- **Building closures.** The Heights Observer reports that steep enrollment drops led to building closures only a few years after a major construction program ended, including the 2008 closure of Coventry Elementary [[27]](#sources). The district's FY2024 financial report lists Coventry and Bellefaire with no enrollment after FY2015 [[2]](#sources).
+- **Heights High's "small schools" period.** In 2004 Heights High became a pilot site for the Gates Foundation's small-schools initiative, and in 2015 it returned to a single comprehensive high school [[28]](#sources). A 2007 Cleveland Magazine article described the effort as an attempt to "stem an exodus of students" [[29]](#sources).
+- **EdChoice eligibility (2020).** Patch reported nine district buildings on the state's EdChoice eligibility list [[20]](#sources); Ideastream (Feb. 2020) said seven [[8]](#sources). The lists changed during 2020.
+- **Current building configuration.** As of March 2026: seven elementary schools, two middle schools (Baumgardner and Roxboro), Heights High, the Options Program, and the Early Childhood Center [[4]](#sources).
+- **2026 staffing.** The board approved cutting 32 staff positions effective July 1, 2026, citing state funding [[31]](#sources).
 
-We were not able to gather comparable, sourced figures for Shaker Heights, Lakewood, South Euclid-Lyndhurst, Euclid, or Cleveland Metropolitan for this snapshot. That comparison is pending; see Gaps.
+## Corrections log
+
+*Oct. 12, 2026 verification pass*
+
+- **4,686 (FY2024):** previously described as reported by the Ohio Auditor of State. It is "School District records" printed in the district's FY2024 Annual Comprehensive Financial Report, which the Auditor published [[2]](#sources).
+- **"About 90% of the district's EdChoice recipients were white, compared with ~18% white enrollment":** previously attributed to Ideastream [[8]](#sources). It does not appear in that article, so we removed it.
+- **Gesu School "84.5% white" and "district 71.4% Black" (ProPublica):** neither figure appears on ProPublica's current page, so we removed both. The race table that used 71.4% and the U.S. News, Niche and NeighborhoodScout figures is replaced by state report-card data.
+- **Enrollment table:** previously sourced to Ballotpedia, now sourced to NCES CCD. All 11 Ballotpedia values match NCES exactly. Wikipedia's "5,062 as of Jan. 10, 2020" is dropped.
+- **Bachelor's degree:** the "58.7%" figure is for Cleveland Heights city only. The district-area figure is **61.2%** (ACS 2020–24).
+- **Boundary:** "most of Cleveland Heights" is now quantified at 93.2% of residents. The rest live in the **East Cleveland** City School District. The South Euclid part is about 1,569 residents (2020).
+- **22.3% / 6,578 (FY2019):** the quotation is confirmed. The source is a Heights Observer teacher's column, not state data, and the URL is updated.
+- **Heights Observer link [6]:** updated to the current URL.
+- **University Heights home value:** $224,900 (Data USA, 2023) → $242,700 (ACS 2020–24). University Heights bachelor's share (67.5%) added.
+- **Private schools:** the four-school total of 2,868 → all eight schools, 3,674.
 
 ## Gaps / unverified
 
-1. **Our tools were limited.** During this research, direct page retrieval failed for every site we tried. That included census.gov, nces.ed.gov, censusreporter.org, chuh.org, and reportcard.education.ohio.gov. All figures above come from search-engine excerpts of those pages. Before publication, someone should open each linked source and confirm each number.
-2. **District IRN.** NCES lists **043794** [[17]](#sources); this matches state school IDs.
-3. **Exact boundary.** The "most of Cleveland Heights, small part of South Euclid" description comes from Wikipedia [[13]](#sources). We have not confirmed which parts of Cleveland Heights, if any, are served by another district (East Cleveland has been suggested), or the size of the South Euclid portion. Check the district boundary map at chuh.org/district/registration.
-4. **Conflicting current enrollment.** 4,655 (district, Mar. 2026), 4,683 (report card), 4,686 (Auditor, FY2024), 4,916 (Ballotpedia/U.S. News, 2023–24), and 5,019 (NCES, 2024–25). We have not reconciled them or obtained the October 2025 headcount or average daily membership (ADM).
-5. **Voucher counts by year.** Reported figures are 1,132 (FY2019), about 1,300, about 1,400 (2020), about 1,800 (2020 court filing), and 1,743/1,924 in a Heights Observer opinion piece whose years we could not confirm. The 2024–26 counts after universal EdChoice eligibility were not retrieved. Another OpenHeights page covers EdChoice.
-6. **Capture rate.** We have no current ACS-based figure for resident K–12 students in public vs. private school (tables B14003/S1401 for school district 3904379). We have no counts for open enrollment out or for homeschool. The ~65% figure for about 2010 is a rough estimate from data that don't line up exactly.
-7. **Student subgroups over time.** Economically disadvantaged %, students with disabilities %, English learners %, chronic absenteeism, mobility, and building-level demographics were **not verified**. Source to use: the Ohio School Report Card enrollment and "Students" data, 2015–2026.
-8. **Child poverty and the makeup of resident children.** Not retrieved. Sources to use: NCES ACS-ED Dashboard [[14]](#sources) or Census Reporter [[12]](#sources). The ACS-ED "13.9%" is labeled "families below poverty," while Census Reporter labels its 13.9% as the all-persons poverty rate. Check which universe each refers to.
-9. **Projection numbers** from the 2010 DeJong-Healy and 2015 FutureThink reports were not retrieved [[18]](#sources)[[19]](#sources).
-10. **Integration history** (1960s–80s housing and school integration, and the share of Black students over time) and a full list of closures and grade reconfigurations (for example, the reorganization of middle schools) were not sourced for this snapshot.
-11. **Peer district comparisons** were not gathered.
-12. **University Heights** education attainment and ACS 2020–24 housing values were not retrieved. The Data USA 2023 figures are from a secondary aggregator.
+1. **Census API.** The official Census API (api.census.gov) now requires a key. The 2020–24 tables came from Census Reporter's API, which redistributes Census Bureau ACS data. The 2008–12 tables came directly from the Census Bureau's ACS summary file. Spot checks matched published figures (for example, population, median income, and poverty).
+2. **Report-card definitions.** DEW's documentation of exactly how the fractional enrollment count is computed, whether it excludes preschool, and the count date of the "School Choice Options" snapshot was not retrieved.
+3. **CEP start date.** We did not confirm when the district began Community Eligibility, which would explain the 2016–17 jump to ~100% economically disadvantaged.
+4. **Non-voucher private and homeschool counts.** These are not collected by the state. Only the ACS gives an indirect, wide-margin estimate.
+5. **The FY2019 6,578 funding base.** The state school-foundation payment report behind it was not retrieved.
+6. **Projection numbers** from the 2010 DeJong-Healy, 2015 FutureThink and "through 2026" FutureThink reports [[18]](#sources)[[19]](#sources).
+7. **Which Cleveland Heights streets** lie in the East Cleveland district (block-level match done; street list not compiled).
+8. **Not re-checked:** Heights High NCES figures; NCES ACS-ED 2019–23 profile; NEPC, News 5 and Heights Observer opinion voucher figures; history items in section 6.
+9. **Peer comparison of report-card subgroups** (chronic absenteeism, disabilities) across Shaker, South Euclid-Lyndhurst, Euclid and Lakewood was not compiled. Census peer comparison is in section 5.
+10. **Integration history** (1960s–80s) and the full sequence of building closures and reconfigurations.
 
 ## Sources
 
-1. Ballotpedia, "Cleveland Heights-University Heights City School District, Ohio" (enrollment table, 1999–2000 to 2023–24). https://ballotpedia.org/Cleveland_Heights-University_Heights_City_School_District,_Ohio
-2. Ohio Auditor of State, Cleveland Heights-University Heights CSD, FY2024 audit report (2025). https://ohioauditor.gov/auditsearch/Reports/2025/Cleveland_Heights-University_Heights_CSD_2024_Cuyahoga_FINAL.pdf
-3. Ohio School Report Cards, district home page (directory enrollment). https://reportcard.education.ohio.gov/district/043794
-4. CH-UH City School District, "District" page (enrollment table as of March 19, 2026). https://www.chuh.org/district
-5. NCES Common Core of Data, district detail 3904379 (2024–25). https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=3904379
-6. Heights Observer, "State funding results in losses for CH-UH" (Nov. 1, 2019). http://heightsobserver.org/read/2019/11/01/state-funding-results-in-losses-for-chuh
+1. NCES Common Core of Data, district 3904379, fall membership 1999–2000 to 2024–25 (with grade-PK counts), retrieved through the Urban Institute Education Data Portal API. Example: https://educationdata.urban.org/api/v1/school-districts/ccd/directory/2024/?leaid=3904379
+2. Ohio Auditor of State, Cleveland Heights-University Heights CSD, FY2024 audit report, including the district's Annual Comprehensive Financial Report (statistical tables 14 and 16) (2025). https://ohioauditor.gov/auditsearch/Reports/2025/Cleveland_Heights-University_Heights_CSD_2024_Cuyahoga_FINAL.pdf
+3. Ohio Department of Education and Workforce, Ohio School Report Cards, district 043794, report-card years 2019–2026 (enrollment by subgroup, School Choice Options, chronic absenteeism, attendance, mobility). Retrieved from the data service behind the report-card site (`reportcarddataapi.education.ohio.gov/api/GetByIrn/043794/{year}`). https://reportcard.education.ohio.gov/district/overview/043794
+4. CH-UH City School District, "District" page (enrollment as of March 19, 2026) and site navigation. https://www.chuh.org/district
+5. NCES Common Core of Data, district detail 3904379 (2024–25 membership; 2025–26 directory). https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=3904379
+6. Ari Klein, "State funding results in losses for CH-UH," Heights Observer, "A Teacher's Voice" (Nov. 1, 2019). https://heightsobserver.org/articles/a-teachers-voice/state-funding-results-in-losses-for-ch-uh/
 7. National Education Policy Center (Jan Resseger blog, quoting the Heights Coalition for Public Education), "EdChoice Voucher Expansion in Ohio Creates a New Kind of School Funding Inequity." https://nepc.colorado.edu/index.php/blog/edchoice-voucher
-8. Ideastream Public Media, "EdChoice Has Cleveland Heights-University Heights Schools In Limbo" (Feb. 17, 2020). https://www.ideastream.org/education/2020-02-17/edchoice-has-cleveland-heights-university-heights-schools-in-limbo
-9. U.S. News & World Report, Cleveland Heights-University Heights City district profile. https://www.usnews.com/education/k12/ohio/districts/cleveland-heights-university-heights-city-108002
-10. Niche, CH-UH district students page. https://www.niche.com/k12/d/cleveland-heights-university-heights-city-school-district-oh/students/
-11. U.S. Census Bureau QuickFacts, Cleveland Heights city, Ohio (V2024 estimates; ACS 2019–23 and 2020–24). https://www.census.gov/quickfacts/fact/table/clevelandheightscityohio,US/PST045224
-12. Census Reporter, Cleveland Heights-University Heights City School District profile (ACS 2024 5-year, GEOID 97000US3904379). http://censusreporter.org/profiles/97000US3904379-cleveland-heights-university-heights-city-school-district-oh/
-13. Wikipedia, "Cleveland Heights–University Heights City School District." https://en.wikipedia.org/wiki/Cleveland_Heights%E2%80%93University_Heights_City_School_District
+8. Jenny Hamel, "EdChoice Has Cleveland Heights-University Heights Schools In Limbo," Ideastream Public Media (Feb. 17, 2020). https://www.ideastream.org/education/2020-02-17/edchoice-has-cleveland-heights-university-heights-schools-in-limbo
+9. U.S. Census Bureau, ACS 2020–24 5-year estimates, tables B01001, B01001B/H/I, B01003, B14002, B14003, B15003, B17001, B19013, B19301, for unified school districts 3904379 (CH-UH), 3904475 (Shaker Heights), 3904479 (South Euclid-Lyndhurst), 3904395 (Euclid), 3904419 (Lakewood), retrieved through the Census Reporter API. Example: https://api.censusreporter.org/1.0/data/show/latest?table_ids=B14002&geo_ids=97000US3904379 ; profile: https://censusreporter.org/profiles/97000US3904379-cleveland-heights-university-heights-city-school-district-oh/
+10. U.S. Census Bureau, ACS 2012 5-year (2008–12) summary file, Ohio, same tables and districts. https://www2.census.gov/programs-surveys/acs/summary_file/2012/data/5_year_by_state/Ohio_All_Geographies_Not_Tracts_Block_Groups.zip
+11. U.S. Census Bureau, ACS 2020–24, Cleveland Heights city (place 3916014), via Census Reporter; also QuickFacts. https://www.census.gov/quickfacts/fact/table/clevelandheightscityohio,US/PST045224
+12. U.S. Census Bureau, 2020 Census Block Assignment Files for Ohio (unified school districts; incorporated places) and the 2020 PL 94-171 redistricting data for Ohio. https://www2.census.gov/geo/docs/maps-data/data/baf2020/BlockAssign_ST39_OH.zip ; https://www2.census.gov/programs-surveys/decennial/2020/data/01-Redistricting_File--PL_94-171/Ohio/oh2020.pl.zip
+13. *(Removed: Wikipedia, replaced by [12].)*
 14. NCES EDGE, ACS-ED School District Profile 2019–23, district 3904379. https://nces.ed.gov/Programs/Edge/ACSDashboard/3904379
-15. ProximityOne, CH-UH School District General Demographics (ACS 2012 5-year). https://proximityone.com/sddep/39/3904379dep1.htm
-16. U.S. Census Bureau QuickFacts, University Heights city, Ohio. https://www.census.gov/quickfacts/fact/table/universityheightscityohio/PST045223
+15. ProximityOne, CH-UH School District General and Social Characteristics (ACS 2012 5-year). Its figures match [10]. https://proximityone.com/sddep/39/3904379dep2.htm
+16. U.S. Census Bureau, ACS 2020–24, University Heights city (place 3978932), via Census Reporter. https://censusreporter.org/profiles/16000US3978932-university-heights-oh/
 17. NCES Common Core of Data, Cleveland Heights High School (390437900571), 2024–25. https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?Search=1&DistrictID=3904379&ID=390437900571
 18. DeJong-Healy, CH-UH enrollment projection report (2010), hosted by CH-UH. https://www.chuh.org/Downloads/building_enrollment_report.pdf
 19. FutureThink, "Cleveland Heights-University Heights City School District Enrollment Projections" (working draft, Nov. 16, 2015). https://www.chuh.org/Downloads/draft_rpt_chuh_151116_tvh.pdf
@@ -194,11 +329,12 @@ We were not able to gather comparable, sourced figures for Shaker Heights, Lakew
 21. News 5 Cleveland, "Debate continues over Ohio's EdChoice as more organizations chime in on lawsuit." https://www.news5cleveland.com/news/education/debate-continues-over-ohios-edchoice-as-more-organizations-chime-in-on-lawsuit
 22. Heights Observer (opinion), "A reset for EdChoice vouchers." https://heightsobserver.org/articles/opinion-blogs/a-reset-for-edchoice-vouchers/
 23. ProPublica, Private School Demographics: CH-UH City School District (Private School Survey 2021–22). https://projects.propublica.org/private-school-demographics/districts/cleveland-heights-university-heights-city-school-district-3904379/
-24. NeighborhoodScout, University Heights schools. https://www.neighborhoodscout.com/oh/university-heights/schools
+24. *(Removed: NeighborhoodScout, replaced by [3].)*
 25. ProPublica, Miseducation: CH-UH City School District (2017–18). https://projects.propublica.org/miseducation/district/3904379
-26. Data USA, University Heights, OH. https://datausa.io/profile/geo/university-heights-oh
+26. *(Removed: Data USA, replaced by [16].)*
 27. Heights Observer, "Heights schools begin their second century." https://heightsobserver.org/articles/heights-history/heights-schools-begin-their-second-century/
 28. Cleveland Historical, "Cleveland Heights High School." https://clevelandhistorical.org/items/show/199
 29. Cleveland Magazine, "Anatomy of Heights High" (April 2007). https://clevelandmagazine.com/articles/anatomy-of-heights-high/
-30. Heights Schools Foundation, "About CH-UH Schools." https://heightsschoolsfoundation.org/about-chuh-schools/
+30. *(Removed: Heights Schools Foundation, replaced by [4].)*
 31. CH-UH Board of Education, "CH-UH City School District to make at least $5 million in cuts over two years." https://www.chuh.org/p/~board/district-board-posts/post/ch-uh-city-school-district-to-make-at-least-5-million-in-cuts-over-two-years
+32. CH-UH, School Boundary Maps (PDF district map with streets). https://www.chuh.org/district/school-boundary-maps
