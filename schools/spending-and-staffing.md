@@ -20,6 +20,8 @@ title: "Spending, Staffing, and Facilities"
 - **Two staff totals, both correct.** NCES counts **1,211.91 full-time-equivalent staff** for 2024–25 [6][7]. The district's audited report counts **956 full-time employees** for FY2025 [5]. The 32 positions cut in 2026 are 2.6% of the first figure and 3.3% of the second, so both fit the district's "approximately 3%."
 - **Teacher pay.** The state's FY2025 District Profile lists CH-UH's average classroom teacher salary as **$87,540**, against a **$76,482** statewide average [8]. The 2025–26 report card shows **$90,331** and an average of **16 years of experience** [1]. The **2025–2028 teachers' contract** raises the base salary **3.25% a year** and grants a full experience step each year, plus a one-time **$750** stipend. The employee health-premium share rises from 11% to 12% in July 2027 [9].
 - **Audits are clean.** The FY2024 and FY2025 financial audits (Rea & Associates, released by the Auditor of State) found **no findings, no material weaknesses, and no reportable noncompliance**. The district qualified as a "low-risk auditee" [10][11].
+- **Compared with districts serving similarly poor students, CH-UH is near the top on both classroom and non-classroom spending.** It spends $11,697 per equivalent pupil in classrooms (97th percentile of poverty-similar districts) and $6,851 outside them, 1.8 times the peer median. The low classroom share reflects high non-classroom spending, not thin classrooms.
+- **Buildings are under-filled more than empty.** Two buildings (15% of space) are vacant. Operating schools average about 11 students per classroom in grades K–8. Excess space likely costs roughly $2–4.6 million a year.
 - **Busing mostly serves nonpublic students.** In the FY2026 state funding report, **1,139 of the 1,710 students** CH-UH carries on school buses (**67%**) attend nonpublic schools [12].
 
 ## 1. Total and per-pupil spending
@@ -104,6 +106,39 @@ In the state's categories, "administration" covers more than central-office sala
 | State | $13,078 | 66.9% | $17,257 | 16.9% |
 
 Among these neighbors, only Shaker Heights spends more per pupil. CH-UH has the lowest classroom share of the group. Lakewood spends about $1,800 less per equivalent pupil and puts three-quarters of its spending into classrooms.
+
+### Compared with districts serving similarly poor students
+
+Neighboring districts differ a lot in poverty, so we also compared CH-UH with every Ohio district whose child-poverty rate is close to CH-UH's (18.9%; Census SAIPE 2024). We used Census child poverty because Ohio's "economically disadvantaged" flag is 99.9% for CH-UH, an artifact of universal free meals (see the [enrollment page](enrollment-and-demographics)). *OpenHeights calculation from the 2025–26 report-card spending data for all 607 districts [1] and Census SAIPE [33].*
+
+| Per equivalent pupil, 2025–26 report card | CH-UH | Median of 30 districts with 15–23% child poverty and 2,500+ students | CH-UH percentile in that group |
+|---|---|---|---|
+| Total spending | $18,548 | $12,103 | 97th |
+| Classroom spending | $11,697 | $8,514 | 97th |
+| Non-classroom spending | $6,851 | $3,724 | 97th |
+| Classroom share | 63.1% | 69.0% | 3rd |
+
+- **The low classroom share does not mean classrooms are short-changed.** CH-UH spends more per pupil *in* classrooms than almost any comparable district. Its share is low because non-classroom spending is about 1.8 times the peer median.
+- **The result holds however the peer group is drawn.** Against all 126 districts with 15–23% child poverty, all 186 at CH-UH's poverty level or higher, Ohio's urban districts, or CH-UH's own state typology group, CH-UH ranks between the 93rd and 98th percentile on both classroom and non-classroom dollars.
+- **Controlling for child poverty, disability share and size** in a statewide regression, CH-UH spends about **$6,400 more per equivalent pupil than predicted** (98th percentile of residuals).
+- **Caveat.** Ohio's need weighting counts economically disadvantaged students as more than one pupil. CH-UH's inflated disadvantage flag therefore probably *understates* its spending relative to peers.
+
+**Where the non-classroom gap sits (Census FY2024, current spending per pupil)** [2]:
+
+| Function | CH-UH | Median, same 30 peers | Difference |
+|---|---|---|---|
+| Instruction | $13,903 | $9,456 | +$4,448 |
+| Operation and maintenance of buildings | $2,588 | $1,348 | +$1,239 |
+| Business, central and other support | $1,827 | $636 | +$1,191 |
+| Pupil support (nurses, counselors, psychologists, social workers) | $2,099 | $1,100 | +$998 |
+| Instructional-staff support (coaching, training, curriculum) | $1,114 | $518 | +$595 |
+| School administration | $1,261 | $819 | +$442 |
+| District administration | $736 | $347 | +$389 |
+| Transportation | $991 | $759 | +$232 |
+| Food service | $507 | $561 | −$54 |
+| **Total current spending** | **$25,025** | **$15,601** | **+$9,424** |
+
+*Differences between medians do not add exactly to the total difference.* Transportation is a small part of the gap, even though two-thirds of CH-UH's bus riders attend nonpublic schools (see below). Districts code some functions differently in Census data, especially "other support," so the business/central line should be read with caution.
 
 ### Spending on resident students who do not attend district schools
 
@@ -241,6 +276,44 @@ Per position, the reductions average about **$106,000 in salary and benefits** (
 
 **Auditor of State.** The FY2024 audit (Rea & Associates; opinion dated December 27, 2024; released February 25, 2025) and the FY2025 audit (opinion dated December 23, 2025; released April 14, 2026) both gave **unmodified ("clean") opinions**. Both reported **no material weaknesses, no significant deficiencies, no material noncompliance, and no findings** for the financial statements or federal awards. Title I was the major federal program tested, and the district qualified as a **low-risk auditee** [10][11]. The FY2025 report notes that net position was restated because of a new accounting standard (GASB 101), not because of an error [11]. The FY2025 release was accompanied by a management letter, which we did not review. Separately, in May 2021 the Auditor of State issued a **$34,675 finding for recovery** over district-funded levy polling (see [Governance and Timeline](governance-and-timeline)). No state performance audit of CH-UH was found.
 
+### Building space and utilization
+
+The district's May 2025 facilities work session lists every building it owns [34]:
+
+| Building | Built | Square feet | Classrooms | Students (Mar. 2026) | Sq ft per student | Students per classroom |
+|---|---|---|---|---|---|---|
+| Heights High | 2017 (rebuilt) | 372,334 | 107 | 1,418 | 263 | 13.3 |
+| Monticello (Baumgardner) and Roxboro middle schools | 1930, 1931 | 237,932 | 97 | 1,009 | 236 | 10.4 |
+| Seven elementary schools | 1920–1974 | 438,443 | 184 | 1,996 | 220 | 10.8 |
+| Delisle Options Center | 1974 | 59,000 | 16 | 97 (Options) | — | — |
+| Board of Education offices | 1960 | 31,903 | 0 | — | — | — |
+| Wiley (vacant) | 1954 | 147,819 | 0 | — | — | — |
+| Millikin (vacant) | 1953 | 54,680 | 0 | — | — | — |
+| **District total** | | **1,342,111** | **404** | **4,655** | **288** | — |
+
+*Students are the district's March 19, 2026 headcount (see the [enrollment page](enrollment-and-demographics)). Per-student and per-classroom figures are OpenHeights calculations. Elementary buildings: Boulevard 1974, Canterbury 1927, Fairfax 1974, Gearity 1954, Noble 1922, Oxford 1928, Roxboro Elementary 1920.*
+
+**What this shows:**
+
+- **Only two buildings are empty.** Wiley and Millikin hold about 202,500 square feet, 15% of the district's space. Vacant buildings cost relatively little to carry (heat, security, insurance), but the district does not report that cost.
+- **The larger issue is under-filled operating schools.** The district averages about 11 students per classroom in its elementary and middle schools and about 238 square feet per student across its operating schools. Classroom counts include rooms for special education, art, music and intervention, so these are not class sizes. But they point to substantial unused capacity, especially in seven small elementary schools averaging about 285 students each.
+- **Rough cost of excess space (OpenHeights estimate).** CH-UH's building operation and maintenance cost about $12.7 million in FY2024, or about $11.16 per square foot of non-vacant space [2]. School planning commonly runs roughly 150–200 square feet per student; this range is our assumption, not a verified state standard. Against it, CH-UH's operating schools carry about **177,000–409,000 square feet (16–37%) more space than needed**, costing roughly **$2.0–$4.6 million a year**. That is about a third to three-quarters of the **$6.1 million** gap between CH-UH's maintenance spending and the poverty-peer median ($1,239 × 4,916 pupils). The rest reflects higher cost per square foot, which is plausible for buildings mostly built in the 1920s and 1930s.
+- **History.** The district has closed or repurposed several buildings as enrollment fell: Millikin, Wiley (after 2013–14), Coventry (transferred to Heights Libraries) and Taylor (now the Delisle Options Center). The 2012 facilities plan proposed closing three elementary schools; that has not happened. The May 2025 ten-year plan relies on the 3.8-mill permanent-improvement levy (about $3.6 million a year) and proposes no consolidation [34]. Heights High was rebuilt under the 2013 bond at 372,334 square feet for a school that now enrolls about 1,400 students.
+- **Debt capacity.** The same presentation reports $129.6 million in debt against a $153.3 million legal limit, leaving $23.7 million of capacity [34].
+
+### Legal costs
+
+Residents often cite legal fees from lawsuits against the district. What the record shows:
+
+- **No comparable statewide figure exists.** Ohio's district finance reports do not break out legal fees, so CH-UH's legal spending cannot be ranked against other districts from published data.
+- **Individual bills appear in board agendas, not totals.** Examples from invoice-approval lists:
+  - $32,640 to Mazanec Raskin & Ryder (superintendent's office, Aug. 2020);
+  - $50,000 to Squire Patton Boggs (charged to Finance, Apr. 2021; possibly bond counsel, not litigation);
+  - $50,000 to Ogletree Deakins for FY2026 human-resources legal services (Dec. 2025) [35].
+- **Lawsuits are largely insured.** The FY2025 audited report lists educators' legal liability coverage with a **$10,000 deductible and a $15 million limit**. It states that settled claims have not exceeded coverage in any of the past three years. Management judges that pending claims will not materially affect the district's finances [5].
+- **Upper bound.** Legal work is one part of "purchased services." CH-UH's purchased services total about **$3,255 per pupil, roughly the same as similar districts' $3,323** (OpenHeights calculation from the FY2025 District Profile: 11.8% × $27,676 vs. 19.1% × $17,424) [8]. Even if CH-UH's legal bills were well above its peers', they could explain only a small part of its overall spending premium.
+- **How to get the real number.** A public-records request for all payments to law firms over several years would give the total. Payment amounts are generally public even when the details of legal work are privileged.
+
 ## Gaps / unverified
 
 - **Bond ratings** (Moody's/S&P) for CH-UH were not found; EMMA official statements were not reviewed.
@@ -248,6 +321,7 @@ Per position, the reductions average about **$106,000 in salary and benefits** (
 - **Administrator salaries by position** (only DEW averages are given). The FY2025 audit's management letter was not reviewed.
 - **Dollar cost of nonpublic busing**: only rider counts and total transportation cost are available.
 - **The NCES "other support services" category** (433 FTE) is not broken down by job, so the NCES total-staff trend cannot be fully explained.
+- **Legal spending totals**: only individual invoices in board agendas were found; no multi-year total. The carrying cost of the two vacant buildings is not reported.
 - **Items from news coverage** (2026 cut details, 2019–2022 contracts, 2013 bond campaign, 2016 cuts, 2020 EdChoice estimates) were not re-verified against original documents in this pass.
 - The **cash outlook** differs between the district's May 2026 statement (−$6M by 2028–29) and news coverage of the forecast (negative in FY2030) [19][32]. The levy page covers the forecast.
 
@@ -300,3 +374,6 @@ Per position, the reductions average about **$106,000 in salary and benefits** (
 30. CH-UH, About Phase 1: https://www.chuh.org/AboutPhase1.aspx
 31. Cleveland Jewish News, "Wiley Middle School to close at end of school year" (2013): https://www.clevelandjewishnews.com/news/local/wiley-middle-school-to-close-at-end-of-school-year/article_54f7b8fe-52dd-11e3-903f-0019bb2963f4.html
 32. Hoodline, "CH-UH schools ask voters to approve $11.1 million annual levy" (Sept. 2026): https://hoodline.com/2026/09/cleveland-heights-university-heights-schools-ask-voters-to-approve-11-1-million-annual-levy/
+33. U.S. Census Bureau, Small Area Income and Poverty Estimates, 2024 school-district estimates: https://www2.census.gov/programs-surveys/saipe/datasets/2024/2024-school-districts/ussd24.txt
+34. CH-UH BoardDocs, May 20, 2025 work session, "Facilities Work Session" presentation: https://go.boarddocs.com/oh/chuh/Board.nsf/files/DGUQKH69AEF9/$file/2025.05.20%20Facilities%20Work%20Session.pdf
+35. CH-UH BoardDocs, invoice and "then and now" approval items, Aug. 4, 2020; Apr. 6, 2021; Dec. 16, 2025 meetings: https://go.boarddocs.com/oh/chuh/Board.nsf/Public
