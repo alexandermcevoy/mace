@@ -13,6 +13,8 @@ title: "Outcomes Adjusted for Who the District Serves"
 
 ## Key facts / bottom line
 
+- **The district's low average is largely about who enrolls.** Every student group in CH-UH outscores its statewide average, but the district as a whole ranks at the 17th percentile because its students are much more likely to be Black and low-income than the community's children overall. Reweighted to the community's own mix, its Performance Index would be about 87, near the median district. Compared district by district, CH-UH's Black and Hispanic students score slightly below the typical district (section 6a).
+
 - **Raw achievement is low, which mostly reflects who the district serves.** CH-UH's 2025–26 Performance Index (PI) was **79.0**, against **82.8** for Ohio as a whole. Its PI ranked **72nd of 77** districts in its state typology group [9][11][12]. Nationally, Stanford places CH-UH's 2022–25 grade 3–8 scores at about the **11th percentile in math** and **22nd in reading** [1].
 - **Adjusted for poverty, CH-UH is roughly where it is predicted to be, and it has moved up since 2023–24.** In an OpenHeights regression across all 607 Ohio districts, CH-UH's 2025–26 PI was **0.7 points above** what its economically disadvantaged share predicts (53rd percentile of residuals). With census child poverty and special-education and English-learner shares as controls, it was **1.1 points above** (55th percentile), up from 7.1 points *below* prediction in 2023–24. On the poverty-flag model, CH-UH has stayed within about 4 points of prediction in every year since 2022–23. **The result depends on the model.** When race is also controlled for, CH-UH ranks near the top of the state (98th percentile). See section 4.
 - **Ohio's growth measure is strong this year, weaker before.** District Progress (value-added) was **3 stars (2021–22), 3 (2022–23), 2 (2023–24), 3 (2024–25) and 4 (2025–26)** [11]. The 2025–26 Value-Added Growth Index of **+7.68** ranked at the **87th percentile** of Ohio districts. A year earlier it was −0.68, at the 48th percentile (OpenHeights calculation from [11]).
@@ -256,6 +258,29 @@ ESSA Performance Index by student group. ESSA PI excludes the "Advanced Plus" le
 - **Black students** in CH-UH scored **7.9 points above** Ohio's Black-student average in 2025–26, up from 2.4 points above in 2023–24 (OpenHeights calculation). They were still below the median district-level result for Black students. Ohio's average is weighted toward large urban districts, while many suburban districts report higher Black-student scores.
 - The **economically disadvantaged** comparison flatters CH-UH. CH-UH's "disadvantaged" group is its entire enrollment, while elsewhere the flag picks out the poorer students.
 - Gap Closing reached **5 stars in 2025–26** [11].
+
+### 6a. Why the district average is low when its student groups are not
+
+About half of the district's resident K–12 children attend private, charter or other schools, and the families who opt out differ from those who stay. School-age children living in the district are about **49% Black and 40% white** (Census ACS 2020–24). District students are about **69% Black and 17% white** (2025–26). By our rough estimate, the opted-out group is roughly two-thirds white (see the [enrollment page](enrollment-and-demographics)). The Census does not split family income between enrolled and opted-out children, so race is the only clean split available.
+
+**ESSA Performance Index by student group, 2025–26** [12]:
+
+| Group | CH-UH | Ohio average | Median Ohio district | CH-UH rank among districts reporting the group |
+|---|---|---|---|---|
+| **All students** | **78.6** | **82.5** | **88.0** | **502nd of 607 (17th percentile)** |
+| Black | 70.9 | 63.0 | 74.1 | 191st of 319 (40th) |
+| Hispanic | 80.7 | 70.8 | 83.6 | 298th of 501 (41st) |
+| Multiracial | 93.3 | 77.8 | 83.3 | 118th of 536 (78th) |
+| White | 107.7 | 89.3 | 89.5 | 20th of 604 (97th) |
+
+*Ranks, percentiles and medians are OpenHeights calculations from the district ESSA PI file [12]. A Performance Index of 100 means every tested student scored "proficient"; it is not normed to an average.*
+
+**What this shows:**
+
+- **A composition effect (Simpson's paradox).** Every student group in CH-UH scores above its statewide average, yet the district as a whole scores below the state. The district ranks at the 17th percentile overall, while its student groups rank between the 40th and 97th. The overall number is low largely because of *who is enrolled*.
+- **Statewide averages flatter some groups.** Ohio's averages for Black and Hispanic students are pulled down by large urban districts. Compared district by district, CH-UH's Black and Hispanic students score a little *below* the typical district's (40th–41st percentile). Its white and multiracial students rank well above.
+- **Reweighting (OpenHeights calculation).** If CH-UH enrolled the community's own mix of children (49% Black, 40% white, the remainder Hispanic and multiracial in today's proportions) at today's group scores, its Performance Index would be about **87**. That is above the state average (82.5) and near the median district (88.0). The same reweighting applied to the median district's group scores gives about 82.
+- **Race is a stand-in for family background, and an imperfect one.** CH-UH's white students likely come from unusually educated families (58.7% of Cleveland Heights adults hold a bachelor's degree), so part of their 97th-percentile result reflects home advantages. CH-UH's Black students may differ in family income from Black students statewide too. This comparison shows the district average is mostly a composition effect. It does **not** show the schools add more than typical districts. Value-added (section 2) and Stanford's learning rates (section 1c) speak to that, and they disagree.
 
 ## 7. Limitations
 

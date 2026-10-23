@@ -134,7 +134,7 @@ footer { border-top: 1px solid var(--border); padding: 20px 0 40px; font-size: 1
   </header>
 
   <h1>CH-UH schools in charts</h1>
-  <p class="lede">Fifteen charts on the Cleveland Heights-University Heights City School District: its finances, the families it serves, and how its students are doing. Voters decide Issue 4, a 6.5-mill operating levy, on November 3, 2026.</p>
+  <p class="lede">Sixteen charts on the Cleveland Heights-University Heights City School District: its finances, the families it serves, and how its students are doing. Voters decide Issue 4, a 6.5-mill operating levy, on November 3, 2026.</p>
   <p class="note">Every chart is drawn from figures checked against primary sources on Oct. 12, 2026. Hover or tap a mark for exact values; each chart has a data table and a link to the guide page with full sourcing. OpenHeights takes no position on the levy.</p>
 
   <nav class="toc" aria-label="Sections">
@@ -262,6 +262,14 @@ footer { border-top: 1px solid var(--border); padding: 20px 0 40px; font-size: 1
       <div class="legend"></div><div class="chart"></div>
       <p class="callout">Census child poverty counts all resident children, including the many CH-UH residents in private schools. The adjusted-outcomes page shows models with more controls; CH-UH sits near the middle on most, and near the top when race is controlled for.</p>
       <figcaption>OpenHeights calculation from Ohio DEW 2025-26 report card data and Census SAIPE 2024. <a href="data/pi_vs_child_poverty_2025-26.csv">Download the data (CSV)</a> · <a href="adjusted-outcomes">Adjusted outcomes page →</a></figcaption>
+    </figure>
+
+    <figure class="card" data-chart="simpson">
+      <h3>Every student group outscores its statewide average, yet the district as a whole falls below it</h3>
+      <p class="sub">ESSA Performance Index by student group, 2025-26. 100 means every tested student scored "proficient."</p>
+      <div class="legend"></div><div class="chart"></div>
+      <p class="callout">The district average is low mainly because of who enrolls: its students are far more likely to be Black and low-income than the community's children. Reweighted to the community's own mix, the district would score about 87. Compared district by district, CH-UH's Black and Hispanic students score slightly below the typical district's.</p>
+      <figcaption>Source: Ohio DEW report card ESSA Performance Index files; medians, percentiles and reweighting are OpenHeights calculations. <a href="adjusted-outcomes#6a-why-the-district-average-is-low-when-its-student-groups-are-not">Adjusted outcomes page →</a></figcaption>
     </figure>
 
     <div class="grid2">
@@ -829,6 +837,36 @@ footer { border-top: 1px solid var(--border); padding: 20px 0 40px; font-size: 1
     hit.addEventListener("blur", function () { ring.setAttribute("opacity", 0); hideTip(); });
   }
 
+  /* ---------- dot comparison (CH-UH vs Ohio avg vs median district) ---------- */
+  function dotCompare(card, o) {
+    var c = C(), box = card.querySelector(".chart"), W = Math.max(280, box.clientWidth);
+    var rowH = 38, n = o.rows.length, H = n * rowH + 34;
+    var svg = svgFor(box, W, H, o.aria);
+    var labW = Math.max.apply(null, o.rows.map(function (r) { return measure(svg, r[0], 12, 650); }));
+    var m = { l: labW + 14, r: 18, t: 6, b: 24 }, pw = W - m.l - m.r, lo = 60, hi = 110;
+    var X = function (v) { return m.l + (v - lo) / (hi - lo) * pw; };
+    [60, 70, 80, 90, 100, 110].forEach(function (t) {
+      el("line", { x1: X(t), x2: X(t), y1: m.t, y2: m.t + n * rowH, stroke: t === 100 ? c.axis : c.grid, "stroke-width": 1 }, svg);
+      txt(svg, X(t), H - 6, t, { "text-anchor": "middle", fill: c.muted });
+    });
+    o.rows.forEach(function (r, i) {
+      var y = m.t + i * rowH + rowH / 2, first = i === 0;
+      if (i === 1) el("line", { x1: 0, x2: W, y1: m.t + rowH, y2: m.t + rowH, stroke: c.grid, "stroke-width": 1 }, svg);
+      txt(svg, m.l - 10, y + 4, r[0], { "text-anchor": "end", fill: first ? c.ink : c.ink2, "font-weight": first ? 650 : 400 });
+      var a = Math.min(r[1], r[2], r[3]), b = Math.max(r[1], r[2], r[3]);
+      el("line", { x1: X(a), x2: X(b), y1: y, y2: y, stroke: c.axis, "stroke-width": 2, "stroke-linecap": "round" }, svg);
+      el("line", { x1: X(r[3]), x2: X(r[3]), y1: y - 8, y2: y + 8, stroke: c.ink2, "stroke-width": 2, "stroke-linecap": "round" }, svg);
+      el("circle", { cx: X(r[2]), cy: y, r: 5.5, fill: c.deInk, stroke: c.surface, "stroke-width": 2 }, svg);
+      el("circle", { cx: X(r[1]), cy: y, r: 7, fill: c.s[0], stroke: c.surface, "stroke-width": 2 }, svg);
+      var d = r[1] - r[2];
+      var dl = (d >= 0 ? "+" : "−") + fmtNum(Math.abs(d), 1) + " vs. Ohio", dw = measure(svg, dl, 11);
+      var right = r[1] >= r[3] && r[1] >= r[2] && X(r[1]) + 11 + dw < W - 2;
+      halo(txt(svg, X(r[1]) + (right ? 11 : -11), y - 9, dl, { "text-anchor": right ? "start" : "end", fill: c.ink2, "font-size": 11 }));
+      var hitr = el("rect", { x: 0, y: y - rowH / 2, width: W, height: rowH, fill: "transparent", "aria-label": r[0] + ": CH-UH " + r[1] + ", Ohio " + r[2] + ", median district " + r[3] }, svg);
+      bindMark(svg, box, hitr, function () { return { title: r[0], rows: [{ color: c.s[0], value: fmtNum(r[1], 1), name: "CH-UH" }, { color: c.deInk, value: fmtNum(r[2], 1), name: "Ohio average" }, { color: c.ink2, value: fmtNum(r[3], 1), name: "Median district" }], extra: "CH-UH ranks at the " + ordinal(r[4]) + " percentile of districts" }; });
+    });
+  }
+
   /* ---------- chart definitions ---------- */
   function usd(v) { return (v < 0 ? "−$" : "$") + fmtNum(Math.abs(v), 1) + "M"; }
   var defs = {
@@ -933,6 +971,12 @@ footer { border-top: 1px solid var(--border); padding: 20px 0 40px; font-size: 1
       scatter(card, { points: d.points, fit: d.fit, label: d.label, highlight: d.highlight, aria: "Scatter plot of Performance Index against child poverty for 607 Ohio districts" });
       var rows = d.points.filter(function (p) { return d.label[p[0]]; }).map(function (p) { var pred = d.fit.a + d.fit.b * p[2]; return [p[1], fmtNum(p[2], 1) + "%", fmtNum(p[3], 1), fmtNum(pred, 1), (p[3] - pred >= 0 ? "+" : "") + fmtNum(p[3] - pred, 1)]; });
       table(card, ["District", "Child poverty", "PI 2025-26", "Line predicts", "Difference"], rows);
+    },
+    simpson: function (card, d) {
+      var c = C();
+      legend(card, [{ name: "CH-UH", color: c.s[0], kind: "dot" }, { name: "Ohio average", color: c.deInk, kind: "dot" }, { name: "Median district", color: c.ink2, kind: "tick" }]);
+      dotCompare(card, { rows: d.rows, aria: "Performance Index by student group, CH-UH versus Ohio average and median district" });
+      table(card, ["Group", "CH-UH", "Ohio average", "Median district", "CH-UH percentile"], d.rows.map(function (r) { return [r[0], fmtNum(r[1], 1), fmtNum(r[2], 1), fmtNum(r[3], 1), ordinal(r[4])]; }));
     },
     valueadded: function (card, d) {
       divCols(card, { rows: d.rows, aria: "CH-UH value-added growth index by year" });

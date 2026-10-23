@@ -112,6 +112,13 @@ V["gaps"] = {"page": "academic-outcomes", "unit": "% proficient, 2025-26",
 V["absent"] = {"page": "academic-outcomes", "unit": "%", "x": ["2021-22","2022-23","2023-24","2024-25","2025-26"],
   "series": [{"name": "CH-UH", "values": [46.3,39.5,37.5,38.2,37.9]}, {"name": "Ohio", "values": [30.2,26.8,25.6,25.1,23.9]}]}
 
+
+V["simpson"] = {"page": "adjusted-outcomes", "unit": "ESSA Performance Index, 2025-26",
+  "rows": [["All students", 78.6, 82.5, 88.0, 17], ["Black", 70.9, 63.0, 74.1, 40], ["Hispanic", 80.7, 70.8, 83.6, 41],
+           ["Multiracial", 93.3, 77.8, 83.3, 78], ["White", 107.7, 89.3, 89.5, 97]],
+  "cf": 87}
+# [group, CH-UH, Ohio average, median district, CH-UH percentile among districts]
+
 # ---- Scatter: PI vs child poverty, all districts -------------------------
 pts = []
 with open(sys.argv[1], newline="") as f:
